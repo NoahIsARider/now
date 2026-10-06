@@ -1,15 +1,12 @@
 // MAYDAY — search + mood filter. No dependencies.
 (function () {
   var data = JSON.parse(document.getElementById('films-data').textContent);
-  var rows = Array.prototype.slice.call(document.querySelectorAll('.manifest tbody tr'));
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.entries .entry'));
   var chipBox = document.getElementById('chips');
   var input = document.getElementById('q');
   var count = document.getElementById('count');
   var empty = document.getElementById('empty');
   var active = [];
-
-  function esc(s) { return s.replace(/[&<>"]/g, function (c) {
-    return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); }
 
   data.moods.forEach(function (m) {
     var b = document.createElement('button');
@@ -27,16 +24,16 @@
   function apply() {
     var q = (input.value || '').trim().toLowerCase();
     var shown = 0;
-    rows.forEach(function (tr) {
-      var hay = (tr.getAttribute('data-hay') || '').toLowerCase();
-      var tags = (tr.getAttribute('data-tags') || '').split(' ');
+    rows.forEach(function (row) {
+      var hay = (row.getAttribute('data-hay') || '').toLowerCase();
+      var tags = (row.getAttribute('data-tags') || '').split(' ');
       var okQ = !q || hay.indexOf(q) > -1;
       var okM = active.every(function (m) { return tags.indexOf(m) > -1; });
       var ok = okQ && okM;
-      tr.hidden = !ok;
+      row.hidden = !ok;
       if (ok) { shown++; }
     });
-    count.textContent = 'SHOWING ' + shown + ' / ' + rows.length + ' FILMS';
+    count.textContent = 'showing ' + shown + ' of ' + rows.length + ' films';
     empty.hidden = shown !== 0;
   }
 

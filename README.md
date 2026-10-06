@@ -14,7 +14,8 @@ page, and a machine-readable copy of the whole list. It is published on
 ```
 data/films.json     the list. this is the only file you edit.
 build.py            reads the json, writes site/
-assets/style.css    all of the design. black rules only, no colour, no rounded corners.
+assets/style.css    all of the design. one narrow column, no rules, no boxes,
+                    no colour except the blue links.
 assets/app.js       search box + mood filters. no dependencies.
 assets/fonts/       Special Elite + Courier Prime, self-hosted woff2, OFL 1.1
 site/               generated output. not in git. this is what gets published.
