@@ -82,3 +82,14 @@ echo "$TOKEN" > ~/.srht-token      # then publish.sh picks it up on its own
   give them stars.
 - No cookies, no trackers, no external requests. Fonts are served from this domain.
 - Site content is the author's. `assets/fonts/` is under the SIL Open Font License 1.1.
+
+## Re-entering the token
+
+sr.ht tokens can expire. When publishing fails with 401:
+
+```sh
+python tools/token-window.py      # then open http://127.0.0.1:8788/
+```
+
+A one-field local page (127.0.0.1 only) writes the new token straight to
+`~/.srht-token`. Nothing is echoed back or logged.
