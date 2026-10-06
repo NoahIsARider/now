@@ -1,0 +1,353 @@
+{
+ "moods": [
+  "quiet",
+  "loud",
+  "sad",
+  "funny",
+  "scary",
+  "strange",
+  "tender"
+ ],
+ "films": [
+  {
+   "n": 1,
+   "slug": "persona",
+   "title": "Persona",
+   "year": 1966,
+   "director": "Ingmar Bergman",
+   "country": "Sweden",
+   "runtime": 83,
+   "rating": 5,
+   "tags": [
+    "strange",
+    "quiet"
+   ],
+   "lead": "An actress stops speaking. A nurse talks enough for both of them.",
+   "note": "Bergman presses two faces together until they blur. The screen burns through once, near the start, and the film never quite puts itself back. Eighty-three minutes with nothing spare in them.",
+   "letterboxd": null
+  },
+  {
+   "n": 2,
+   "slug": "el-sur",
+   "title": "El Sur",
+   "year": 1983,
+   "director": "Víctor Erice",
+   "country": "Spain, France",
+   "runtime": 95,
+   "rating": 5,
+   "tags": [
+    "quiet",
+    "sad"
+   ],
+   "lead": "A daughter grows up in the north of Spain, watching her father for clues.",
+   "note": "Erice made this for television and it was cut before release, so what survives is unfinished on purpose. A girl, a house, a father who keeps one door closed. The last scene arrives like a held breath.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/el-sur/"
+  },
+  {
+   "n": 3,
+   "slug": "cmon-cmon",
+   "title": "C'mon C'mon",
+   "year": 2021,
+   "director": "Mike Mills",
+   "country": "United States",
+   "runtime": 108,
+   "rating": 5,
+   "tags": [
+    "tender",
+    "quiet"
+   ],
+   "lead": "A radio journalist takes his nephew on a road trip and interviews children about the future.",
+   "note": "Mostly filmed in cars and hotel rooms, in black and white. The interviews are real children and they carry the film. A movie about listening that actually listens.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/cmon-cmon/"
+  },
+  {
+   "n": 4,
+   "slug": "first-cow",
+   "title": "First Cow",
+   "year": 2019,
+   "director": "Kelly Reichardt",
+   "country": "United States",
+   "runtime": 121,
+   "rating": 5,
+   "tags": [
+    "quiet",
+    "tender"
+   ],
+   "lead": "Two outsiders steal milk from the only cow in Oregon to sell fried dough.",
+   "note": "A frontier film with no heroism in it, only labour and friendship. Reichardt keeps the camera low and patient. The last ten minutes are as tense as any thriller.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/first-cow/"
+  },
+  {
+   "n": 5,
+   "slug": "marcel-the-shell",
+   "title": "Marcel the Shell with Shoes On",
+   "year": 2021,
+   "director": "Dean Fleischer Camp",
+   "country": "United States",
+   "runtime": 90,
+   "rating": 5,
+   "tags": [
+    "tender",
+    "funny"
+   ],
+   "lead": "A one-inch shell with one eye searches for his family inside an Airbnb.",
+   "note": "Stop-motion pretending to be a documentary. Funny for ten minutes, then quietly devastating about being the one who got left behind.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/marcel-the-shell-with-shoes-on-2021/"
+  },
+  {
+   "n": 6,
+   "slug": "the-florida-project",
+   "title": "The Florida Project",
+   "year": 2017,
+   "director": "Sean Baker",
+   "country": "United States",
+   "runtime": 115,
+   "rating": 5,
+   "tags": [
+    "tender",
+    "sad"
+   ],
+   "lead": "Children run wild through a motel outside Walt Disney World.",
+   "note": "Baker shoots on 35mm in colours that do not belong to these lives. Moonee's summer is a game for as long as it can stay one. The final shot changes format and it hurts.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/the-florida-project/"
+  },
+  {
+   "n": 7,
+   "slug": "hereditary",
+   "title": "Hereditary",
+   "year": 2018,
+   "director": "Ari Aster",
+   "country": "United States",
+   "runtime": 127,
+   "rating": 5,
+   "tags": [
+    "scary",
+    "sad"
+   ],
+   "lead": "A family loses its grandmother and inherits something worse.",
+   "note": "Aster builds his horror out of miniature models, homework and silence before he lets it go loud. The last act takes everything. It earns it.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/hereditary/"
+  },
+  {
+   "n": 8,
+   "slug": "showing-up",
+   "title": "Showing Up",
+   "year": 2022,
+   "director": "Kelly Reichardt",
+   "country": "United States",
+   "runtime": 108,
+   "rating": 5,
+   "tags": [
+    "quiet",
+    "funny"
+   ],
+   "lead": "A sculptor in Portland tries to finish work for a show while everybody interrupts her.",
+   "note": "The least dramatic film on this list. A cat, a kiln, a broken water heater, a brother who is not well. Reichardt argues that making things is mostly errands.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/showing-up-2022/"
+  },
+  {
+   "n": 9,
+   "slug": "the-banshees-of-inisherin",
+   "title": "The Banshees of Inisherin",
+   "year": 2022,
+   "director": "Martin McDonagh",
+   "country": "Ireland, United Kingdom, United States",
+   "runtime": 114,
+   "rating": 5,
+   "tags": [
+    "sad",
+    "funny"
+   ],
+   "lead": "One friend stops speaking to the other, on an island where nothing else happens.",
+   "note": "Played straight and photographed beautifully. The civil war across the water is the hum underneath. McDonagh's funniest film and his bleakest, which is saying something.",
+   "letterboxd": null
+  },
+  {
+   "n": 10,
+   "slug": "the-substance",
+   "title": "The Substance",
+   "year": 2024,
+   "director": "Coralie Fargeat",
+   "country": "France, United Kingdom, United States",
+   "runtime": 141,
+   "rating": 5,
+   "tags": [
+    "loud",
+    "scary"
+   ],
+   "lead": "A fading star injects a black-market serum and is issued a younger version of herself.",
+   "note": "Fargeat shoots close, wet and very loud. Body horror aimed at anyone who has been told to keep producing. The audience noise is part of the show.",
+   "letterboxd": null
+  },
+  {
+   "n": 11,
+   "slug": "misericordia",
+   "title": "Misericordia",
+   "year": 2024,
+   "director": "Alain Guiraudie",
+   "country": "France",
+   "runtime": 103,
+   "rating": 5,
+   "tags": [
+    "strange",
+    "funny"
+   ],
+   "lead": "A man returns to his village for a funeral and then stays too long.",
+   "note": "Guiraudie's people have no shame and no plan. A death, a priest, a night walk in the woods, all delivered in the flattest possible tone.",
+   "letterboxd": null
+  },
+  {
+   "n": 12,
+   "slug": "the-lovers",
+   "title": "The Lovers",
+   "year": 2017,
+   "director": "Azazel Jacobs",
+   "country": "United States",
+   "runtime": 97,
+   "rating": 4,
+   "tags": [
+    "tender",
+    "funny"
+   ],
+   "lead": "A married couple, both having affairs, fall back in love with each other.",
+   "note": "Debra Winger and Tracy Letts are the entire engine. A comedy about cheating that refuses to judge anybody in it.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/the-lovers-2017/"
+  },
+  {
+   "n": 13,
+   "slug": "talk-to-me",
+   "title": "Talk to Me",
+   "year": 2022,
+   "director": "Danny Philippou, Michael Philippou",
+   "country": "Australia",
+   "runtime": 94,
+   "rating": 4,
+   "tags": [
+    "scary",
+    "loud"
+   ],
+   "lead": "Teenagers get hold of a hand that lets the dead speak through them.",
+   "note": "Made by the RackaRacka brothers, so it moves fast and does not flinch. Grief, peer pressure and possession inside ninety-four minutes.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/talk-to-me-2022/"
+  },
+  {
+   "n": 14,
+   "slug": "civil-war",
+   "title": "Civil War",
+   "year": 2024,
+   "director": "Alex Garland",
+   "country": "United States, United Kingdom",
+   "runtime": 109,
+   "rating": 4,
+   "tags": [
+    "loud",
+    "sad"
+   ],
+   "lead": "A photo team drives to Washington through a country at war with itself.",
+   "note": "Garland keeps the politics vague on purpose and stays with the journalists. A war film about the habit of looking, with one very quiet scene in a house that stops the film cold.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/civil-war-2024/"
+  },
+  {
+   "n": 15,
+   "slug": "aftersun",
+   "title": "Aftersun",
+   "year": 2022,
+   "director": "Charlotte Wells",
+   "country": "United States, United Kingdom",
+   "runtime": 101,
+   "rating": null,
+   "tags": [
+    "sad",
+    "tender"
+   ],
+   "lead": "A young father and his daughter on a package holiday, remembered years later.",
+   "note": "Wells films it twice at once, what happened and what a daughter can now see in it. Almost nothing is said out loud.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/aftersun/"
+  },
+  {
+   "n": 16,
+   "slug": "paris-texas",
+   "title": "Paris, Texas",
+   "year": 1984,
+   "director": "Wim Wenders",
+   "country": "France, Germany",
+   "runtime": 147,
+   "rating": null,
+   "tags": [
+    "sad",
+    "quiet"
+   ],
+   "lead": "A man walks out of the desert and slowly accounts for his life.",
+   "note": "Wenders and Ry Cooder make the American west feel empty and loud at the same time. The last scene in the booth is a whole film on its own.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/paris-texas/"
+  },
+  {
+   "n": 17,
+   "slug": "cleo-from-5-to-7",
+   "title": "Cléo from 5 to 7",
+   "year": 1962,
+   "director": "Agnès Varda",
+   "country": "Italy, France",
+   "runtime": 90,
+   "rating": null,
+   "tags": [
+    "quiet",
+    "tender"
+   ],
+   "lead": "Ninety minutes in the life of a singer waiting on a medical result.",
+   "note": "Varda keeps it in real time and mostly on the street. The fear loosens exactly when Cléo stops looking at herself.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/cleo-from-5-to-7/"
+  },
+  {
+   "n": 18,
+   "slug": "the-zone-of-interest",
+   "title": "The Zone of Interest",
+   "year": 2023,
+   "director": "Jonathan Glazer",
+   "country": "United States, Poland, United Kingdom",
+   "runtime": 106,
+   "rating": null,
+   "tags": [
+    "scary",
+    "quiet"
+   ],
+   "lead": "The commandant of Auschwitz and his wife build a garden against the camp wall.",
+   "note": "All of it is in the sound. The camera never crosses the wall and you never stop hearing what is behind it.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/the-zone-of-interest/"
+  },
+  {
+   "n": 19,
+   "slug": "moonlight",
+   "title": "Moonlight",
+   "year": 2016,
+   "director": "Barry Jenkins",
+   "country": "United States",
+   "runtime": 111,
+   "rating": null,
+   "tags": [
+    "sad",
+    "tender"
+   ],
+   "lead": "Three chapters in the life of a boy in Miami who cannot say what he wants.",
+   "note": "Jenkins shoots in blue and skin, and hands the last chapter to a man who has learned to perform all of it.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/moonlight-2016/"
+  },
+  {
+   "n": 20,
+   "slug": "the-lighthouse",
+   "title": "The Lighthouse",
+   "year": 2019,
+   "director": "Robert Eggers",
+   "country": "Canada, United States",
+   "runtime": 109,
+   "rating": null,
+   "tags": [
+    "strange",
+    "scary"
+   ],
+   "lead": "Two men, one rock, a lamp neither of them is allowed to touch.",
+   "note": "Black and white, boxed into an almost square frame, wet and loud. A duel about work, drink and the light upstairs.",
+   "letterboxd": "https://letterboxd.com/noahisarider/film/the-lighthouse-2019/"
+  }
+ ]
+}

@@ -1,0 +1,304 @@
+/* ==========================================================================
+   MAYDAY — a films manifest
+   Rules: black lines, straight lines, nothing else. No colour, no curves,
+   no shadows, no rounded corners. Every edge in this file is a 1px or 2px
+   black rule; every accent is a black line at 0deg or 45deg.
+   ========================================================================== */
+
+@import url("./fonts/fonts.css");
+
+:root {
+  --ink: #000;
+  --paper: #fff;
+  --line: 1px solid var(--ink);
+  --line-2: 2px solid var(--ink);
+  --col: 1px solid var(--ink);
+  --display: "Special Elite", "Courier New", monospace;
+  --text: "Courier Prime", "Courier New", monospace;
+  --pad: 16px;
+  --shell: 1360px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: 15px;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+a { color: var(--ink); text-decoration: none; }
+a:hover, a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+img, svg { max-width: 100%; }
+
+.shell { max-width: var(--shell); margin: 0 auto; border-left: var(--col); border-right: var(--col); }
+
+/* --- the only decorative device: 45-degree black lines ------------------- */
+.hazard {
+  height: 7px;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  background: repeating-linear-gradient(45deg, var(--ink) 0 1px, transparent 1px 7px);
+}
+
+/* --- masthead ----------------------------------------------------------- */
+.mast {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.5fr) minmax(0, 210px);
+  border-bottom: var(--line);
+}
+.mast > * { padding: 18px var(--pad) 20px; border-right: var(--col); }
+.mast > *:last-child { border-right: 0; }
+
+.mark {
+  font-family: var(--display);
+  font-size: clamp(40px, 6.2vw, 88px);
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.mark .cursor {
+  display: inline-block;
+  width: 0.12em;
+  height: 0.62em;
+  background: var(--ink);
+  margin-left: 0.06em;
+  animation: blink 1.4s steps(1, end) infinite;
+}
+@keyframes blink { 0%, 60% { opacity: 1; } 60.01%, 100% { opacity: 0; } }
+
+.quote {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  max-width: 46ch;
+}
+.quote b { font-weight: 700; letter-spacing: 0.14em; }
+
+.stats {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 2;
+  text-transform: uppercase;
+}
+.stats span { display: inline-block; min-width: 5.5em; font-weight: 400; letter-spacing: 0.1em; }
+
+/* --- control strip ------------------------------------------------------ */
+.controls {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  border-bottom: var(--line);
+}
+.controls > * { padding: 14px var(--pad); border-right: var(--col); }
+.controls > *:last-child { border-right: 0; }
+
+.field { display: block; }
+.field span {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-bottom: 4px;
+}
+.field input {
+  width: 100%;
+  border: 0;
+  border-bottom: var(--line);
+  background: transparent;
+  font: inherit;
+  padding: 2px 0 4px;
+  color: var(--ink);
+}
+.field input:focus { outline: 0; border-bottom: var(--line-2); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; align-content: center; align-items: center; }
+.chips .label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-right: 4px;
+}
+.chip {
+  font: inherit;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  padding: 3px 9px 4px;
+  border: var(--line);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+/* --- the manifest table ------------------------------------------------- */
+.manifest { width: 100%; border-collapse: collapse; }
+.manifest th, .manifest td {
+  border-bottom: var(--line);
+  text-align: left;
+  vertical-align: baseline;
+  padding: 11px 12px;
+}
+.manifest thead th {
+  border-bottom: var(--line-2);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  padding-top: 10px;
+  padding-bottom: 9px;
+  white-space: nowrap;
+}
+.manifest tbody tr:hover, .manifest tbody tr:focus-within { background: var(--ink); color: var(--paper); }
+.manifest tbody tr:hover a, .manifest tbody tr:focus-within a { color: var(--paper); }
+.manifest tbody tr:hover .filmno, .manifest tbody tr:focus-within .filmno { color: var(--paper); }
+
+.col-no { width: 62px; }
+.col-dir { width: 22%; }
+.col-mood { width: 230px; }
+.col-star { width: 96px; text-align: right; }
+
+.filmno { font-size: 12px; letter-spacing: 0.08em; }
+.filmtitle { font-family: var(--display); font-size: 19px; line-height: 1.2; letter-spacing: 0.005em; }
+.filmtitle a { text-decoration: none; }
+.filmyear { font-size: 12.5px; white-space: nowrap; }
+.moods { font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; }
+.stars { font-size: 12px; letter-spacing: 0.1em; white-space: nowrap; }
+
+.empty { padding: 26px var(--pad); border-bottom: var(--line); font-size: 13px; }
+.count { padding: 9px var(--pad); font-size: 11px; letter-spacing: 0.16em; border-bottom: var(--line); }
+
+/* --- film sheet --------------------------------------------------------- */
+.sheet__bar {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--pad);
+  padding: 9px var(--pad);
+  border-bottom: var(--line);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.sheet__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+  border-bottom: var(--line);
+}
+.sheet__head > * { padding: 22px var(--pad) 24px; }
+.sheet__head > *:first-child { border-right: var(--col); }
+
+.sheet__title {
+  font-family: var(--display);
+  font-size: clamp(30px, 5.2vw, 68px);
+  line-height: 0.98;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.sheet__lead { margin: 14px 0 0; font-size: 15px; max-width: 54ch; }
+
+.facts { margin: 0; padding: 0; list-style: none; font-size: 12.5px; }
+.facts li { display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 8px; padding: 4px 0; border-top: var(--line); }
+.facts li:first-child { border-top: 0; }
+.facts b { font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; padding-top: 2px; }
+.facts a { overflow-wrap: anywhere; }
+
+.sheet__body { padding: 24px var(--pad); border-bottom: var(--line); }
+.sheet__body p { margin: 0 0 14px; max-width: 68ch; }
+.sheet__body p:last-child { margin-bottom: 0; }
+.note-drop::first-letter {
+  font-family: var(--display);
+  font-size: 2.4em;
+  float: left;
+  line-height: 0.78;
+  padding: 4px 8px 0 0;
+}
+
+.beacon { display: block; border-bottom: var(--line); padding: 18px var(--pad); }
+.beacon svg { display: block; width: 100%; height: 74px; }
+.beacon .codex { font-size: 11px; letter-spacing: 0.3em; margin-top: 8px; }
+
+.pager {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.pager > * { padding: 15px var(--pad); font-size: 12px; letter-spacing: 0.08em; }
+.pager > *:first-child { border-right: var(--col); }
+.pager > *:last-child { text-align: right; }
+.pager span { display: block; font-size: 10.5px; font-weight: 700; letter-spacing: 0.2em; margin-bottom: 3px; }
+.pager .none { opacity: 0.35; }
+
+/* --- prose pages (about, 404) ------------------------------------------ */
+.doc { padding: 24px var(--pad) 30px; }
+.doc h2 {
+  font-family: var(--display);
+  font-size: 22px;
+  margin: 0 0 10px;
+  padding-top: 14px;
+  border-top: var(--line-2);
+}
+.doc section { margin-bottom: 26px; }
+.doc p { margin: 0 0 12px; max-width: 70ch; }
+.doc ul { margin: 0 0 12px; padding-left: 1.3em; max-width: 70ch; }
+.doc li { margin-bottom: 5px; }
+.doc .k { font-weight: 700; }
+
+/* --- footer ------------------------------------------------------------- */
+.foot__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+.foot__row > * { padding: 14px var(--pad); border-right: var(--col); font-size: 11.5px; letter-spacing: 0.06em; }
+.foot__row > *:last-child { border-right: 0; }
+.signal { font-weight: 700; letter-spacing: 0.26em; }
+.foot ul { margin: 0; padding: 0; list-style: none; }
+.foot li { padding: 2px 0; }
+.foot .meta { font-size: 11px; letter-spacing: 0.1em; }
+
+/* --- narrow ------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .mast { grid-template-columns: minmax(0, 1fr); }
+  .mast > * { border-right: 0; border-bottom: var(--col); }
+  .mast > *:last-child { border-bottom: 0; }
+  .controls { grid-template-columns: minmax(0, 1fr); }
+  .controls > * { border-right: 0; border-bottom: var(--col); }
+  .controls > *:last-child { border-bottom: 0; }
+  .sheet__head { grid-template-columns: minmax(0, 1fr); }
+  .sheet__head > *:first-child { border-right: 0; border-bottom: var(--col); }
+  .foot__row { grid-template-columns: minmax(0, 1fr); }
+  .foot__row > * { border-right: 0; border-bottom: var(--col); }
+  .foot__row > *:last-child { border-bottom: 0; }
+}
+
+@media (max-width: 720px) {
+  .manifest thead { display: none; }
+  .manifest, .manifest tbody, .manifest tr, .manifest td { display: block; width: auto; }
+  .manifest tbody tr { border-bottom: var(--line-2); padding: 12px var(--pad) 13px; }
+  .manifest tbody tr:hover, .manifest tbody tr:focus-within { background: transparent; color: var(--ink); }
+  .manifest tbody tr:hover a { color: var(--ink); }
+  .manifest td { border-bottom: 0; padding: 0; }
+  .manifest .col-no { margin-bottom: 2px; }
+  .manifest .filmtitle { font-size: 21px; }
+  .manifest .col-star { text-align: left; margin-top: 4px; }
+  .manifest .col-dir::before { content: ""; }
+  .manifest .moods { letter-spacing: 0.1em; }
+}
+
+/* --- print: it is a manifest, someone will print it --------------------- */
+@media print {
+  .hazard, .controls, .cursor { display: none; }
+  body { font-size: 11pt; }
+  .manifest tbody tr { break-inside: avoid; }
+  a { text-decoration: none; }
+}
