@@ -24,7 +24,8 @@ assets/favicon.svg                 the letter M cut out of Special Elite, as a p
 assets/fonts/                      Special Elite + Courier Prime, self-hosted, OFL 1.1
 site/                              generated output, not in git, this is what gets published
 publish.sh                         build + upload to pages.sr.ht
-.build.yml                         the same thing, run by builds.sr.ht on push
+tools/git-hooks/pre-push           the same thing, run on every push
+tools/builds.sr.ht.yml             the builds.sr.ht manifest, inactive (needs a paid account)
 ```
 
 Each line on the index carries two links: the blue address is the film on Letterboxd, and
@@ -91,7 +92,8 @@ cp tools/git-hooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push
 This exists because the `.build.yml` route is not available on a free account:
 pushing while builds.sr.ht was wired up returned
 `Error submitting build job: A paid account is required to use this feature`.
-`.build.yml` is kept for the day that changes.
+The manifest is kept at `tools/builds.sr.ht.yml` (a copy at the repo root would make
+git.sr.ht print that error on every push). Move it back to `.build.yml` to activate it.
 
 **By hand** — needs a personal access token from
 <https://meta.sr.ht/oauth2/personal-token> with the scope `pages.sr.ht/PAGES:RW`:
