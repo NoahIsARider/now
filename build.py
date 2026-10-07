@@ -100,6 +100,7 @@ def footer(p):
   <ul>
     <li><a href="{p}">the manifest</a></li>
     <li><a href="{p}about/">about this list</a></li>
+    <li><a href="/">now</a></li>
     <li><a href="{e(REPO)}">source repository</a></li>
   </ul>
   <p class="meta">compiled by <a href="{e(LETTERBOXD)}" rel="me">noahisarider</a> · film data from
