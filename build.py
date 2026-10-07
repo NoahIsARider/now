@@ -30,6 +30,12 @@ def e(s):
     return html.escape(str(s if s is not None else ""), quote=True)
 
 
+def soft(url):
+    """display text for a url, with <wbr> after each slash so narrow screens break it at
+    the separators. <wbr> is markup, not a character, so a copied url stays clean."""
+    return e(url).replace("/", "/<wbr>")
+
+
 def stars(rating):
     if rating is None:
         return "liked"
@@ -113,7 +119,7 @@ def page_index(films, profile, ratings):
       <div class="head">
         <span class="name">{e(f['title'])}
           <span class="year">{f['year']}</span></span>
-        <a class="url" href="film/{f['slug']}/">{e(CLEAN_URL)}/film/{f['slug']}/</a>
+        <a class="url" href="film/{f['slug']}/">{soft(CLEAN_URL + "/film/" + f['slug'] + "/")}</a>
       </div>
       <div class="meta">{e(meta)}</div>
 {review}    </div>
@@ -162,9 +168,9 @@ def page_film(f, films, profile):
 
     nav = []
     if prev_f:
-        nav.append(f'previous <a href="../{prev_f["slug"]}/">{e(film_url(prev_f))}</a>')
+        nav.append(f'previous <a href="../{prev_f["slug"]}/">{soft(film_url(prev_f))}</a>')
     if next_f:
-        nav.append(f'next <a href="../{next_f["slug"]}/">{e(film_url(next_f))}</a>')
+        nav.append(f'next <a href="../{next_f["slug"]}/">{soft(film_url(next_f))}</a>')
     if not nav:
         nav.append("the end of the manifest")
 
@@ -174,7 +180,7 @@ def page_film(f, films, profile):
 
     review = (f'<p class="note">{e(f["review"])}</p>' if f.get("review") else "")
     body = f"""<p class="top"><a href="../../">← the manifest</a>
-  <span class="selfurl">{e(film_url(f))}</span></p>
+  <span class="selfurl">{soft(film_url(f))}</span></p>
 <h1 class="title">{e(f['title'])}</h1>
 <p class="film-head">{e(stars(f['rating']))}
   <span class="pos">{f['n']:02d} of {len(films):02d}</span></p>
@@ -194,7 +200,7 @@ def page_about(films, profile, ratings):
     five = sum(1 for f in films if f["rating"] == 5)
     reviews = sum(1 for f in films if f["review"])
     liked_only = sum(1 for f in films if f["rating"] is None)
-    body = f"""<p class="top"><a href="../">← the manifest</a><span class="selfurl">{e(CLEAN_URL)}/about/</span></p>
+    body = f"""<p class="top"><a href="../">← the manifest</a><span class="selfurl">{soft(CLEAN_URL + "/about/")}</span></p>
 <div class="doc">
   <section>
     <h2>What this is</h2>
@@ -247,7 +253,7 @@ def page_about(films, profile, ratings):
 
 
 def page_404(films, profile, ratings):
-    body = f"""<p class="top"><a href="/MAYDAY/">← the manifest</a><span class="selfurl">{e(CLEAN_URL)}/404</span></p>
+    body = f"""<p class="top"><a href="/MAYDAY/">← the manifest</a><span class="selfurl">{soft(CLEAN_URL + "/404")}</span></p>
 <div class="doc">
   <section>
     <h2>Nothing at this address</h2>

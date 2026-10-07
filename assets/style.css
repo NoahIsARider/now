@@ -122,7 +122,7 @@ h1, h2 { font-family: var(--display); font-weight: 400; }
   margin-left: auto;
   font-size: 12.5px;
   text-align: right;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 .entry .meta { font-size: 13px; margin-top: 2px; }
 .entry .review {
@@ -146,7 +146,7 @@ h1, h2 { font-family: var(--display); font-weight: 400; }
   font-size: 12.5px;
   margin-bottom: 30px;
 }
-.selfurl { overflow-wrap: anywhere; }
+.selfurl { overflow-wrap: break-word; }
 .title {
   font-size: 40px;
   line-height: 1.02;
@@ -164,7 +164,7 @@ h1, h2 { font-family: var(--display); font-weight: 400; }
 .film-head .pos { font-size: 12.5px; }
 .film-meta { font-size: 13.5px; margin: 0 0 26px; }
 .note { font-size: 16px; line-height: 1.82; margin: 0 0 30px; max-width: 64ch; }
-.pager { font-size: 13px; margin: 0; line-height: 1.9; overflow-wrap: anywhere; }
+.pager { font-size: 13px; margin: 0; line-height: 1.9; overflow-wrap: break-word; }
 
 /* --- prose pages --------------------------------------------------------- */
 .doc section { margin-bottom: 32px; }
