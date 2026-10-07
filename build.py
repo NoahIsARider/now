@@ -141,7 +141,7 @@ def page_index(films, profile, ratings):
                 f'{exposed(CLEAN_URL + "/film/" + f["slug"] + "/")}</a>')
         entries.append(f"""  <li class="entry" data-rating="{f['rating'] if f['rating'] is not None else ''}"
       data-liked="{'1' if f['liked'] else '0'}" data-hay="{e(hay)}">
-    <div class="no"><a href="film/{f['slug']}/" title="this film's page here">{f['n']:02d}</a></div>
+    <div class="no">{f['n']:02d}</div>
     <div>
       <div class="head">
         <span class="name">{e(f['title'])}
