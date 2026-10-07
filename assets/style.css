@@ -137,6 +137,18 @@ h1, h2 { font-family: var(--display); font-weight: 400; }
 
 .empty { font-size: 14px; margin: 30px 0 0; max-width: 60ch; }
 
+/* --- page top bar (about, 404) ------------------------------------------- */
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 16px;
+  font-size: 12.5px;
+  margin-bottom: 30px;
+}
+.selfurl { overflow-wrap: break-word; }
+
 /* --- prose pages --------------------------------------------------------- */
 .doc section { margin-bottom: 32px; }
 .doc h2 { font-size: 20px; margin: 0 0 10px; }

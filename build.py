@@ -183,7 +183,7 @@ def page_about(films, profile, ratings):
     liked_only = sum(1 for f in films if f["rating"] is None and f.get("liked"))
     reviewed_only = sum(1 for f in films
                         if f["rating"] is None and not f.get("liked") and f.get("review"))
-    body = f"""<p class="top"><a href="../">← the manifest</a><span class="selfurl">{soft(CLEAN_URL + "/about/")}</span></p>
+    body = f"""<p class="top"><a href="../">← the manifest</a><span class="selfurl">about</span></p>
 <div class="doc">
   <section>
     <h2>What this is</h2>
@@ -238,7 +238,7 @@ def page_about(films, profile, ratings):
 
 
 def page_404(films, profile, ratings):
-    body = f"""<p class="top"><a href="/MAYDAY/">← the manifest</a><span class="selfurl">{soft(CLEAN_URL + "/404")}</span></p>
+    body = f"""<p class="top"><a href="/MAYDAY/">← the manifest</a><span class="selfurl">404</span></p>
 <div class="doc">
   <section>
     <h2>Nothing at this address</h2>
