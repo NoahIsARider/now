@@ -12,8 +12,11 @@ he wrote one, and the film's page address spelled out as the link.
 ## Layout
 
 ```
-data/films.json                    the whole list. this is the only file you edit by hand.
-tools/build-films-from-export.py   rebuilds it from a Letterboxd export (+ Wikidata)
+data/films.json                    the whole list. the only file you edit by hand.
+data/reviews-en.json               english renderings of the reviews written in chinese
+tools/build-films-from-export.py   rebuilds films.json from a Letterboxd export (+ Wikidata)
+tools/resolve-letterboxd-links.py  turns the export's boxd.it links into letterboxd.com/film/...
+tools/token-window.py              one-field local page for re-entering an expired token
 build.py                           reads the json, writes site/
 assets/style.css                   all of the design
 assets/app.js                      search + rating filter, no dependencies
@@ -23,6 +26,11 @@ site/                              generated output, not in git, this is what ge
 publish.sh                         build + upload to pages.sr.ht
 .build.yml                         the same thing, run by builds.sr.ht on push
 ```
+
+Each line on the index carries two links: the blue address is the film on Letterboxd, and
+the number at the start of the line opens that film's page on this site. Every review is
+published in English. The Chinese originals stay in `data/films.json` as `review_zh` and are
+stripped from the published `films.json`, so no Chinese is served.
 
 ## Rebuilding the list from Letterboxd
 
