@@ -1,24 +1,26 @@
-// MAYDAY — search + mood filter. No dependencies.
+// MAYDAY — search + rating filter. No dependencies.
 (function () {
-  var data = JSON.parse(document.getElementById('films-data').textContent);
   var rows = Array.prototype.slice.call(document.querySelectorAll('.entries .entry'));
-  var chipBox = document.getElementById('chips');
   var input = document.getElementById('q');
   var count = document.getElementById('count');
   var empty = document.getElementById('empty');
-  var active = [];
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var ratings = [];       // selected star values, matched with OR
+  var likedOnly = false;
 
-  data.moods.forEach(function (m) {
-    var b = document.createElement('button');
-    b.className = 'chip'; b.type = 'button'; b.textContent = m;
-    b.setAttribute('aria-pressed', 'false');
-    b.addEventListener('click', function () {
-      var i = active.indexOf(m);
-      if (i < 0) { active.push(m); } else { active.splice(i, 1); }
-      b.setAttribute('aria-pressed', i < 0 ? 'true' : 'false');
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      if (chip.hasAttribute('data-liked')) {
+        likedOnly = !likedOnly;
+        chip.setAttribute('aria-pressed', likedOnly ? 'true' : 'false');
+      } else {
+        var v = chip.getAttribute('data-rating');
+        var i = ratings.indexOf(v);
+        if (i < 0) { ratings.push(v); } else { ratings.splice(i, 1); }
+        chip.setAttribute('aria-pressed', i < 0 ? 'true' : 'false');
+      }
       apply();
     });
-    chipBox.appendChild(b);
   });
 
   function apply() {
@@ -26,10 +28,11 @@
     var shown = 0;
     rows.forEach(function (row) {
       var hay = (row.getAttribute('data-hay') || '').toLowerCase();
-      var tags = (row.getAttribute('data-tags') || '').split(' ');
       var okQ = !q || hay.indexOf(q) > -1;
-      var okM = active.every(function (m) { return tags.indexOf(m) > -1; });
-      var ok = okQ && okM;
+      var r = row.getAttribute('data-rating');
+      var okR = ratings.length === 0 || ratings.indexOf(r) > -1;
+      var okL = !likedOnly || row.getAttribute('data-liked') === '1';
+      var ok = okQ && okR && okL;
       row.hidden = !ok;
       if (ok) { shown++; }
     });

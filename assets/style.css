@@ -59,8 +59,8 @@ h1, h2 { font-family: var(--display); font-weight: 400; }
   margin: 0 0 16px;
   letter-spacing: 0.02em;
 }
-.quote { margin: 0 0 20px; font-size: 14.5px; max-width: 58ch; }
-.stats { margin: 0 0 34px; font-size: 13px; max-width: 58ch; }
+.quote { margin: 0 0 18px; font-size: 14.5px; max-width: 58ch; }
+.stats { margin: 0 0 34px; font-size: 13px; max-width: 62ch; }
 
 /* --- controls ------------------------------------------------------------ */
 .controls { margin-bottom: 18px; }
@@ -91,7 +91,7 @@ h1, h2 { font-family: var(--display); font-weight: 400; }
   background: none;
   color: var(--ink);
   padding: 0;
-  margin: 0 16px 6px 0;
+  margin: 0 14px 6px 0;
   cursor: pointer;
 }
 .chip:hover { text-decoration: underline; text-underline-offset: 3px; }
@@ -105,43 +105,66 @@ h1, h2 { font-family: var(--display); font-weight: 400; }
   display: grid;
   grid-template-columns: 3.4ch minmax(0, 1fr);
   column-gap: 10px;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 .entry .no { font-size: 12.5px; padding-top: 8px; }
-.entry .title { font-family: var(--display); font-size: 21px; line-height: 1.18; }
+.entry .head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  column-gap: 18px;
+  row-gap: 2px;
+}
+.entry .name { font-family: var(--display); font-size: 21px; line-height: 1.18; }
 .entry .year { font-size: 12.5px; }
+.entry .url {
+  margin-left: auto;
+  font-size: 12.5px;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
 .entry .meta { font-size: 13px; margin-top: 2px; }
-.entry .lead { font-size: 13.5px; margin-top: 7px; max-width: 62ch; }
+.entry .review {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.78;
+  max-width: 62ch;
+}
 .stars { letter-spacing: 0.06em; white-space: nowrap; }
 
-.empty { font-size: 14px; margin: 30px 0 0; }
+.empty { font-size: 14px; margin: 30px 0 0; max-width: 60ch; }
 
 /* --- film page ----------------------------------------------------------- */
 .top {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
+  align-items: baseline;
+  column-gap: 16px;
+  row-gap: 2px;
   font-size: 12.5px;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
+.selfurl { overflow-wrap: anywhere; }
 .title {
   font-size: 40px;
   line-height: 1.02;
-  margin: 0 0 14px;
+  margin: 0 0 10px;
   overflow-wrap: anywhere;
 }
-.lead { font-size: 16.5px; margin: 0 0 18px; max-width: 50ch; }
-.film-meta { font-size: 13.5px; margin: 0 0 5px; }
-.byline { font-size: 13.5px; margin: 0 0 30px; }
-.note { font-size: 16.5px; line-height: 1.74; margin: 0 0 30px; max-width: 64ch; }
-.note-drop::first-letter {
-  font-family: var(--display);
-  font-size: 2.35em;
-  float: left;
-  line-height: 0.8;
-  padding: 3px 4px 0 0;
+.film-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 15px;
+  margin: 0 0 6px;
 }
-.pager { font-size: 14px; margin: 0 0 8px; }
+.film-head .pos { font-size: 12.5px; }
+.film-meta { font-size: 13.5px; margin: 0 0 26px; }
+.note { font-size: 16px; line-height: 1.82; margin: 0 0 30px; max-width: 64ch; }
+.pager { font-size: 13px; margin: 0; line-height: 1.9; overflow-wrap: anywhere; }
 
 /* --- prose pages --------------------------------------------------------- */
 .doc section { margin-bottom: 32px; }
@@ -163,12 +186,16 @@ h1, h2 { font-family: var(--display); font-weight: 400; }
 .foot li { margin-bottom: 3px; }
 .foot .meta { font-size: 12px; margin-top: 12px; max-width: 62ch; }
 
+/* CJK reviews fall back to a system face. give them room and no letter-spacing. */
+.note:lang(zh), .review:lang(zh) { letter-spacing: 0; }
+
 /* --- narrow -------------------------------------------------------------- */
 @media (max-width: 640px) {
   .shell { padding: 32px 18px 48px; }
   .mark { font-size: 32px; }
   .title { font-size: 31px; }
   .entry { margin-bottom: 24px; }
+  .entry .url { margin-left: 0; text-align: left; }
 }
 
 @media print {

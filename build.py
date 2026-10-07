@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 MAYDAY site builder.
-    python build.py          ->  writes ./site/  (the directory that gets published)
+    python build.py       ->  writes ./site/  (the directory that gets published)
 
-Source of truth is data/films.json. Edit that, re-run, done.
-Design rule: type, whitespace and blue links. No rules, no boxes, no images.
+Source of truth is data/films.json, which is generated from the Letterboxd export
+(see tools/build-films-from-export.py). Ratings and reviews are the author's own.
+Design: type, whitespace and blue links. No rules, no boxes, no images.
 """
 import html
 import json
@@ -17,8 +18,8 @@ SRC = os.path.join(ROOT, "site")
 DATA = os.path.join(ROOT, "data", "films.json")
 ASSETS = os.path.join(ROOT, "assets")
 
-# where the site lives. change this if you publish it somewhere else.
-SITE_URL = "https://noahisarider.srht.site/MAYDAY"
+CLEAN_URL = "noahisarider.srht.site/MAYDAY"          # what the links display
+SITE_URL = "https://" + CLEAN_URL                   # canonical / og:url
 TAGLINE = ("It is said that once a pilot has issued the MAYDAY distress signal three times, "
            "the probability of survival is almost zero.")
 REPO = "https://sr.ht/~noahisarider/MAYDAY/"
@@ -30,9 +31,11 @@ def e(s):
 
 
 def stars(rating):
-    if not rating:
-        return "not rated"
-    return "★" * int(rating) + "·" * (5 - int(rating))
+    if rating is None:
+        return "liked"
+    n = int(rating)
+    half = "½" if (rating - n) >= 0.5 else ""
+    return "★" * n + half
 
 
 def layout(*, title, desc, p, body, path, indexable=True):
@@ -78,129 +81,155 @@ def footer(p):
 </footer>"""
 
 
-def masthead(films, moods):
-    years = sorted(f["year"] for f in films if f["year"])
-    five = sum(1 for f in films if f["rating"] == 5)
-    rated = sum(1 for f in films if f["rating"])
+def masthead(films, profile):
+    rated = [f for f in films if f["rating"]]
+    years = sorted(f["year"] for f in films)
     return f"""<header class="mast">
   <h1 class="mark">MAYDAY</h1>
   <p class="quote">{e(TAGLINE)}</p>
-  <p class="stats">{len(films)} films, {five} of them with five stars, {len(moods)} moods to filter
-  by, {years[0]} to {years[-1]}. {rated} are rated, the rest I logged without leaving a verdict.</p>
+  <p class="stats">{len(rated)} films I have rated, {sum(1 for f in films if f['rating'] == 5)}
+  of them five stars, and {sum(1 for f in films if f['review'])} I wrote something about.
+  {years[0]} to {years[-1]}.</p>
 </header>"""
 
 
-def page_index(films, moods):
+def page_index(films, profile, ratings):
     entries = []
     for f in films:
-        hay = " ".join(filter(None, [f["title"], str(f["year"]), f["director"],
-                                     f["country"], " ".join(f["tags"]), f["lead"]]))
-        entries.append(f"""  <li class="entry" data-tags="{' '.join(f['tags'])}" data-hay="{e(hay)}">
+        hay = " ".join(filter(None, [f["title"], str(f["year"]), f.get("director"),
+                                     f.get("country"), f.get("review")]))
+        meta = " · ".join(filter(None, [
+            stars(f["rating"]),
+            f.get("director"),
+            f.get("country"),
+            f"{f['runtime']} min" if f.get("runtime") else None,
+        ]))
+        review = (f'      <blockquote class="review">{e(f["review"])}</blockquote>\n'
+                  if f.get("review") else "")
+        entries.append(f"""  <li class="entry" data-rating="{f['rating'] if f['rating'] is not None else ''}"
+      data-liked="{'1' if f['liked'] else '0'}" data-hay="{e(hay)}">
     <div class="no">{f['n']:02d}</div>
     <div>
-      <div class="title"><a href="film/{f['slug']}/">{e(f['title'])}</a>
-        <span class="year">{f['year']}</span></div>
-      <div class="meta">{e(f['director'] or '')} · {e(' · '.join(f['tags']))} ·
-        <span class="stars">{e(stars(f['rating']))}</span></div>
-      <div class="lead">{e(f['lead'])}</div>
-    </div>
+      <div class="head">
+        <span class="name">{e(f['title'])}
+          <span class="year">{f['year']}</span></span>
+        <a class="url" href="film/{f['slug']}/">{e(CLEAN_URL)}/film/{f['slug']}/</a>
+      </div>
+      <div class="meta">{e(meta)}</div>
+{review}    </div>
   </li>""")
 
-    body = masthead(films, moods) + f"""
+    chips = "".join(
+        f'<button class="chip" type="button" data-rating="{r}" aria-pressed="false">'
+        f'{stars(r)}</button>' for r in ratings)
+    body = masthead(films, profile) + f"""
 <section class="controls">
-  <label class="field"><span class="lab">search the manifest</span>
+  <label class="field"><span class="lab">search</span>
     <input id="q" type="search" autocomplete="off"
-           placeholder="title, director, country, mood" aria-label="Search films"></label>
-  <p class="chips" id="chips"><span class="lab">mood:</span></p>
+           placeholder="title, director, country, or words from a review"
+           aria-label="Search films"></label>
+  <p class="chips" id="chips"><span class="lab">rating</span>{chips}
+    <button class="chip" type="button" data-liked="1" aria-pressed="false">liked</button></p>
 </section>
 <p class="count" id="count">showing {len(films)} of {len(films)} films</p>
 <ol class="entries">
 {chr(10).join(entries)}
 </ol>
-<p class="empty" id="empty" hidden>Nothing here answers to that. Try fewer words, or clear the mood.</p>
-<script id="films-data" type="application/json">{json.dumps({'moods': moods, 'count': len(films)})}</script>
+<p class="empty" id="empty" hidden>Nothing here answers to that. Try fewer words, or clear
+the filters.</p>
 <script src="assets/app.js" defer></script>
 {footer('./')}"""
     return layout(title="MAYDAY — a films manifest",
-                  desc=("A short, opinionated manifest of films: what to watch, who made it, "
-                        "what it will do to you. " + TAGLINE),
+                  desc=("Every film I have rated, with what I wrote about it. "
+                        + TAGLINE),
                   p="./", path="", body=body)
 
 
-def page_film(f, films, moods):
+def film_url(f):
+    return f"{CLEAN_URL}/film/{f['slug']}/"
+
+
+def page_film(f, films, profile):
     i = films.index(f)
     prev_f = films[i - 1] if i > 0 else None
     next_f = films[i + 1] if i < len(films) - 1 else None
 
-    meta = " · ".join(str(x) for x in [f["year"], f["country"], f"{f['runtime']} min"] if x)
-    byline = f"directed by {e(f['director'] or '—')}"
-    if f["tags"]:
-        byline += f" · {e(' · '.join(f['tags']))}"
-    if f["letterboxd"]:
-        byline += f' · <a href="{e(f["letterboxd"])}" rel="noopener">on Letterboxd</a>'
+    meta = " · ".join(filter(None, [
+        f"dir. {f['director']}" if f.get("director") else None,
+        f.get("country"),
+        f"{f['runtime']} min" if f.get("runtime") else None,
+    ]))
 
     nav = []
     if prev_f:
-        nav.append(f'previous <a href="../{prev_f["slug"]}/">{e(prev_f["title"])} '
-                   f'{prev_f["year"]}</a>')
+        nav.append(f'previous <a href="../{prev_f["slug"]}/">{e(film_url(prev_f))}</a>')
     if next_f:
-        nav.append(f'next <a href="../{next_f["slug"]}/">{e(next_f["title"])} '
-                   f'{next_f["year"]}</a>')
+        nav.append(f'next <a href="../{next_f["slug"]}/">{e(film_url(next_f))}</a>')
     if not nav:
         nav.append("the end of the manifest")
 
+    if f.get("letterboxd"):
+        nav.append(f'<a href="{e(f["letterboxd"])}" rel="noopener">'
+                   f'{e(f["letterboxd"].replace("https://", ""))}</a>')
+
+    review = (f'<p class="note">{e(f["review"])}</p>' if f.get("review") else "")
     body = f"""<p class="top"><a href="../../">← the manifest</a>
-  <span>{f['n']:02d} of {len(films):02d}</span></p>
+  <span class="selfurl">{e(film_url(f))}</span></p>
 <h1 class="title">{e(f['title'])}</h1>
-<p class="lead">{e(f['lead'])}</p>
-<p class="film-meta">{e(meta)} · <span class="stars">{e(stars(f['rating']))}</span></p>
-<p class="byline">{byline}</p>
-<p class="note note-drop">{e(f['note'])}</p>
+<p class="film-head">{e(stars(f['rating']))}
+  <span class="pos">{f['n']:02d} of {len(films):02d}</span></p>
+<p class="film-meta">{e(meta)}</p>
+{review}
 <p class="pager">{' · '.join(nav)}</p>
 {footer('../../')}"""
     return layout(title=f"{f['title']} ({f['year']}) — MAYDAY",
-                  desc=f"{f['title']} ({f['year']}), directed by {f['director']}. {f['lead']}",
+                  desc=f"{f['title']} ({f['year']})"
+                       + (f", directed by {f['director']}" if f.get("director") else "")
+                       + ". A film from the MAYDAY manifest.",
                   p="../../", path=f"film/{f['slug']}/", body=body)
 
 
-def page_about(films, moods):
-    body = f"""<p class="top"><a href="../">← the manifest</a><span>about</span></p>
+def page_about(films, profile, ratings):
+    rated = [f for f in films if f["rating"]]
+    five = sum(1 for f in films if f["rating"] == 5)
+    reviews = sum(1 for f in films if f["review"])
+    liked_only = sum(1 for f in films if f["rating"] is None)
+    body = f"""<p class="top"><a href="../">← the manifest</a><span class="selfurl">{e(CLEAN_URL)}/about/</span></p>
 <div class="doc">
   <section>
     <h2>What this is</h2>
-    <p>A list of films I would hand to someone with no other information about them.
-       {e(TAGLINE)}</p>
-    <p>It is not a canon, and it is not finished. It is what I have actually watched and would
-       defend, with the length and the mood written next to it so you can pick by what you can
-       stand to feel tonight.</p>
+    <p>{len(rated)} films I have rated, {five} of them five stars, plus {liked_only} I liked
+       without leaving a score. {e(TAGLINE)}</p>
+    <p>{e(profile['bio'])}</p>
   </section>
   <section>
     <h2>How a film gets in</h2>
     <ul>
-      <li>I watched it and it stayed with me for longer than the week.</li>
-      <li>I can say in one sentence what it does to a person.</li>
+      <li>I watched it and gave it a score, or liked it without one.</li>
+      <li>I can say in one sentence what it does to a person, and {reviews} of these I have.</li>
       <li>I would still recommend it to someone who does not share my taste.</li>
     </ul>
-    <p>Everything here comes from my Letterboxd log, where the five-star entries are the spine of
-       the list. Films I logged but never rated sit at the bottom, marked
-       <span class="k">not rated</span>.</p>
+    <p>Everything on this site comes out of my own Letterboxd log, which is where the rest of
+       what I have watched stays.</p>
   </section>
   <section>
     <h2>Reading it</h2>
     <ul>
-      <li>the number — position, nothing more</li>
-      <li>the moods — {e(', '.join(moods))}. A film carries two, at most</li>
-      <li>the stars — my own value from Letterboxd, not a score out of ten</li>
+      <li>the number — position on the list, highest rated first, nothing more</li>
+      <li>the stars — my own score: {stars(5)}, {stars(4.5)}, {stars(4)}, {stars(3.5)}, {stars(3)}</li>
+      <li><span class="k">liked</span> — I liked it on Letterboxd without giving it a score</li>
+      <li>the blue link on each line — the address of that film's page, spelled out</li>
     </ul>
   </section>
   <section>
     <h2>About the site</h2>
-    <p>One column of type, no rules, no boxes, no images, and no colour except the links, which are
-       blue because that is what links are. It is a static page built from a single JSON file and
-       published on sourcehut pages. The fonts are served from this domain, so loading a page asks
-       nobody else for anything.</p>
-    <p>The verdicts and the notes are mine, which is to say they are opinions, and you are allowed
-       to disagree with them loudly.</p>
+    <p>One column of type, no rules, no boxes, no images, and no colour except the links, which
+       are blue because that is what links are. It is a static page built from a single JSON file
+       and published on sourcehut pages. The fonts are served from this domain, so loading a page
+       asks nobody else for anything.</p>
+    <p>Film metadata (director, country, length) is matched against Wikidata and left blank when
+       there is no clean match, rather than guessed. The scores and the notes are mine, which is to
+       say they are opinions, and you are allowed to disagree with them loudly.</p>
   </section>
   <section>
     <h2>Where to find things</h2>
@@ -217,8 +246,8 @@ def page_about(films, moods):
                   p="../", path="about/", body=body)
 
 
-def page_404(films, moods):
-    body = """<p class="top"><a href="/MAYDAY/">← the manifest</a><span>404</span></p>
+def page_404(films, profile, ratings):
+    body = f"""<p class="top"><a href="/MAYDAY/">← the manifest</a><span class="selfurl">{e(CLEAN_URL)}/404</span></p>
 <div class="doc">
   <section>
     <h2>Nothing at this address</h2>
@@ -231,17 +260,9 @@ def page_404(films, moods):
                   path="404.html", body=body, indexable=False)
 
 
-def favicon():
-    return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">'
-            '<rect width="32" height="32" fill="#fff"/>'
-            '<text x="16" y="24" text-anchor="middle" fill="#000"'
-            ' font-family="Courier New, monospace" font-size="26" font-weight="bold">M</text>'
-            '</svg>')
-
-
 def main():
     data = json.load(open(DATA, encoding="utf-8"))
-    films, moods = data["films"], data["moods"]
+    films, profile, ratings = data["films"], data["profile"], data["ratings"]
 
     if os.path.isdir(SRC):
         shutil.rmtree(SRC)
@@ -250,18 +271,18 @@ def main():
     shutil.copytree(os.path.join(ASSETS, "fonts"), os.path.join(SRC, "assets", "fonts"))
     for f in ("style.css", "app.js"):
         shutil.copy(os.path.join(ASSETS, f), os.path.join(SRC, "assets", f))
-    open(os.path.join(SRC, "favicon.svg"), "w", encoding="utf-8").write(favicon())
+    shutil.copy(os.path.join(ASSETS, "favicon.svg"), os.path.join(SRC, "favicon.svg"))
 
     def w(path, text):
         full = os.path.join(SRC, path)
         os.makedirs(os.path.dirname(full), exist_ok=True)
         open(full, "w", encoding="utf-8").write(text)
 
-    w("index.html", page_index(films, moods))
+    w("index.html", page_index(films, profile, ratings))
     for f in films:
-        w(f"film/{f['slug']}/index.html", page_film(f, films, moods))
-    w("about/index.html", page_about(films, moods))
-    w("404.html", page_404(films, moods))
+        w(f"film/{f['slug']}/index.html", page_film(f, films, profile))
+    w("about/index.html", page_about(films, profile, ratings))
+    w("404.html", page_404(films, profile, ratings))
 
     urls = [f"{SITE_URL}/", f"{SITE_URL}/about/"] + \
            [f"{SITE_URL}/film/{f['slug']}/" for f in films]
@@ -274,7 +295,8 @@ def main():
     pages = sum(len(fs) for _, _, fs in os.walk(SRC))
     size = sum(os.path.getsize(os.path.join(d, f))
                for d, _, fs in os.walk(SRC) for f in fs)
-    print(f"built {pages} files, {size/1024:.0f} KiB into {SRC}")
+    print(f"built {pages} files, {size/1024:.0f} KiB into {SRC} "
+          f"({len(films)} films, {sum(1 for f in films if f.get('review'))} reviews)")
 
 
 if __name__ == "__main__":

@@ -1,95 +1,96 @@
 # MAYDAY
 
-A films manifest. Black lines, straight lines, nothing else.
+A films manifest. Type, whitespace and blue links. No rules, no boxes, no images.
 
 > It is said that once a pilot has issued the MAYDAY distress signal three times,
 > the probability of survival is almost zero.
 
-A static site: an index of films with a one-line verdict each, a page per film, an about
-page, and a machine-readable copy of the whole list. It is published on
-[sourcehut pages](https://pages.sr.ht) at <https://noahisarider.srht.site/MAYDAY/>.
+Live at <https://noahisarider.srht.site/MAYDAY/>: every film the author has rated on
+Letterboxd (105 of them: 85 rated, 20 liked), with his own score, his own review where
+he wrote one, and the film's page address spelled out as the link.
 
 ## Layout
 
 ```
-data/films.json     the list. this is the only file you edit.
-build.py            reads the json, writes site/
-assets/style.css    all of the design. one narrow column, no rules, no boxes,
-                    no colour except the blue links.
-assets/app.js       search box + mood filters. no dependencies.
-assets/fonts/       Special Elite + Courier Prime, self-hosted woff2, OFL 1.1
-site/               generated output. not in git. this is what gets published.
-publish.sh          build + upload to pages.sr.ht
-.build.yml          the same thing, run by builds.sr.ht on every push
+data/films.json                    the whole list. this is the only file you edit by hand.
+tools/build-films-from-export.py   rebuilds it from a Letterboxd export (+ Wikidata)
+build.py                           reads the json, writes site/
+assets/style.css                   all of the design
+assets/app.js                      search + rating filter, no dependencies
+assets/favicon.svg                 the letter M cut out of Special Elite, as a path
+assets/fonts/                      Special Elite + Courier Prime, self-hosted, OFL 1.1
+site/                              generated output, not in git, this is what gets published
+publish.sh                         build + upload to pages.sr.ht
+.build.yml                         the same thing, run by builds.sr.ht on push
 ```
 
-## Editing the list
+## Rebuilding the list from Letterboxd
 
-Add or change an entry in `data/films.json`, then:
+Export from Letterboxd (Settings → Data → Export your data), then:
 
 ```sh
-python build.py
+python tools/build-films-from-export.py ~/Downloads/letterboxd-<user>-<date>.zip
 ```
 
-A film record:
+It takes the ratings, the review text and the likes from the archive, then looks up
+director, country, runtime and genre on Wikidata. A lookup is only accepted when the
+English label matches the title **and** a publication (or TV start) date falls in the
+film's year, searching within the film class (`haswbstatement:P31=Q11424`) so that
+titles like *Her*, *Men* or *Civil War* do not resolve to constellations and taxa.
+Anything that does not match cleanly is left blank on purpose: a blank field is honest,
+a guessed director is not. About 103 of 105 match.
+
+It takes roughly two minutes, once. The result is cached in `data/films.json`, so
+`build.py` never touches the network.
+
+## Editing by hand
+
+Add or change an entry in `data/films.json`, then `python build.py`.
 
 ```json
 {
-  "n": 4,
+  "n": 21,
   "slug": "first-cow",
   "title": "First Cow",
   "year": 2019,
+  "rating": 5.0,
+  "liked": true,
   "director": "Kelly Reichardt",
   "country": "United States",
   "runtime": 121,
-  "rating": 5,
-  "tags": ["quiet", "tender"],
-  "lead": "One sentence printed under the title on the film page.",
-  "note": "Two or three sentences. The body of the film page.",
-  "letterboxd": "https://letterboxd.com/noahisarider/film/first-cow/"
+  "genre": "drama film",
+  "review": "the text shown under the film, in his own words",
+  "letterboxd": "https://boxd.it/krga"
 }
 ```
 
-- `slug` becomes the URL: `film/first-cow/`
-- `rating` is 1-5 or `null`. `null` prints **not rated** and no stars.
-- `tags` must come from the `moods` list at the top of the file. Two per film reads best.
-- `n` is the position on the manifest. Renumber by hand, the builder prints them in file order.
+- `slug` becomes the URL: `film/first-cow/`, and the link printed on each line.
+- `rating` 1–5, halves allowed, or `null` for a film that was liked but never scored.
+- `review` may be `null`. Chinese reviews are fine: they fall back to a system CJK face.
+- Order in the file is the order on the page. The generator prints the numbers it is given.
 
 ## Publishing
 
-The site lives at `noahisarider.srht.site/MAYDAY/`. To update it, either
+The site lives at `noahisarider.srht.site/MAYDAY/`. Either
 
 **Automatically** — push to the repository on git.sr.ht. `builds.sr.ht` runs `build.py`,
-tars `site/` and uploads it. Nothing to configure, the manifest requests its own
-`pages.sr.ht/PAGES:RW` token for the duration of the build.
+tars `site/` and uploads it. The manifest requests its own `pages.sr.ht/PAGES:RW` token
+for the duration of the build, so no secret is stored in the repository.
 
-**By hand** — needs a personal access token from <https://meta.sr.ht/oauth2/personal-tokens>
-with the scope `pages.sr.ht/PAGES:RW`:
+**By hand** — needs a personal access token from
+<https://meta.sr.ht/oauth2/personal-token> with the scope `pages.sr.ht/PAGES:RW`:
 
 ```sh
-echo "$TOKEN" > ~/.srht-token      # then publish.sh picks it up on its own
-./publish.sh                       # or: SRHT_TOKEN=... ./publish.sh
+echo "$TOKEN" > ~/.srht-token      # publish.sh picks this up on its own
+./publish.sh
 ```
 
 `SRHT_DOMAIN` and `SRHT_SUBDIR` override the two variables at the top of the script.
+If the token expires, `python tools/token-window.py` opens a one-field local page on
+<http://127.0.0.1:8788/> that writes a new one straight to `~/.srht-token`.
 
 ## Notes
 
-- Film metadata (year, director, country, runtime) was assembled from a Letterboxd RSS
-  export and enriched against Wikidata. Spot-check anything that looks wrong.
-- The ratings are the Letterboxd star values. Films at the bottom of the manifest were
-  logged but never rated: they are watched, not necessarily recommended. Prune them or
-  give them stars.
 - No cookies, no trackers, no external requests. Fonts are served from this domain.
-- Site content is the author's. `assets/fonts/` is under the SIL Open Font License 1.1.
-
-## Re-entering the token
-
-sr.ht tokens can expire. When publishing fails with 401:
-
-```sh
-python tools/token-window.py      # then open http://127.0.0.1:8788/
-```
-
-A one-field local page (127.0.0.1 only) writes the new token straight to
-`~/.srht-token`. Nothing is echoed back or logged.
+- Scores and reviews are the author's. Metadata comes from Letterboxd and Wikidata.
+- `assets/fonts/` is under the SIL Open Font License 1.1.
