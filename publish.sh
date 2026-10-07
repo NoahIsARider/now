@@ -5,12 +5,15 @@
 # with the scope  pages.sr.ht/PAGES:RW
 # Read from $SRHT_TOKEN, else from ~/.srht-token, else asked for on the terminal.
 #
-# note: this uploads to the domain root. the films manifest lives in /MAYDAY/ and is
-# published separately by its own publish.sh, into that subdirectory.
+# note: this uploads to the domain root, which REPLACES THE WHOLE SITE, subdirectories
+# included, so /MAYDAY/ is wiped every time and is published again at the end of this
+# script. the other direction is safe: a publish INTO a subdirectory only touches that
+# subdirectory.
 set -eu
 
 cd "$(dirname "$0")"
 DOMAIN="${SRHT_DOMAIN:-noahisarider.srht.site}"
+MAYDAY_DIR="${MAYDAY_DIR:-../MAYDAY}"
 
 TOKEN="${SRHT_TOKEN:-}"
 if [ -z "$TOKEN" ] && [ -f "$HOME/.srht-token" ]; then
@@ -39,3 +42,11 @@ curl -fsS -H "Authorization: Bearer $TOKEN" \
   "https://pages.sr.ht/publish/$DOMAIN"
 echo
 echo "published -> https://$DOMAIN/"
+
+# put the films manifest back: the upload above replaced the entire site
+if [ -d "$MAYDAY_DIR" ] && [ -f "$MAYDAY_DIR/publish.sh" ]; then
+  echo
+  echo "the root publish replaces the whole site, so /MAYDAY/ goes back up too ..."
+  SRHT_TOKEN="$TOKEN" SRHT_DOMAIN="$DOMAIN" sh -c "cd '$MAYDAY_DIR' && ./publish.sh" \
+    || echo "warning: could not republish MAYDAY, run ../MAYDAY/publish.sh by hand"
+fi

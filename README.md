@@ -42,9 +42,13 @@ Change `data/now.json`, then `python build.py`.
 
 ## Publishing
 
-`noahisarider.srht.site/` is the domain root. The films manifest lives at `/MAYDAY/` and is
-published separately, into that subdirectory, by its own `publish.sh` — the two do not
-overwrite each other.
+`noahisarider.srht.site/` is the domain root, and the films manifest lives at `/MAYDAY/`.
+
+**Publishing the root replaces the whole site, subdirectories included.** Verified: after a
+root publish `/MAYDAY/` answered 404. So `publish.sh` here publishes the root and then runs
+`../MAYDAY/publish.sh` to put the manifest back. The other direction is harmless — a publish
+*into* a subdirectory only touches that subdirectory, so pushing MAYDAY never disturbs this
+page. If you ever publish the root by hand, republish MAYDAY afterwards.
 
 ```sh
 ./publish.sh          # uses ~/.srht-token
