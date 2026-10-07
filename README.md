@@ -79,11 +79,19 @@ Add or change an entry in `data/films.json`, then `python build.py`.
 
 ## Publishing
 
-The site lives at `noahisarider.srht.site/MAYDAY/`. Either
+The site lives at `noahisarider.srht.site/MAYDAY/`.
 
-**Automatically** — push to the repository on git.sr.ht. `builds.sr.ht` runs `build.py`,
-tars `site/` and uploads it. The manifest requests its own `pages.sr.ht/PAGES:RW` token
-for the duration of the build, so no secret is stored in the repository.
+**On push** — `git push` to `git@git.sr.ht:~noahisarider/MAYDAY` runs
+`tools/git-hooks/pre-push`, which rebuilds `site/` and uploads it. Install it once:
+
+```sh
+cp tools/git-hooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push
+```
+
+This exists because the `.build.yml` route is not available on a free account:
+pushing while builds.sr.ht was wired up returned
+`Error submitting build job: A paid account is required to use this feature`.
+`.build.yml` is kept for the day that changes.
 
 **By hand** — needs a personal access token from
 <https://meta.sr.ht/oauth2/personal-token> with the scope `pages.sr.ht/PAGES:RW`:
@@ -96,6 +104,8 @@ echo "$TOKEN" > ~/.srht-token      # publish.sh picks this up on its own
 `SRHT_DOMAIN` and `SRHT_SUBDIR` override the two variables at the top of the script.
 If the token expires, `python tools/token-window.py` opens a one-field local page on
 <http://127.0.0.1:8788/> that writes a new one straight to `~/.srht-token`.
+
+Pushes go over SSH, not HTTPS: git.sr.ht answers an HTTPS push with a 403.
 
 ## Notes
 

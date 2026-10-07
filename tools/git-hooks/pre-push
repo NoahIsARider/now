@@ -1,0 +1,20 @@
+#!/bin/sh
+# MAYDAY: publish the site whenever master is pushed.
+#
+# builds.sr.ht runs .build.yml on push, but that service needs a paid account
+# ("A paid account is required to use this feature"), so the deploy happens here.
+# Install with:  cp tools/git-hooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push
+
+remote="$1"
+refs=$(cat)
+
+case "$refs" in
+  *refs/heads/master*|*refs/heads/main*)
+    echo "[mayday] rebuilding and publishing to pages.sr.ht ..."
+    if ! ./publish.sh; then
+      echo "[mayday] publish failed. the push continues, the site is unchanged."
+    fi
+    ;;
+esac
+
+exit 0
