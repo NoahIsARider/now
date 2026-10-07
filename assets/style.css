@@ -131,6 +131,8 @@ h1, h2 { font-family: var(--display); font-weight: 400; }
   line-height: 1.78;
   max-width: 62ch;
 }
+.entry .review p { margin: 0 0 7px; }
+.entry .review p:last-child { margin-bottom: 0; }
 .stars { letter-spacing: 0.06em; white-space: nowrap; }
 
 .empty { font-size: 14px; margin: 30px 0 0; max-width: 60ch; }
@@ -163,7 +165,8 @@ h1, h2 { font-family: var(--display); font-weight: 400; }
 }
 .film-head .pos { font-size: 12.5px; }
 .film-meta { font-size: 13.5px; margin: 0 0 26px; }
-.note { font-size: 16px; line-height: 1.82; margin: 0 0 30px; max-width: 64ch; }
+.note { font-size: 16px; line-height: 1.82; margin: 0 0 14px; max-width: 64ch; }
+.note:last-of-type { margin-bottom: 30px; }
 .pager { font-size: 13px; margin: 0; line-height: 1.9; overflow-wrap: break-word; }
 
 /* --- prose pages --------------------------------------------------------- */

@@ -56,6 +56,14 @@ def exposed(url):
     return soft(url.replace("https://", ""))
 
 
+def paras(text):
+    """a blank line in a review is a paragraph break"""
+    if not text:
+        return []
+    norm = text.replace(chr(13) + chr(10), chr(10)).replace(chr(13), chr(10))
+    return [c.strip() for c in norm.split(chr(10) + chr(10)) if c.strip()]
+
+
 def layout(*, title, desc, p, body, path, indexable=True):
     url = f"{SITE_URL}/{path}" if path else f"{SITE_URL}/"
     return f"""<!doctype html>
@@ -122,8 +130,10 @@ def page_index(films, profile, ratings):
             f.get("country"),
             f"{f['runtime']} min" if f.get("runtime") else None,
         ]))
-        review = (f'      <blockquote class="review">{e(f["review"])}</blockquote>\n'
-                  if f.get("review") else "")
+        review = ""
+        if f.get("review"):
+            ps = "".join(f"<p>{e(p)}</p>" for p in paras(f["review"]))
+            review = f'      <blockquote class="review">{ps}</blockquote>\n'
         lb = f.get("letterboxd_url")
         link = (f'<a class="url" href="{e(lb)}" rel="noopener">{exposed(lb)}</a>'
                 if lb else
@@ -195,7 +205,7 @@ def page_film(f, films, profile):
         nav.append(f'<a href="{e(f["letterboxd_url"])}" rel="noopener">'
                    f'{exposed(f["letterboxd_url"])}</a>')
 
-    review = (f'<p class="note">{e(f["review"])}</p>' if f.get("review") else "")
+    review = "".join(f'<p class="note">{e(p)}</p>' for p in paras(f.get("review")))
     body = f"""<p class="top"><a href="../../">← the manifest</a>
   <span class="selfurl">{soft(film_url(f))}</span></p>
 <h1 class="title">{e(f['title'])}</h1>
