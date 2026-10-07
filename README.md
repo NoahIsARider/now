@@ -111,6 +111,11 @@ If the token expires, `python tools/token-window.py` opens a one-field local pag
 
 Pushes go over SSH, not HTTPS: git.sr.ht answers an HTTPS push with a 403.
 
+The domain root now holds a separate page (`srht-home` in the same projects folder). A root
+publish replaces the entire site, so it wipes `/MAYDAY/`. Publishing *into* this
+subdirectory, as this script does, leaves everything else alone — so pushes here are always
+safe. If `/MAYDAY/` ever 404s, the root was republished: just run `./publish.sh` again.
+
 ## Notes
 
 - No cookies, no trackers, no external requests. Fonts are served from this domain.
