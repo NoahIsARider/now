@@ -6,8 +6,9 @@ A films manifest. Type, whitespace and blue links. No rules, no boxes, no images
 > the probability of survival is almost zero.
 
 Live at <https://noahisarider.srht.site/MAYDAY/>: every film the author has rated on
-Letterboxd (105 of them: 85 rated, 20 liked), with his own score, his own review where
-he wrote one, and the film's page address spelled out as the link.
+Letterboxd (106 of them: 85 rated, 20 liked without a score, 1 he only wrote about), with
+his own score, his own review where he wrote one, and each film's Letterboxd address
+spelled out as the only link on the line. Two pages in total, the manifest and an about.
 
 ## Layout
 
@@ -28,10 +29,11 @@ tools/git-hooks/pre-push           the same thing, run on every push
 tools/builds.sr.ht.yml             the builds.sr.ht manifest, inactive (needs a paid account)
 ```
 
-Each line on the index carries two links: the blue address is the film on Letterboxd, and
-the number at the start of the line opens that film's page on this site. Every review is
-published in English. The Chinese originals stay in `data/films.json` as `review_zh` and are
-stripped from the published `films.json`, so no Chinese is served.
+The blue address at the end of each line is that film on Letterboxd, and it is the only link
+on the line. There are no per-film pages any more: the review, the score and the credits all
+sit on the manifest itself. Every review is published in English. The Chinese originals stay
+in `data/films.json` as `review_zh` and are stripped from the published `films.json`, so no
+Chinese is served.
 
 ## Rebuilding the list from Letterboxd
 
@@ -73,7 +75,7 @@ Add or change an entry in `data/films.json`, then `python build.py`.
 }
 ```
 
-- `slug` becomes the URL: `film/first-cow/`, and the link printed on each line.
+- `slug` is unused for now, kept in case per-film pages come back.
 - `rating` 1–5, halves allowed, or `null` for a film that was liked but never scored.
 - `review` may be `null`. Chinese reviews are fine: they fall back to a system CJK face.
 - Order in the file is the order on the page. The generator prints the numbers it is given.

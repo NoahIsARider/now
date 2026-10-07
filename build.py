@@ -136,9 +136,7 @@ def page_index(films, profile, ratings):
             review = f'      <blockquote class="review">{ps}</blockquote>\n'
         lb = f.get("letterboxd_url")
         link = (f'<a class="url" href="{e(lb)}" rel="noopener">{exposed(lb)}</a>'
-                if lb else
-                f'<a class="url" href="film/{f["slug"]}/">'
-                f'{exposed(CLEAN_URL + "/film/" + f["slug"] + "/")}</a>')
+                if lb else "")
         entries.append(f"""  <li class="entry" data-rating="{f['rating'] if f['rating'] is not None else ''}"
       data-liked="{'1' if f['liked'] else '0'}" data-hay="{e(hay)}">
     <div class="no">{f['n']:02d}</div>
@@ -178,50 +176,6 @@ the filters.</p>
                   p="./", path="", body=body)
 
 
-def film_url(f):
-    return f"{CLEAN_URL}/film/{f['slug']}/"
-
-
-def page_film(f, films, profile):
-    i = films.index(f)
-    prev_f = films[i - 1] if i > 0 else None
-    next_f = films[i + 1] if i < len(films) - 1 else None
-
-    meta = " · ".join(filter(None, [
-        f"dir. {f['director']}" if f.get("director") else None,
-        f.get("country"),
-        f"{f['runtime']} min" if f.get("runtime") else None,
-    ]))
-
-    nav = []
-    if prev_f:
-        nav.append(f'previous <a href="../{prev_f["slug"]}/">{soft(film_url(prev_f))}</a>')
-    if next_f:
-        nav.append(f'next <a href="../{next_f["slug"]}/">{soft(film_url(next_f))}</a>')
-    if not nav:
-        nav.append("the end of the manifest")
-
-    if f.get("letterboxd_url"):
-        nav.append(f'<a href="{e(f["letterboxd_url"])}" rel="noopener">'
-                   f'{exposed(f["letterboxd_url"])}</a>')
-
-    review = "".join(f'<p class="note">{e(p)}</p>' for p in paras(f.get("review")))
-    body = f"""<p class="top"><a href="../../">← the manifest</a>
-  <span class="selfurl">{soft(film_url(f))}</span></p>
-<h1 class="title">{e(f['title'])}</h1>
-<p class="film-head">{e(status(f))}
-  <span class="pos">{f['n']:02d} of {len(films):02d}</span></p>
-<p class="film-meta">{e(meta)}</p>
-{review}
-<p class="pager">{' · '.join(nav)}</p>
-{footer('../../')}"""
-    return layout(title=f"{f['title']} ({f['year']}) — MAYDAY",
-                  desc=f"{f['title']} ({f['year']})"
-                       + (f", directed by {f['director']}" if f.get("director") else "")
-                       + ". A film from the MAYDAY manifest.",
-                  p="../../", path=f"film/{f['slug']}/", body=body)
-
-
 def page_about(films, profile, ratings):
     rated = [f for f in films if f["rating"]]
     five = sum(1 for f in films if f["rating"] == 5)
@@ -251,8 +205,7 @@ def page_about(films, profile, ratings):
   <section>
     <h2>Reading it</h2>
     <ul>
-      <li>the number — position on the list, highest rated first. it also opens that film's
-          page here</li>
+      <li>the number — position on the list, highest rated first</li>
       <li>the stars — my own score: {stars(5)}, {stars(4.5)}, {stars(4)}, {stars(3.5)}, {stars(3)}</li>
       <li><span class="k">liked</span> — liked on Letterboxd without giving it a score</li>
       <li>the blue address on each line — that film's page on Letterboxd, spelled out</li>
@@ -304,7 +257,6 @@ def main():
 
     if os.path.isdir(SRC):
         shutil.rmtree(SRC)
-    os.makedirs(os.path.join(SRC, "film"), exist_ok=True)
 
     shutil.copytree(os.path.join(ASSETS, "fonts"), os.path.join(SRC, "assets", "fonts"))
     for f in ("style.css", "app.js"):
@@ -317,13 +269,10 @@ def main():
         open(full, "w", encoding="utf-8").write(text)
 
     w("index.html", page_index(films, profile, ratings))
-    for f in films:
-        w(f"film/{f['slug']}/index.html", page_film(f, films, profile))
     w("about/index.html", page_about(films, profile, ratings))
     w("404.html", page_404(films, profile, ratings))
 
-    urls = [f"{SITE_URL}/", f"{SITE_URL}/about/"] + \
-           [f"{SITE_URL}/film/{f['slug']}/" for f in films]
+    urls = [f"{SITE_URL}/", f"{SITE_URL}/about/"]
     w("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n'
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
       "".join(f"  <url><loc>{e(u)}</loc></url>\n" for u in urls) + "</urlset>\n")
@@ -339,7 +288,8 @@ def main():
     size = sum(os.path.getsize(os.path.join(d, f))
                for d, _, fs in os.walk(SRC) for f in fs)
     print(f"built {pages} files, {size/1024:.0f} KiB into {SRC} "
-          f"({len(films)} films, {sum(1 for f in films if f.get('review'))} reviews)")
+          f"({len(films)} films on one page, {sum(1 for f in films if f.get('review'))} reviews, "
+          f"index + about only)")
 
 
 if __name__ == "__main__":

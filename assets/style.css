@@ -137,38 +137,6 @@ h1, h2 { font-family: var(--display); font-weight: 400; }
 
 .empty { font-size: 14px; margin: 30px 0 0; max-width: 60ch; }
 
-/* --- film page ----------------------------------------------------------- */
-.top {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  column-gap: 16px;
-  row-gap: 2px;
-  font-size: 12.5px;
-  margin-bottom: 30px;
-}
-.selfurl { overflow-wrap: break-word; }
-.title {
-  font-size: 40px;
-  line-height: 1.02;
-  margin: 0 0 10px;
-  overflow-wrap: anywhere;
-}
-.film-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-  font-size: 15px;
-  margin: 0 0 6px;
-}
-.film-head .pos { font-size: 12.5px; }
-.film-meta { font-size: 13.5px; margin: 0 0 26px; }
-.note { font-size: 16px; line-height: 1.82; margin: 0 0 14px; max-width: 64ch; }
-.note:last-of-type { margin-bottom: 30px; }
-.pager { font-size: 13px; margin: 0; line-height: 1.9; overflow-wrap: break-word; }
-
 /* --- prose pages --------------------------------------------------------- */
 .doc section { margin-bottom: 32px; }
 .doc h2 { font-size: 20px; margin: 0 0 10px; }
@@ -196,7 +164,6 @@ h1, h2 { font-family: var(--display); font-weight: 400; }
 @media (max-width: 640px) {
   .shell { padding: 32px 18px 48px; }
   .mark { font-size: 32px; }
-  .title { font-size: 31px; }
   .entry { margin-bottom: 24px; }
   .entry .url { margin-left: 0; text-align: left; }
 }
