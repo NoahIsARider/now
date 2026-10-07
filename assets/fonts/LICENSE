@@ -1,0 +1,15 @@
+Fonts in this directory
+=======================
+
+Special Elite — Brian J. Bonislawsky / Astigmatic (Cosmic Patterns)
+  https://fonts.google.com/specimen/Special+Elite
+
+Courier Prime — Alan Dague-Greene
+  https://fonts.google.com/specimen/Courier+Prime
+
+Both are licensed under the SIL Open Font License, Version 1.1, which permits
+use, modification and redistribution, including bundling with a website.
+Full text: https://scripts.sil.org/OFL
+
+Files here are the latin-subset woff2 builds served by Google Fonts, kept
+locally so that loading a page makes no request to a third party.

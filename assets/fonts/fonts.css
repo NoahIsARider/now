@@ -1,0 +1,4 @@
+/* Self-hosted. Both families are SIL Open Font License 1.1 (see fonts/LICENSE). */
+@font-face{font-family:'Courier Prime';font-style:normal;font-weight:400;font-display:swap;src:url('./courierprime-400.woff2') format('woff2');}
+@font-face{font-family:'Courier Prime';font-style:normal;font-weight:700;font-display:swap;src:url('./courierprime-700.woff2') format('woff2');}
+@font-face{font-family:'Special Elite';font-style:normal;font-weight:400;font-display:swap;src:url('./specialelite-400.woff2') format('woff2');}

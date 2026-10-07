@@ -1,0 +1,76 @@
+/* ==========================================================================
+   noahisarider — what I am doing right now
+   A narrow column of text. No rules, no boxes, no images, no nav.
+   ========================================================================== */
+
+@import url("./fonts/fonts.css");
+
+:root {
+  --ink: #000;
+  --paper: #fff;
+  --blue: #0000ee;
+  --blue-hover: #0000a3;
+  --display: "Special Elite", "Courier New", monospace;
+  --text: "Courier Prime", "Courier New", monospace;
+  --col: 34em;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 15px/1.72 var(--text);
+  letter-spacing: 0.005em;
+}
+
+.shell {
+  max-width: var(--col);
+  margin: 0 auto;
+  padding: 15vh 26px 12vh;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:visited { color: var(--blue); }
+a:hover, a:focus-visible {
+  color: var(--blue-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+:focus-visible { outline: 0; background: #f2f2f2; box-shadow: 0 0 0 4px #f2f2f2; }
+
+/* --- masthead: a name and a date, nothing else --------------------------- */
+.mast { margin-bottom: 3.4em; }
+.name {
+  font-family: var(--display);
+  font-size: 19px;
+  margin: 0 0 4px;
+}
+.stamp { margin: 0; font-size: 12.5px; color: var(--ink); }
+
+/* --- sections ------------------------------------------------------------ */
+section { margin-bottom: 2.6em; }
+.label {
+  font-family: var(--display);
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+.lead { margin: 0; }
+.summary { margin-bottom: 2.6em; }
+.items { list-style: none; margin: 0; padding: 0; }
+.items li { margin-bottom: 3px; }
+.items li::before { content: "\00b7  "; }
+
+/* --- footer -------------------------------------------------------------- */
+.foot {
+  margin-top: 4em;
+  font-size: 13px;
+}
+.foot a { margin-right: 14px; }
+
+@media (max-width: 560px) {
+  .shell { padding: 8vh 20px 10vh; }
+}

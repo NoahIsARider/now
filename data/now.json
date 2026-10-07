@@ -1,0 +1,36 @@
+{
+  "updated": "2026-10-07",
+  "name": "noahisarider",
+  "summary": "Preparing PhD applications. Four papers in flight.",
+  "sections": [
+    {
+      "label": "work",
+      "items": [
+        "one under review, on counterfactual software defect detection",
+        "one in internal review and being polished, on tourism management",
+        "one in progress, a quantitative meta-analysis in smart healthcare",
+        "one in progress, a mental health coaching agent for smart healthcare"
+      ]
+    },
+    {
+      "label": "elsewhere",
+      "body": "An X account for technology and the things I am learning. Mastodon and Bluesky for art."
+    },
+    {
+      "label": "watching",
+      "body": "[Primetime](https://letterboxd.com/film/primetime-2026/) — the moral position of the story is genuinely ambiguous, but the characters are sharply drawn and the setting is real, so the whole thing feels natural. The visual language is unafraid, and it works far better than people are saying it does."
+    },
+    {
+      "label": "listening",
+      "body": "[Racing Mount Pleasant](https://racingmountpleasant.bandcamp.com/album/racing-mount-pleasant-2)"
+    }
+  ],
+  "footer": [
+    { "label": "rss", "href": "feed.xml" },
+    { "label": "films", "href": "https://noahisarider.srht.site/MAYDAY/" },
+    { "label": "letterboxd", "href": "https://letterboxd.com/noahisarider/" }
+  ],
+  "changelog": [
+    { "date": "2026-10-07", "note": "first version" }
+  ]
+}
