@@ -7,8 +7,9 @@ Updated when something changes, with an RSS feed for whoever wants it.
 ## Layout
 
 ```
-data/now.json            the whole page. this is the only file you edit.
-build.py                 reads it, writes site/
+data/now.json            the now page. edit this for the front page.
+data/papers.json         the papers page (papers.html): what I am reading, with notes.
+build.py                 reads both, writes site/
 assets/style.css         the design: one narrow column, black on white, blue links
 assets/fonts/            Special Elite + Courier Prime, self-hosted, OFL 1.1
 site/                    generated output, not in git, this is what gets published
@@ -39,6 +40,11 @@ Change `data/now.json`, then `python build.py`.
 - **When you change something, add a line to `changelog`.** The newest entry becomes the
   top item in `feed.xml` and carries the full current text, so subscribers see the update.
   Older entries stay in the feed with their note.
+
+The papers page is the same idea: edit `data/papers.json`, re-run. Papers are grouped
+(`label` + `papers`); each paper has `title`, optional `url`, `authors`, `venue`, `year`,
+optional `status` (shown unless it is `read`), and an optional `note` — `note` accepts the
+same inline `[text](url)` links.
 
 ## Publishing
 

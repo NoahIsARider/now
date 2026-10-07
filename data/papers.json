@@ -1,0 +1,80 @@
+{
+  "updated": "2026-10-07",
+  "name": "noahisarider",
+  "summary": "Recent reading notes: looped models and diffusion LMs, post-training and RL, plus some human-AI collaboration.",
+  "groups": [
+    {
+      "label": "october 2026",
+      "papers": [
+        {
+          "title": "Large Language Continuous Diffusion Models",
+          "authors": "Zhihan Yang, Wei Guo, Jean-Marie Lemercier, et al.",
+          "venue": "arXiv",
+          "year": 2026,
+          "url": "https://arxiv.org/abs/2610.02665",
+          "note": "Sigma, a large-scale continuous diffusion LM. The speed-up story is not mysterious: DDIM cuts the number of denoising rounds, and PDD merges several rounds of prediction into a single model call."
+        },
+        {
+          "title": "Towards Looped Models Done Right, Part II: Rethinking at Fixed Points",
+          "authors": "Benhao Huang, Chufan Shi, Junlin Chen, et al.",
+          "venue": "arXiv",
+          "year": 2026,
+          "url": "https://arxiv.org/abs/2610.06833",
+          "note": "If a looped LM's state nearly stops changing, the path to that point stops mattering — truncated backprop, a 3x smaller KV cache and a student that prefills ~1.8x faster all fall out of it. A learned depth prior plus orthogonal injection is what makes the fixed point reliable."
+        },
+        {
+          "title": "Finetuning with Sampling: SFT Learns Better Than You Think",
+          "authors": "Aayush Karan, Sitan Chen, Yilun Du",
+          "venue": "arXiv",
+          "year": 2026,
+          "url": "https://arxiv.org/abs/2610.02140",
+          "note": "Treats SFT's generalization problem as a data problem rather than an objective problem: projection sampling reshapes expert traces toward the base model's distribution, and plain SFT then rivals RL post-training. Worth noting the theory assumes exact MH while the implementation is an approximate acceptance rule."
+        },
+        {
+          "title": "Looped Diffusion Transformer",
+          "authors": "Yong Xien Chng, Tianyi Chen, Wenwen Tong, et al.",
+          "venue": "arXiv",
+          "year": 2026,
+          "url": "https://arxiv.org/abs/2609.40305",
+          "note": "A 260M DiT that loops its middle blocks beats a model 6.5x larger: deep supervision on every loop, plus an orthogonal-projection attention (XSA) that stops repeated loops from washing out spatial information."
+        },
+        {
+          "title": "Sharpening Tax in Post-Training",
+          "authors": "Changdae Oh, Qi Zeng, Qi Qi, et al.",
+          "venue": "arXiv",
+          "year": 2026,
+          "url": "https://arxiv.org/abs/2610.01509",
+          "note": "RL post-training pushes tasks toward 'always solved or never solved', costing pass@k coverage. The Sharpening Tax quantifies the loss; PTGS raises the sampling temperature on hard prompts and pays a smaller tax. Also a good model of how to turn a broad controversy into a verifiable research chain."
+        },
+        {
+          "title": "Information-Time Proximal Policy Optimization",
+          "authors": "Yongcheng Zeng, Xinyu Cui, Yan Song, et al.",
+          "venue": "arXiv",
+          "year": 2026,
+          "url": "https://arxiv.org/abs/2609.24380",
+          "note": "Token distance is not information distance. InfoPPO re-derives discounting and clipping in 'information time' using per-state uncertainty, keeping terminal rewards alive in long reasoning chains instead of over-attenuating them."
+        },
+        {
+          "title": "Generative AI and Human Knowledge Sharing: Evidence from a Natural Experiment",
+          "authors": "Y. Su, K. Zhang, Q. Wang, L. Qiu",
+          "venue": "SSRN working paper",
+          "year": 2025,
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4628786",
+          "note": "A Quora policy shock analysed with DID: embedding AI answers raised human answer volume by ~5.5% and length by 22.5% — no crowding out. The mechanism they isolate is an AI-conformity effect: people align their answers to AI as a trusted source, confirmed by a follow-up experiment."
+        },
+        {
+          "title": "Collaborative human-AI trust (CHAI-T): A process framework for active management of trust in human-AI collaboration",
+          "authors": "Melanie J. McGrath, Andreas Duenser, Justine Lacey, Cécile Paris",
+          "venue": "Computers in Human Behavior: Artificial Humans",
+          "year": 2025,
+          "url": "https://arxiv.org/abs/2404.01615",
+          "note": "Treats trust as something you actively manage across a teaming lifecycle rather than calibrate once: three classes of antecedents plus team processes and performance phases, aiming at the zone between rejection and over-reliance."
+        },
+        {
+          "title": "AI Systems and AI Agents as Cognitive Participants: Empirical Evidence of Problem Formation in Decision Systems",
+          "note": "Three empirical illustrations — semiconductor manufacturing, engineering design, logistics — of AI moving upstream: no longer only solving given problems, but shaping what counts as an anomaly, a feasible design, or a requirement."
+        }
+      ]
+    }
+  ]
+}

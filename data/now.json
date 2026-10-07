@@ -27,10 +27,12 @@
   ],
   "footer": [
     { "label": "rss", "href": "feed.xml" },
+    { "label": "papers", "href": "papers.html" },
     { "label": "films", "href": "https://noahisarider.srht.site/MAYDAY/" },
     { "label": "letterboxd", "href": "https://letterboxd.com/noahisarider/" }
   ],
   "changelog": [
-    { "date": "2026-10-07", "note": "first version" }
+    { "date": "2026-10-07", "note": "first version" },
+    { "date": "2026-10-07", "note": "added a papers page" }
   ]
 }
