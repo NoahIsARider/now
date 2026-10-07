@@ -24,7 +24,9 @@
    "genre": "comedy film",
    "runtime": 107,
    "slug": "the-invite",
-   "n": 1
+   "n": 1,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-invite-2026/"
   },
   {
    "title": "Bugonia",
@@ -39,7 +41,9 @@
    "genre": "science fiction film, comedy film, black comedy film, thriller film",
    "runtime": 118,
    "slug": "bugonia",
-   "n": 2
+   "n": 2,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/bugonia/"
   },
   {
    "title": "It Was Just an Accident",
@@ -54,7 +58,9 @@
    "genre": "drama film",
    "runtime": 105,
    "slug": "it-was-just-an-accident",
-   "n": 3
+   "n": 3,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/it-was-just-an-accident/"
   },
   {
    "title": "Pillion",
@@ -69,13 +75,15 @@
    "genre": "drama film, LGBTQ-related film, romantic comedy film",
    "runtime": 106,
    "slug": "pillion",
-   "n": 4
+   "n": 4,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/pillion-2025/"
   },
   {
    "title": "Sinners",
    "year": 2025,
    "rating": 5.0,
-   "review": "最开始是一种对黑人欲望与社会审视下的自我接受与内在追溯，然后转向莫名其妙的战斗与陈词滥调的种族斗争。但是音乐真的好听，概念和视觉也很高级。",
+   "review": "It opens as self-acceptance and an inner reckoning with Black desire under a white gaze, then turns into a fight scene that comes out of nowhere and a racial struggle told in cliches. The music is genuinely great though, and the concept and the images are first rate.",
    "liked": true,
    "letterboxd": "https://boxd.it/KQMM",
    "qid": "Q125473145",
@@ -84,7 +92,9 @@
    "genre": "vampire film, drama film, fantasy film, thriller film, horror film",
    "runtime": 137,
    "slug": "sinners",
-   "n": 5
+   "n": 5,
+   "review_zh": "最开始是一种对黑人欲望与社会审视下的自我接受与内在追溯，然后转向莫名其妙的战斗与陈词滥调的种族斗争。但是音乐真的好听，概念和视觉也很高级。",
+   "letterboxd_url": "https://letterboxd.com/film/sinners-2025/"
   },
   {
    "title": "That Summer in Paris",
@@ -99,7 +109,9 @@
    "genre": null,
    "runtime": 77,
    "slug": "that-summer-in-paris",
-   "n": 6
+   "n": 6,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/that-summer-in-paris/"
   },
   {
    "title": "The Secret Agent",
@@ -114,7 +126,9 @@
    "genre": "drama film, thriller film, historical film, political thriller film",
    "runtime": 160,
    "slug": "the-secret-agent",
-   "n": 7
+   "n": 7,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-secret-agent-2025/"
   },
   {
    "title": "Misericordia",
@@ -129,13 +143,15 @@
    "genre": "comedy drama, crime film",
    "runtime": 103,
    "slug": "misericordia",
-   "n": 8
+   "n": 8,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/misericordia-2024/"
   },
   {
    "title": "The Substance",
    "year": 2024,
    "rating": 5.0,
-   "review": "我最喜欢的一个镜头是苏和伊丽莎白对视的那一刻，因为那是我在观看电影时第一次认识到他们不是同一个人，也许也是苏和伊丽莎白第一次意识到他们不是同一个人。我们总是认为灵魂或者意识、记忆决定了我们是谁。既然我还是我自己，于是我们允许自己去伤害自己的身体，过度追求美丽。但是我们的具身体验最终塑造了我们，特别是在今天AI的时代。哪怕AI被输入了我的全部记忆，它也不是我；我才是我，在我的身体之中。\r\n\r\n作者用一种极致的对身体的折磨提醒我们，为美丽焦虑虽然是不好的，但是随着时代进步以及不断地学习，我们也是可以学会去找到一种温和的中庸状态的。过于夸张的结尾其实是在提醒我们，在后女权时代，就不要为自己没有那么自信而陷入羞辱循环中了，毕竟我们还是不会弄得自己在舞台上变身怪物、大肆喷血的",
+   "review": "My favourite shot is the moment Sue and Elisabeth look at each other, because it was the first time while watching that I understood they are not the same person, and maybe the first time Sue and Elisabeth understood it too.\n\nWe like to think the soul, or consciousness, or memory is what makes us who we are. As long as I am still myself, we let ourselves damage the body and chase beauty too far. But it is the embodied experience that ends up making us, especially now, in the age of AI. Even with all of my memories loaded into it, it is not me. I am me, inside my body.\n\nThe film uses an extreme torture of the body to remind us that anxiety about beauty is bad, and that as things move on and we keep learning we can find a gentler middle. The overdone ending is a reminder that in a post-feminist age we should stop shaming ourselves for not being confident, since none of us is about to turn into a monster and spray blood across a stage.",
    "liked": true,
    "letterboxd": "https://boxd.it/zanS",
    "qid": "Q113380226",
@@ -144,7 +160,9 @@
    "genre": "science fiction horror film, drama film, body horror film, satirical film, thriller film, psychological thriller film, horror film, science fiction film, psychological horror film, psychological drama film, monster film, splatter film, independent film, black comedy film, desire horror fiction",
    "runtime": 141,
    "slug": "the-substance",
-   "n": 9
+   "n": 9,
+   "review_zh": "我最喜欢的一个镜头是苏和伊丽莎白对视的那一刻，因为那是我在观看电影时第一次认识到他们不是同一个人，也许也是苏和伊丽莎白第一次意识到他们不是同一个人。我们总是认为灵魂或者意识、记忆决定了我们是谁。既然我还是我自己，于是我们允许自己去伤害自己的身体，过度追求美丽。但是我们的具身体验最终塑造了我们，特别是在今天AI的时代。哪怕AI被输入了我的全部记忆，它也不是我；我才是我，在我的身体之中。\n\n作者用一种极致的对身体的折磨提醒我们，为美丽焦虑虽然是不好的，但是随着时代进步以及不断地学习，我们也是可以学会去找到一种温和的中庸状态的。过于夸张的结尾其实是在提醒我们，在后女权时代，就不要为自己没有那么自信而陷入羞辱循环中了，毕竟我们还是不会弄得自己在舞台上变身怪物、大肆喷血的",
+   "letterboxd_url": "https://letterboxd.com/film/the-substance/"
   },
   {
    "title": "Do Not Expect Too Much from the End of the World",
@@ -159,13 +177,15 @@
    "genre": "comedy film",
    "runtime": 163,
    "slug": "do-not-expect-too-much-from-the-end-of-the-world",
-   "n": 10
+   "n": 10,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/do-not-expect-too-much-from-the-end-of-the-world/"
   },
   {
    "title": "Goodbye Julia",
    "year": 2023,
    "rating": 5.0,
-   "review": "虽然将宏观伤痛写入小家故事的电影并不少，但是这部电影仍然通过突出情感的真诚，人性的弱点与社会导致的不可逃避的结局之间的张力，带来了一次特殊的情感体验",
+   "review": "Plenty of films fold a national wound into a small family story. This one still lands as something rare, because it holds the sincerity of the feeling against the weakness of the people and against an ending society made unavoidable.",
    "liked": false,
    "letterboxd": "https://boxd.it/G3U0",
    "qid": "Q117713987",
@@ -174,7 +194,9 @@
    "genre": "drama film",
    "runtime": 120,
    "slug": "goodbye-julia",
-   "n": 11
+   "n": 11,
+   "review_zh": "虽然将宏观伤痛写入小家故事的电影并不少，但是这部电影仍然通过突出情感的真诚，人性的弱点与社会导致的不可逃避的结局之间的张力，带来了一次特殊的情感体验",
+   "letterboxd_url": "https://letterboxd.com/film/goodbye-julia/"
   },
   {
    "title": "Janet Planet",
@@ -189,7 +211,9 @@
    "genre": "drama film",
    "runtime": 113,
    "slug": "janet-planet",
-   "n": 12
+   "n": 12,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/janet-planet/"
   },
   {
    "title": "No Bears",
@@ -204,13 +228,15 @@
    "genre": "drama film",
    "runtime": 106,
    "slug": "no-bears",
-   "n": 13
+   "n": 13,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/no-bears/"
   },
   {
    "title": "R.M.N.",
    "year": 2022,
    "rating": 5.0,
-   "review": "将要杀死人们的不是移民、病毒或者种族主义，更高的社会顶层结构才是深夜里威胁着我们的熊。而老一辈已经死去，我们只能靠自己解决问题并承担行为的后果了。",
+   "review": "What will kill people is not the immigrants, or the virus, or racism. The structure above them all is the bear in the night. The old generation is already dead. We are left to solve it ourselves and to carry what we do about it.",
    "liked": true,
    "letterboxd": "https://boxd.it/yDoe",
    "qid": "Q111633274",
@@ -219,7 +245,9 @@
    "genre": "drama film",
    "runtime": 125,
    "slug": "r-m-n",
-   "n": 14
+   "n": 14,
+   "review_zh": "将要杀死人们的不是移民、病毒或者种族主义，更高的社会顶层结构才是深夜里威胁着我们的熊。而老一辈已经死去，我们只能靠自己解决问题并承担行为的后果了。",
+   "letterboxd_url": "https://letterboxd.com/film/rmn/"
   },
   {
    "title": "She Said",
@@ -234,7 +262,9 @@
    "genre": "drama film, biographical film",
    "runtime": 129,
    "slug": "she-said",
-   "n": 15
+   "n": 15,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/she-said-2022/"
   },
   {
    "title": "Showing Up",
@@ -249,7 +279,9 @@
    "genre": "drama film, comedy film",
    "runtime": 108,
    "slug": "showing-up",
-   "n": 16
+   "n": 16,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/showing-up-2022/"
   },
   {
    "title": "The Banshees of Inisherin",
@@ -264,13 +296,15 @@
    "genre": "comedy film, drama film, black comedy, tragicomedy",
    "runtime": 114,
    "slug": "the-banshees-of-inisherin",
-   "n": 17
+   "n": 17,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-banshees-of-inisherin/"
   },
   {
    "title": "Bad Luck Banging or Loony Porn",
    "year": 2021,
    "rating": 5.0,
-   "review": "当我们纠结于是否实行一种身份政治或者民族主义的时候，我们就已经失去进行有效的民主对话的能力了，无论最后的答案是“是”还是“不是”",
+   "review": "The moment we argue over whether to practise identity politics or nationalism, we have already lost the ability to have a real democratic conversation, whichever way the answer goes.",
    "liked": true,
    "letterboxd": "https://boxd.it/tJOM",
    "qid": "Q105441000",
@@ -279,7 +313,9 @@
    "genre": "drama film, comedy film, erotic film",
    "runtime": 106,
    "slug": "bad-luck-banging-or-loony-porn",
-   "n": 18
+   "n": 18,
+   "review_zh": "当我们纠结于是否实行一种身份政治或者民族主义的时候，我们就已经失去进行有效的民主对话的能力了，无论最后的答案是“是”还是“不是”",
+   "letterboxd_url": "https://letterboxd.com/film/bad-luck-banging-or-loony-porn/"
   },
   {
    "title": "C'mon C'mon",
@@ -294,7 +330,9 @@
    "genre": "drama film",
    "runtime": 108,
    "slug": "c-mon-c-mon",
-   "n": 19
+   "n": 19,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/cmon-cmon/"
   },
   {
    "title": "Marcel the Shell with Shoes On",
@@ -309,13 +347,15 @@
    "genre": "mockumentary, comedy film, family film",
    "runtime": 90,
    "slug": "marcel-the-shell-with-shoes-on",
-   "n": 20
+   "n": 20,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/marcel-the-shell-with-shoes-on-2021/"
   },
   {
    "title": "First Cow",
    "year": 2019,
    "rating": 5.0,
-   "review": "《第一头牛》的动人之处在于它灵巧地描绘了时间如何埋葬了我们。在大多数人年轻之时，时间没有摧残我们，没有让我们的身体饱受折磨，时间让我们满身尘土。我们在某一刻被定格，有限性焕发出无限的光辉，而此刻也是我们被埋葬的那一刻，剩下的一切都是脚注、评说、后记或者历史。",
+   "review": "What moves me in First Cow is how deftly it shows time burying us. For most of us, while we are young, time does not wreck us, does not set the body aching. It covers us in dust. We get fixed at some point, and finitude gives off an infinite light, and that moment is also the moment we are buried. Everything after it is a footnote, a commentary, a postscript or history.",
    "liked": false,
    "letterboxd": "https://boxd.it/krga",
    "qid": "Q65082453",
@@ -324,7 +364,9 @@
    "genre": "fantasy film",
    "runtime": 121,
    "slug": "first-cow",
-   "n": 21
+   "n": 21,
+   "review_zh": "《第一头牛》的动人之处在于它灵巧地描绘了时间如何埋葬了我们。在大多数人年轻之时，时间没有摧残我们，没有让我们的身体饱受折磨，时间让我们满身尘土。我们在某一刻被定格，有限性焕发出无限的光辉，而此刻也是我们被埋葬的那一刻，剩下的一切都是脚注、评说、后记或者历史。",
+   "letterboxd_url": "https://letterboxd.com/film/first-cow/"
   },
   {
    "title": "Mrs. Fletcher",
@@ -339,7 +381,9 @@
    "genre": null,
    "slug": "mrs-fletcher",
    "n": 22,
-   "qid": null
+   "qid": null,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/mrs-fletcher/"
   },
   {
    "title": "Hereditary",
@@ -354,7 +398,9 @@
    "genre": "horror film, drama film",
    "runtime": 127,
    "slug": "hereditary",
-   "n": 23
+   "n": 23,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/hereditary/"
   },
   {
    "title": "I Do Not Care If We Go Down in History as Barbarians",
@@ -369,7 +415,9 @@
    "genre": "historical film, comedy drama, comedy film, drama film",
    "runtime": 140,
    "slug": "i-do-not-care-if-we-go-down-in-history-as-barbarians",
-   "n": 24
+   "n": 24,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/i-do-not-care-if-we-go-down-in-history-as-barbarians/"
   },
   {
    "title": "Mirage",
@@ -384,7 +432,9 @@
    "genre": "thriller film, science fiction film, drama film, time-travel film",
    "runtime": 128,
    "slug": "mirage",
-   "n": 25
+   "n": 25,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/mirage-2018/"
   },
   {
    "title": "The Florida Project",
@@ -399,7 +449,9 @@
    "genre": "drama film",
    "runtime": 115,
    "slug": "the-florida-project",
-   "n": 26
+   "n": 26,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-florida-project/"
   },
   {
    "title": "Nocturnal Animals",
@@ -414,13 +466,15 @@
    "genre": "drama film, rape and revenge film",
    "runtime": 116,
    "slug": "nocturnal-animals",
-   "n": 27
+   "n": 27,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/nocturnal-animals/"
   },
   {
    "title": "Tangerine",
    "year": 2015,
    "rating": 5.0,
-   "review": "到底要怎么结尾才能不去不会给人一种索取同情的感觉呢？我也没有一个答案。所以还是给肖恩贝克满分了",
+   "review": "How do you end a film like this without it feeling like it is asking for your pity? I do not have an answer either. So Sean Baker gets full marks.",
    "liked": true,
    "letterboxd": "https://boxd.it/9QRe",
    "qid": "Q19263995",
@@ -429,7 +483,9 @@
    "genre": "comedy drama, Christmas film, transgender film, LGBTQ-related film",
    "runtime": 88,
    "slug": "tangerine",
-   "n": 28
+   "n": 28,
+   "review_zh": "到底要怎么结尾才能不去不会给人一种索取同情的感觉呢？我也没有一个答案。所以还是给肖恩贝克满分了",
+   "letterboxd_url": "https://letterboxd.com/film/tangerine/"
   },
   {
    "title": "Birdman or (The Unexpected Virtue of Ignorance)",
@@ -444,7 +500,9 @@
    "genre": "comedy film, drama film, black comedy, tragicomedy",
    "runtime": 119,
    "slug": "birdman-or-the-unexpected-virtue-of-ignorance",
-   "n": 29
+   "n": 29,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/birdman-or-the-unexpected-virtue-of-ignorance/"
   },
   {
    "title": "Her",
@@ -459,7 +517,9 @@
    "genre": "science fiction film, drama film, romantic comedy film, comedy film, arthouse science fiction film",
    "runtime": 126,
    "slug": "her",
-   "n": 30
+   "n": 30,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/her/"
   },
   {
    "title": "Starlet",
@@ -474,7 +534,9 @@
    "genre": "drama film, female buddy film",
    "runtime": null,
    "slug": "starlet",
-   "n": 31
+   "n": 31,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/starlet/"
   },
   {
    "title": "(500) Days of Summer",
@@ -489,7 +551,9 @@
    "genre": "romantic comedy, comedy drama, coming-of-age film, comedy film",
    "runtime": 95,
    "slug": "500-days-of-summer",
-   "n": 32
+   "n": 32,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/500-days-of-summer/"
   },
   {
    "title": "Away We Go",
@@ -504,13 +568,15 @@
    "genre": "comedy drama, romantic comedy",
    "runtime": 98,
    "slug": "away-we-go",
-   "n": 33
+   "n": 33,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/away-we-go/"
   },
   {
    "title": "Dogtooth",
    "year": 2009,
    "rating": 5.0,
-   "review": "悬置的结局此刻却充满了无限的希望，因为我们知道兰斯莫斯是如此的犬儒主义",
+   "review": "The suspended ending is somehow full of hope, because we know what a cynic Lanthimos is.",
    "liked": true,
    "letterboxd": "https://boxd.it/158K",
    "qid": "Q1075918",
@@ -519,7 +585,9 @@
    "genre": "drama film, LGBTQ-related film",
    "runtime": 93,
    "slug": "dogtooth",
-   "n": 34
+   "n": 34,
+   "review_zh": "悬置的结局此刻却充满了无限的希望，因为我们知道兰斯莫斯是如此的犬儒主义",
+   "letterboxd_url": "https://letterboxd.com/film/dogtooth/"
   },
   {
    "title": "I Killed My Mother",
@@ -534,7 +602,9 @@
    "genre": "drama film, coming-of-age film, LGBTQ-related film, biographical film",
    "runtime": 100,
    "slug": "i-killed-my-mother",
-   "n": 35
+   "n": 35,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/i-killed-my-mother/"
   },
   {
    "title": "Sunshine Cleaning",
@@ -549,7 +619,9 @@
    "genre": "drama film, comedy film, independent film",
    "runtime": 91,
    "slug": "sunshine-cleaning",
-   "n": 36
+   "n": 36,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/sunshine-cleaning/"
   },
   {
    "title": "Little Miss Sunshine",
@@ -564,7 +636,9 @@
    "genre": "comedy film, drama film, road movie",
    "runtime": 98,
    "slug": "little-miss-sunshine",
-   "n": 37
+   "n": 37,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/little-miss-sunshine/"
   },
   {
    "title": "Brokeback Mountain",
@@ -579,13 +653,15 @@
    "genre": "romance film, drama film, LGBTQ-related film",
    "runtime": 134,
    "slug": "brokeback-mountain",
-   "n": 38
+   "n": 38,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/brokeback-mountain/"
   },
   {
    "title": "Good Bye, Lenin!",
    "year": 2003,
    "rating": 5.0,
-   "review": "真诚动人，催人泪下",
+   "review": "Sincere and moving. It made me cry.",
    "liked": true,
    "letterboxd": "https://boxd.it/2ayA",
    "qid": "Q154817",
@@ -594,7 +670,9 @@
    "genre": "drama film, coming-of-age film, comedy film",
    "runtime": 125,
    "slug": "good-bye-lenin",
-   "n": 39
+   "n": 39,
+   "review_zh": "真诚动人，催人泪下",
+   "letterboxd_url": "https://letterboxd.com/film/good-bye-lenin/"
   },
   {
    "title": "Lost in Translation",
@@ -609,7 +687,9 @@
    "genre": "romantic comedy film, independent film, drama film",
    "runtime": 97,
    "slug": "lost-in-translation",
-   "n": 40
+   "n": 40,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/lost-in-translation/"
   },
   {
    "title": "Werckmeister Harmonies",
@@ -624,7 +704,9 @@
    "genre": "drama film",
    "runtime": 145,
    "slug": "werckmeister-harmonies",
-   "n": 41
+   "n": 41,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/werckmeister-harmonies/"
   },
   {
    "title": "Being John Malkovich",
@@ -639,7 +721,9 @@
    "genre": "comedy drama, fantasy film, comedy film, drama film, surrealist film",
    "runtime": 108,
    "slug": "being-john-malkovich",
-   "n": 42
+   "n": 42,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/being-john-malkovich/"
   },
   {
    "title": "The Virgin Suicides",
@@ -654,7 +738,9 @@
    "genre": "teen film, coming-of-age film, drama film",
    "runtime": 97,
    "slug": "the-virgin-suicides",
-   "n": 43
+   "n": 43,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-virgin-suicides/"
   },
   {
    "title": "Lost Highway",
@@ -669,7 +755,9 @@
    "genre": "neo-noir, mystery film, thriller film, film noir, drama film, psychological thriller film, psychological drama film, psychological horror film, crime thriller film, crime drama film, suspense film, fantasy film, surrealist film, horror film, crime film",
    "runtime": 135,
    "slug": "lost-highway",
-   "n": 44
+   "n": 44,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/lost-highway/"
   },
   {
    "title": "The Adventures of Priscilla, Queen of the Desert",
@@ -684,7 +772,9 @@
    "genre": "buddy film, comedy drama, LGBTQ-related film, transgender film, road movie",
    "runtime": 104,
    "slug": "the-adventures-of-priscilla-queen-of-the-desert",
-   "n": 45
+   "n": 45,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-adventures-of-priscilla-queen-of-the-desert/"
   },
   {
    "title": "Close-Up",
@@ -699,7 +789,9 @@
    "genre": "trial film, docufiction",
    "runtime": 93,
    "slug": "close-up",
-   "n": 46
+   "n": 46,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/close-up/"
   },
   {
    "title": "Stand by Me",
@@ -714,7 +806,9 @@
    "genre": "teen film, coming-of-age film, adventure film, comedy film, drama film",
    "runtime": 89,
    "slug": "stand-by-me",
-   "n": 47
+   "n": 47,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/stand-by-me/"
   },
   {
    "title": "A Zed & Two Noughts",
@@ -729,13 +823,15 @@
    "genre": "drama film, comedy drama",
    "runtime": 115,
    "slug": "a-zed-two-noughts",
-   "n": 48
+   "n": 48,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/a-zed-two-noughts/"
   },
   {
    "title": "El Sur",
    "year": 1983,
    "rating": 5.0,
-   "review": "This film brings Janet Planet to mind. The insights into a child's interiority and lived experience are remarkably delicate—they require not just a profound attunement to life and emotion, but the formal mastery to transmute that sensibility into cinematic language.\r\nJanet Planet captures the density of time: that sticky, seemingly interminable stretch of summer. Boredom, in itself, is a quiet romanticism; you haven't yet learned to measure your existence against objectives.\r\nEl Sur, on the other hand, dwells in spatial darkness—hunting for a source of light under constraint, knowing you can keep living as long as there is any light at all. It is in this exact drift that we grasp how irreducibly complex people are, and slowly become more whole ourselves.",
+   "review": "This film brings Janet Planet to mind. The insights into a child's interiority and lived experience are remarkably delicate, and they require not just a profound attunement to life and emotion but the formal mastery to transmute that sensibility into cinematic language.\n\nJanet Planet captures the density of time: that sticky, seemingly interminable stretch of summer. Boredom, in itself, is a quiet romanticism. You have not yet learned to measure your existence against objectives.\n\nEl Sur, on the other hand, dwells in spatial darkness, hunting for a source of light under constraint, knowing you can keep living as long as there is any light at all. It is in this exact drift that we grasp how irreducibly complex people are, and slowly become more whole ourselves.",
    "liked": true,
    "letterboxd": "https://boxd.it/JbM",
    "qid": "Q4254113",
@@ -744,13 +840,15 @@
    "genre": "drama film",
    "runtime": 95,
    "slug": "el-sur",
-   "n": 49
+   "n": 49,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/el-sur/"
   },
   {
    "title": "Network",
    "year": 1976,
    "rating": 5.0,
-   "review": "它关于过去，是一个美好的电影时代的重现与回想；它关于现在，是对社会的深刻思考、严肃批判与真诚的深情；它关于未来，在循环中，我们将走向何处",
+   "review": "It is about the past, a re-enactment and a remembering of a great era of cinema. It is about the present, a deep reading of society, a serious critique and a sincere affection. It is about the future, and where the loop takes us.",
    "liked": true,
    "letterboxd": "https://boxd.it/1VqG",
    "qid": "Q572165",
@@ -759,7 +857,9 @@
    "genre": "comedy drama, drama film, comedy film, black comedy film, satirical film, romantic comedy film",
    "runtime": 121,
    "slug": "network",
-   "n": 50
+   "n": 50,
+   "review_zh": "它关于过去，是一个美好的电影时代的重现与回想；它关于现在，是对社会的深刻思考、严肃批判与真诚的深情；它关于未来，在循环中，我们将走向何处",
+   "letterboxd_url": "https://letterboxd.com/film/network/"
   },
   {
    "title": "Dog Day Afternoon",
@@ -774,7 +874,9 @@
    "genre": "heist film, action film, drama film, crime film, comedy drama, LGBTQ-related film, thriller film, crime thriller film, crime drama film, comedy film, biographical film, gangster film, black comedy film, suspense film, docudrama, mystery film",
    "runtime": 125,
    "slug": "dog-day-afternoon",
-   "n": 51
+   "n": 51,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/dog-day-afternoon/"
   },
   {
    "title": "Chinatown",
@@ -789,7 +891,9 @@
    "genre": "neo-noir, mystery film, film noir, crime thriller film, drama film",
    "runtime": 131,
    "slug": "chinatown",
-   "n": 52
+   "n": 52,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/chinatown/"
   },
   {
    "title": "Wanda",
@@ -804,7 +908,9 @@
    "genre": "heist film, drama film, crime film, fiction film",
    "runtime": 105,
    "slug": "wanda",
-   "n": 53
+   "n": 53,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/wanda/"
   },
   {
    "title": "Persona",
@@ -819,7 +925,9 @@
    "genre": "art film, drama film",
    "runtime": 84,
    "slug": "persona",
-   "n": 54
+   "n": 54,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/persona/"
   },
   {
    "title": "The Virgin Spring",
@@ -834,7 +942,9 @@
    "genre": "drama film",
    "runtime": 89,
    "slug": "the-virgin-spring",
-   "n": 55
+   "n": 55,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-virgin-spring/"
   },
   {
    "title": "Uncut Gems",
@@ -849,7 +959,9 @@
    "genre": "crime film, comedy drama, drama film, thriller film",
    "runtime": 135,
    "slug": "uncut-gems",
-   "n": 56
+   "n": 56,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/uncut-gems/"
   },
   {
    "title": "Backrooms",
@@ -864,13 +976,15 @@
    "genre": "horror film, adventure film, science fiction film, psychological horror film, mystery film",
    "runtime": 110,
    "slug": "backrooms",
-   "n": 57
+   "n": 57,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/backrooms-2026/"
   },
   {
    "title": "The Drama",
    "year": 2026,
    "rating": 4.0,
-   "review": "我觉得很好看",
+   "review": "I thought it was very good.",
    "liked": false,
    "letterboxd": "https://boxd.it/OA2w",
    "qid": "Q130590402",
@@ -879,7 +993,9 @@
    "genre": "drama film, romance film, romantic comedy film",
    "runtime": 105,
    "slug": "the-drama",
-   "n": 58
+   "n": 58,
+   "review_zh": "我觉得很好看",
+   "letterboxd_url": "https://letterboxd.com/film/the-drama/"
   },
   {
    "title": "The Odyssey",
@@ -894,7 +1010,9 @@
    "genre": "fantasy film, adventure film, action film, historical film, epic film",
    "runtime": 172,
    "slug": "the-odyssey",
-   "n": 59
+   "n": 59,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-odyssey-2026/"
   },
   {
    "title": "Sentimental Value",
@@ -909,7 +1027,9 @@
    "genre": "drama film, comedy film, comedy drama",
    "runtime": 132,
    "slug": "sentimental-value",
-   "n": 60
+   "n": 60,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/sentimental-value-2025/"
   },
   {
    "title": "Train Dreams",
@@ -924,7 +1044,9 @@
    "genre": "drama film, period drama film",
    "runtime": 102,
    "slug": "train-dreams",
-   "n": 61
+   "n": 61,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/train-dreams/"
   },
   {
    "title": "undertone",
@@ -939,13 +1061,15 @@
    "genre": "horror film",
    "runtime": null,
    "slug": "undertone",
-   "n": 62
+   "n": 62,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/undertone-2025/"
   },
   {
    "title": "Anora",
    "year": 2024,
    "rating": 4.0,
-   "review": "阿诺拉是一部令人心碎的电影，但是现实肯定是更加令人倍感无力的，肖恩贝克已经在保护我们观众了",
+   "review": "Anora breaks your heart, and the real thing is more crushing still. Sean Baker is already shielding us.",
    "liked": true,
    "letterboxd": "https://boxd.it/Egcw",
    "qid": "Q123185887",
@@ -954,13 +1078,15 @@
    "genre": "comedy drama",
    "runtime": 139,
    "slug": "anora",
-   "n": 63
+   "n": 63,
+   "review_zh": "阿诺拉是一部令人心碎的电影，但是现实肯定是更加令人倍感无力的，肖恩贝克已经在保护我们观众了",
+   "letterboxd_url": "https://letterboxd.com/film/anora/"
   },
   {
    "title": "Civil War",
    "year": 2024,
    "rating": 4.0,
-   "review": "2024年拍《阳光小美女》be like",
+   "review": "Making Little Miss Sunshine in 2024, basically.",
    "liked": false,
    "letterboxd": "https://boxd.it/z1jW",
    "qid": "Q111538862",
@@ -969,13 +1095,15 @@
    "genre": "action film, drama film, dystopian film",
    "runtime": 109,
    "slug": "civil-war",
-   "n": 64
+   "n": 64,
+   "review_zh": "2024年拍《阳光小美女》be like",
+   "letterboxd_url": "https://letterboxd.com/film/civil-war-2024/"
   },
   {
    "title": "Heretic",
    "year": 2024,
    "rating": 4.0,
-   "review": "精致的A24甜点",
+   "review": "A neat little A24 dessert.",
    "liked": false,
    "letterboxd": "https://boxd.it/H1lY",
    "qid": "Q122933268",
@@ -984,7 +1112,9 @@
    "genre": "thriller film, horror film",
    "runtime": 110,
    "slug": "heretic",
-   "n": 65
+   "n": 65,
+   "review_zh": "精致的A24甜点",
+   "letterboxd_url": "https://letterboxd.com/film/heretic-2024/"
   },
   {
    "title": "El Conde",
@@ -999,13 +1129,15 @@
    "genre": "comedy film, vampire film",
    "runtime": 110,
    "slug": "el-conde",
-   "n": 66
+   "n": 66,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/el-conde/"
   },
   {
    "title": "Talk to Me",
    "year": 2022,
    "rating": 4.0,
-   "review": "从《回应我》可以看出，现在的A24已经成功地形成了自己的一套选片口味：小巧精致，闷骚文艺。大家都可以拍笔仙类的恐怖片，但a24就是和其他人拍的不一样。就像是你让他做一份西红柿炒蛋，他也偏要加上胡椒粉和罗勒。\r\n伏笔全部得到很巧妙的照应，但逻辑上却不完全自洽，就像一个设计精巧的机关盒，忽略了聪明的玩家会直接把它摔碎来获得核心里的东西。",
+   "review": "Talk to Me shows that A24 has settled into its own taste in picking films: small, precise, repressed, arty. Anyone can make a seance horror film, but A24's is not like the others. It is as if you asked them for scrambled eggs with tomato and they insist on adding pepper and basil.\n\nEvery setup pays off cleverly, though the logic does not quite hold, like a beautifully made puzzle box that forgets a smart player will simply smash it open to get at what is inside.",
    "liked": false,
    "letterboxd": "https://boxd.it/C6uQ",
    "qid": "Q116193178",
@@ -1014,7 +1146,9 @@
    "genre": "horror film, thriller film",
    "runtime": 94,
    "slug": "talk-to-me",
-   "n": 67
+   "n": 67,
+   "review_zh": "从《回应我》可以看出，现在的A24已经成功地形成了自己的一套选片口味：小巧精致，闷骚文艺。大家都可以拍笔仙类的恐怖片，但a24就是和其他人拍的不一样。就像是你让他做一份西红柿炒蛋，他也偏要加上胡椒粉和罗勒。\r\n伏笔全部得到很巧妙的照应，但逻辑上却不完全自洽，就像一个设计精巧的机关盒，忽略了聪明的玩家会直接把它摔碎来获得核心里的东西。",
+   "letterboxd_url": "https://letterboxd.com/film/talk-to-me-2022/"
   },
   {
    "title": "The Lovers",
@@ -1029,7 +1163,9 @@
    "genre": "comedy film, romance film",
    "runtime": 97,
    "slug": "the-lovers",
-   "n": 68
+   "n": 68,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-lovers-2017/"
   },
   {
    "title": "In the House",
@@ -1044,7 +1180,9 @@
    "genre": "thriller film, mystery film, comedy drama, drama film",
    "runtime": 102,
    "slug": "in-the-house",
-   "n": 69
+   "n": 69,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/in-the-house/"
   },
   {
    "title": "50/50",
@@ -1059,7 +1197,9 @@
    "genre": "comedy film, drama film",
    "runtime": 100,
    "slug": "50-50",
-   "n": 70
+   "n": 70,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/50-50/"
   },
   {
    "title": "Melancholia",
@@ -1074,7 +1214,9 @@
    "genre": "science fiction film, drama film, art film, apocalyptic film, arthouse science fiction film",
    "runtime": 130,
    "slug": "melancholia",
-   "n": 71
+   "n": 71,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/melancholia/"
   },
   {
    "title": "Synecdoche, New York",
@@ -1089,7 +1231,9 @@
    "genre": "drama film",
    "runtime": 124,
    "slug": "synecdoche-new-york",
-   "n": 72
+   "n": 72,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/synecdoche-new-york/"
   },
   {
    "title": "Caché",
@@ -1104,7 +1248,9 @@
    "genre": "drama film, thriller film",
    "runtime": 117,
    "slug": "cache",
-   "n": 73
+   "n": 73,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/cache/"
   },
   {
    "title": "Bad Education",
@@ -1119,7 +1265,9 @@
    "genre": "neo-noir, coming-of-age film, drama film, LGBTQ-related film, mystery film, crime film, thriller film",
    "runtime": 105,
    "slug": "bad-education",
-   "n": 74
+   "n": 74,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/bad-education/"
   },
   {
    "title": "Naked Lunch",
@@ -1134,7 +1282,9 @@
    "genre": "drama film, science fiction horror film, LGBTQ-related film, arthouse science fiction film, horror film, science fiction film, mystery film, thriller film, experimental film, monster film, surrealist film",
    "runtime": 110,
    "slug": "naked-lunch",
-   "n": 75
+   "n": 75,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/naked-lunch/"
   },
   {
    "title": "Night on Earth",
@@ -1149,13 +1299,15 @@
    "genre": "comedy film, drama film",
    "runtime": 123,
    "slug": "night-on-earth",
-   "n": 76
+   "n": 76,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/night-on-earth/"
   },
   {
    "title": "The Discreet Charm of the Bourgeoisie",
    "year": 1972,
    "rating": 4.0,
-   "review": "我们一直在寻找，从来都没有获得什么，连在寻找什么都不记得了",
+   "review": "They keep searching, they never get anything, and they have forgotten what they were looking for.",
    "liked": false,
    "letterboxd": "https://boxd.it/2440",
    "qid": "Q308920",
@@ -1164,7 +1316,9 @@
    "genre": "drama film, comedy film, fantasy film",
    "runtime": 96,
    "slug": "the-discreet-charm-of-the-bourgeoisie",
-   "n": 77
+   "n": 77,
+   "review_zh": "我们一直在寻找，从来都没有获得什么，连在寻找什么都不记得了",
+   "letterboxd_url": "https://letterboxd.com/film/the-discreet-charm-of-the-bourgeoisie/"
   },
   {
    "title": "Jules and Jim",
@@ -1179,7 +1333,9 @@
    "genre": "romance film, drama film, buddy film",
    "runtime": 105,
    "slug": "jules-and-jim",
-   "n": 78
+   "n": 78,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/jules-and-jim/"
   },
   {
    "title": "Incendies",
@@ -1194,7 +1350,9 @@
    "genre": "drama film, mystery film",
    "runtime": 133,
    "slug": "incendies",
-   "n": 79
+   "n": 79,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/incendies/"
   },
   {
    "title": "The Room Next Door",
@@ -1209,7 +1367,9 @@
    "genre": "drama film",
    "runtime": 107,
    "slug": "the-room-next-door",
-   "n": 80
+   "n": 80,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-room-next-door-2024/"
   },
   {
    "title": "The Middle Ages",
@@ -1224,13 +1384,15 @@
    "genre": null,
    "runtime": null,
    "slug": "the-middle-ages",
-   "n": 81
+   "n": 81,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-middle-ages/"
   },
   {
    "title": "World War III",
    "year": 2022,
    "rating": 3.0,
-   "review": "一场无法发起的世界第三次大战",
+   "review": "A third world war that can never be started.",
    "liked": false,
    "letterboxd": "https://boxd.it/BZBU",
    "qid": "Q109297092",
@@ -1239,7 +1401,9 @@
    "genre": "drama film",
    "runtime": 107,
    "slug": "world-war-iii",
-   "n": 82
+   "n": 82,
+   "review_zh": "一场无法发起的世界第三次大战",
+   "letterboxd_url": "https://letterboxd.com/film/world-war-iii-2022/"
   },
   {
    "title": "Minari",
@@ -1254,7 +1418,9 @@
    "genre": "drama film",
    "runtime": 115,
    "slug": "minari",
-   "n": 83
+   "n": 83,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/minari/"
   },
   {
    "title": "Thumbsucker",
@@ -1269,7 +1435,9 @@
    "genre": "coming-of-age film, drama film, comedy film",
    "runtime": 96,
    "slug": "thumbsucker",
-   "n": 84
+   "n": 84,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/thumbsucker/"
   },
   {
    "title": "Death and the Maiden",
@@ -1284,7 +1452,9 @@
    "genre": "rape and revenge film, drama film, mystery film",
    "runtime": 103,
    "slug": "death-and-the-maiden",
-   "n": 85
+   "n": 85,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/death-and-the-maiden/"
   },
   {
    "title": "Primetime",
@@ -1299,7 +1469,9 @@
    "genre": "crime drama film, biographical film, psychological thriller, crime thriller film",
    "runtime": 110,
    "slug": "primetime",
-   "n": 86
+   "n": 86,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/primetime-2026/"
   },
   {
    "title": "American Fiction",
@@ -1314,7 +1486,9 @@
    "genre": "drama film",
    "runtime": 117,
    "slug": "american-fiction",
-   "n": 87
+   "n": 87,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/american-fiction/"
   },
   {
    "title": "The Zone of Interest",
@@ -1329,7 +1503,9 @@
    "genre": "drama film, historical film, war film, historical drama",
    "runtime": 105,
    "slug": "the-zone-of-interest",
-   "n": 88
+   "n": 88,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-zone-of-interest/"
   },
   {
    "title": "You Hurt My Feelings",
@@ -1344,7 +1520,9 @@
    "genre": "comedy drama",
    "runtime": 93,
    "slug": "you-hurt-my-feelings",
-   "n": 89
+   "n": 89,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/you-hurt-my-feelings-2023/"
   },
   {
    "title": "Aftersun",
@@ -1359,7 +1537,9 @@
    "genre": "drama film, teen drama film",
    "runtime": 101,
    "slug": "aftersun",
-   "n": 90
+   "n": 90,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/aftersun/"
   },
   {
    "title": "Men",
@@ -1374,7 +1554,26 @@
    "genre": "horror film, drama film, fantasy film",
    "runtime": 100,
    "slug": "men",
-   "n": 91
+   "n": 91,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/men-2022/"
+  },
+  {
+   "slug": "nope",
+   "title": "Nope",
+   "year": 2022,
+   "rating": null,
+   "liked": false,
+   "director": null,
+   "country": null,
+   "runtime": null,
+   "genre": null,
+   "review": "The score over the final standoff is what earned this a place among the horror films that move me.",
+   "review_zh": "最后的决战配乐让这部电影在我心里也占据了动人恐怖片的一席之地",
+   "letterboxd": "https://boxd.it/f9pizf",
+   "qid": null,
+   "n": 92,
+   "letterboxd_url": "https://letterboxd.com/film/nope/"
   },
   {
    "title": "After Yang",
@@ -1389,7 +1588,9 @@
    "genre": "drama film, science fiction film",
    "runtime": 96,
    "slug": "after-yang",
-   "n": 92
+   "n": 93,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/after-yang/"
   },
   {
    "title": "Nomadland",
@@ -1404,7 +1605,9 @@
    "genre": "drama film, road movie",
    "runtime": 107,
    "slug": "nomadland",
-   "n": 93
+   "n": 94,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/nomadland/"
   },
   {
    "title": "The Lighthouse",
@@ -1419,7 +1622,9 @@
    "genre": "horror film, drama film, fantasy film",
    "runtime": 109,
    "slug": "the-lighthouse",
-   "n": 94
+   "n": 95,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-lighthouse-2019/"
   },
   {
    "title": "Roma",
@@ -1434,7 +1639,9 @@
    "genre": "drama film",
    "runtime": 135,
    "slug": "roma",
-   "n": 95
+   "n": 96,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/roma-2018/"
   },
   {
    "title": "Sharp Objects",
@@ -1448,8 +1655,10 @@
    "runtime": null,
    "genre": "thriller television series",
    "slug": "sharp-objects",
-   "n": 96,
-   "qid": "Q25206010"
+   "n": 97,
+   "qid": "Q25206010",
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/sharp-objects/"
   },
   {
    "title": "The Favourite",
@@ -1464,7 +1673,9 @@
    "genre": "biographical film, drama film, LGBTQ-related film",
    "runtime": 120,
    "slug": "the-favourite",
-   "n": 97
+   "n": 98,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-favourite/"
   },
   {
    "title": "Lady Bird",
@@ -1479,7 +1690,9 @@
    "genre": "comedy drama, tragicomedy, drama film, LGBTQ-related film",
    "runtime": 93,
    "slug": "lady-bird",
-   "n": 98
+   "n": 99,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/lady-bird/"
   },
   {
    "title": "Spotlight",
@@ -1494,7 +1707,9 @@
    "genre": "drama film, biographical film",
    "runtime": 127,
    "slug": "spotlight",
-   "n": 99
+   "n": 100,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/spotlight/"
   },
   {
    "title": "The Lobster",
@@ -1509,7 +1724,9 @@
    "genre": "science fiction film, romantic comedy film, dystopian film, arthouse science fiction film",
    "runtime": 118,
    "slug": "the-lobster",
-   "n": 100
+   "n": 101,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-lobster/"
   },
   {
    "title": "The Witch",
@@ -1524,7 +1741,9 @@
    "genre": "horror film, mystery film",
    "runtime": 93,
    "slug": "the-witch",
-   "n": 101
+   "n": 102,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/the-witch-2015/"
   },
   {
    "title": "Locke",
@@ -1539,7 +1758,9 @@
    "genre": "drama film, road movie",
    "runtime": 85,
    "slug": "locke",
-   "n": 102
+   "n": 103,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/locke/"
   },
   {
    "title": "Black Swan",
@@ -1554,7 +1775,9 @@
    "genre": "psychological thriller film, thriller film, psychological horror fiction, drama film, horror film, LGBTQ-related film, magic realist film",
    "runtime": 108,
    "slug": "black-swan",
-   "n": 103
+   "n": 104,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/black-swan/"
   },
   {
    "title": "All About My Mother",
@@ -1569,7 +1792,9 @@
    "genre": "comedy drama, transgender film",
    "runtime": 101,
    "slug": "all-about-my-mother",
-   "n": 104
+   "n": 105,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/all-about-my-mother/"
   },
   {
    "title": "Rosemary's Baby",
@@ -1584,7 +1809,9 @@
    "genre": "horror film, psychological horror film, drama film, religious horror, satanic film, supernatural horror film, thriller film, psycho-biddy, gothic horror film, Gothic film, suspense film, psychological drama film, psychological thriller film, supernatural film",
    "runtime": 137,
    "slug": "rosemary-s-baby",
-   "n": 105
+   "n": 106,
+   "review_zh": null,
+   "letterboxd_url": "https://letterboxd.com/film/rosemarys-baby/"
   }
  ]
 }

@@ -38,10 +38,22 @@ def soft(url):
 
 def stars(rating):
     if rating is None:
-        return "liked"
+        return ""
     n = int(rating)
     half = "½" if (rating - n) >= 0.5 else ""
     return "★" * n + half
+
+
+def status(f):
+    """what to print where the score goes: stars, or 'liked', or nothing at all"""
+    if f["rating"]:
+        return stars(f["rating"])
+    return "liked" if f.get("liked") else ""
+
+
+def exposed(url):
+    """the link text: the address as you would read it out loud, without the scheme"""
+    return soft(url.replace("https://", ""))
 
 
 def layout(*, title, desc, p, body, path, indexable=True):
@@ -93,9 +105,9 @@ def masthead(films, profile):
     return f"""<header class="mast">
   <h1 class="mark">MAYDAY</h1>
   <p class="quote">{e(TAGLINE)}</p>
-  <p class="stats">{len(rated)} films I have rated, {sum(1 for f in films if f['rating'] == 5)}
-  of them five stars, and {sum(1 for f in films if f['review'])} I wrote something about.
-  {years[0]} to {years[-1]}.</p>
+  <p class="stats">{len(films)} films on the list. {len(rated)} I have rated,
+  {sum(1 for f in films if f['rating'] == 5)} of them five stars, and
+  {sum(1 for f in films if f['review'])} I wrote something about. {years[0]} to {years[-1]}.</p>
 </header>"""
 
 
@@ -105,21 +117,26 @@ def page_index(films, profile, ratings):
         hay = " ".join(filter(None, [f["title"], str(f["year"]), f.get("director"),
                                      f.get("country"), f.get("review")]))
         meta = " · ".join(filter(None, [
-            stars(f["rating"]),
+            status(f),
             f.get("director"),
             f.get("country"),
             f"{f['runtime']} min" if f.get("runtime") else None,
         ]))
         review = (f'      <blockquote class="review">{e(f["review"])}</blockquote>\n'
                   if f.get("review") else "")
+        lb = f.get("letterboxd_url")
+        link = (f'<a class="url" href="{e(lb)}" rel="noopener">{exposed(lb)}</a>'
+                if lb else
+                f'<a class="url" href="film/{f["slug"]}/">'
+                f'{exposed(CLEAN_URL + "/film/" + f["slug"] + "/")}</a>')
         entries.append(f"""  <li class="entry" data-rating="{f['rating'] if f['rating'] is not None else ''}"
       data-liked="{'1' if f['liked'] else '0'}" data-hay="{e(hay)}">
-    <div class="no">{f['n']:02d}</div>
+    <div class="no"><a href="film/{f['slug']}/" title="this film's page here">{f['n']:02d}</a></div>
     <div>
       <div class="head">
         <span class="name">{e(f['title'])}
           <span class="year">{f['year']}</span></span>
-        <a class="url" href="film/{f['slug']}/">{soft(CLEAN_URL + "/film/" + f['slug'] + "/")}</a>
+        {link}
       </div>
       <div class="meta">{e(meta)}</div>
 {review}    </div>
@@ -174,15 +191,15 @@ def page_film(f, films, profile):
     if not nav:
         nav.append("the end of the manifest")
 
-    if f.get("letterboxd"):
-        nav.append(f'<a href="{e(f["letterboxd"])}" rel="noopener">'
-                   f'{e(f["letterboxd"].replace("https://", ""))}</a>')
+    if f.get("letterboxd_url"):
+        nav.append(f'<a href="{e(f["letterboxd_url"])}" rel="noopener">'
+                   f'{exposed(f["letterboxd_url"])}</a>')
 
     review = (f'<p class="note">{e(f["review"])}</p>' if f.get("review") else "")
     body = f"""<p class="top"><a href="../../">← the manifest</a>
   <span class="selfurl">{soft(film_url(f))}</span></p>
 <h1 class="title">{e(f['title'])}</h1>
-<p class="film-head">{e(stars(f['rating']))}
+<p class="film-head">{e(status(f))}
   <span class="pos">{f['n']:02d} of {len(films):02d}</span></p>
 <p class="film-meta">{e(meta)}</p>
 {review}
@@ -199,13 +216,16 @@ def page_about(films, profile, ratings):
     rated = [f for f in films if f["rating"]]
     five = sum(1 for f in films if f["rating"] == 5)
     reviews = sum(1 for f in films if f["review"])
-    liked_only = sum(1 for f in films if f["rating"] is None)
+    liked_only = sum(1 for f in films if f["rating"] is None and f.get("liked"))
+    reviewed_only = sum(1 for f in films
+                        if f["rating"] is None and not f.get("liked") and f.get("review"))
     body = f"""<p class="top"><a href="../">← the manifest</a><span class="selfurl">{soft(CLEAN_URL + "/about/")}</span></p>
 <div class="doc">
   <section>
     <h2>What this is</h2>
-    <p>{len(rated)} films I have rated, {five} of them five stars, plus {liked_only} I liked
-       without leaving a score. {e(TAGLINE)}</p>
+    <p>{len(rated)} films I have rated, {five} of them five stars, {liked_only} I liked without
+       leaving a score, and {reviewed_only} I wrote about without scoring at all.
+       {e(TAGLINE)}</p>
     <p>{e(profile['bio'])}</p>
   </section>
   <section>
@@ -221,10 +241,11 @@ def page_about(films, profile, ratings):
   <section>
     <h2>Reading it</h2>
     <ul>
-      <li>the number — position on the list, highest rated first, nothing more</li>
+      <li>the number — position on the list, highest rated first. it also opens that film's
+          page here</li>
       <li>the stars — my own score: {stars(5)}, {stars(4.5)}, {stars(4)}, {stars(3.5)}, {stars(3)}</li>
-      <li><span class="k">liked</span> — I liked it on Letterboxd without giving it a score</li>
-      <li>the blue link on each line — the address of that film's page, spelled out</li>
+      <li><span class="k">liked</span> — liked on Letterboxd without giving it a score</li>
+      <li>the blue address on each line — that film's page on Letterboxd, spelled out</li>
     </ul>
   </section>
   <section>
@@ -235,7 +256,8 @@ def page_about(films, profile, ratings):
        asks nobody else for anything.</p>
     <p>Film metadata (director, country, length) is matched against Wikidata and left blank when
        there is no clean match, rather than guessed. The scores and the notes are mine, which is to
-       say they are opinions, and you are allowed to disagree with them loudly.</p>
+       say they are opinions, and you are allowed to disagree with them loudly. A few notes were
+       written in Chinese and are translated here, with the originals kept in films.json.</p>
   </section>
   <section>
     <h2>Where to find things</h2>
@@ -296,7 +318,12 @@ def main():
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
       "".join(f"  <url><loc>{e(u)}</loc></url>\n" for u in urls) + "</urlset>\n")
     w("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
-    w("films.json", json.dumps(data, ensure_ascii=False, indent=1) + "\n")
+    # the published data file keeps every field except the Chinese originals: the site
+    # itself is all english, and review_zh is kept in the repository, not on the web.
+    public = json.loads(json.dumps(data))
+    for f in public["films"]:
+        f.pop("review_zh", None)
+    w("films.json", json.dumps(public, ensure_ascii=False, indent=1) + "\n")
 
     pages = sum(len(fs) for _, _, fs in os.walk(SRC))
     size = sum(os.path.getsize(os.path.join(d, f))
