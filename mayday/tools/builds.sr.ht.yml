@@ -1,0 +1,33 @@
+# builds.sr.ht manifest. NOT active: it is kept here, out of the repository root, because
+# this account cannot submit build jobs ("A paid account is required to use this feature").
+# Deploys run through tools/git-hooks/pre-push instead.
+# To switch to builds.sr.ht: git mv tools/builds.sr.ht.yml .build.yml
+
+# builds.sr.ht: rebuild and republish the site on every push.
+# The oauth directive grants a short-lived pages.sr.ht token to the build, so no
+# secret is stored anywhere in this repository.
+image: alpine/edge
+oauth: pages.sr.ht/PAGES:RW
+packages:
+  - python3
+  - curl
+  - tar
+environment:
+  site: noahisarider.srht.site
+  subdir: MAYDAY
+tasks:
+  - build: |
+      python3 build.py
+  - verify: |
+      test -f site/index.html
+      test -f site/film/first-cow/index.html
+      echo "site/ has $(find site -type f | wc -l) files"
+  - package: |
+      cd site
+      tar -czf ../site.tar.gz .
+  - publish: |
+      curl -fsS -H "Authorization: Bearer $OAUTH2_TOKEN" \
+        -F content=@site.tar.gz \
+        "https://pages.sr.ht/publish/$site/$subdir"
+      echo
+      echo "published -> https://$site/$subdir/"
