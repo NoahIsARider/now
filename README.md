@@ -9,12 +9,15 @@ Updated when something changes, with an RSS feed for whoever wants it.
 ```
 data/now.json            the now page. edit this for the front page.
 data/papers.json         the papers page (papers.html): what I am reading, with notes.
-build.py                 reads both, then calls mayday/build.py, writes the whole site/
+build.py                 reads both, then calls mayday/ and shkb/build.py, writes the whole site/
 assets/style.css         the design: one narrow column, black on white, blue links
 assets/fonts/            Special Elite + Courier Prime, self-hosted, OFL 1.1
 mayday/                  the MAYDAY films manifest, served at /MAYDAY/
 mayday/data/films.json   the film list, generated from a Letterboxd export
 mayday/build.py          builds the manifest into site/MAYDAY/
+shkb/                    the shkb listening manifest, served at /shkb/ (dark, underwater)
+shkb/data/albums.json    the record list, generated from a record.club export
+shkb/build.py            builds the manifest into site/shkb/
 site/                    generated output, not in git, this is what gets published
 publish.sh               build + upload everything in one tarball
 tools/git-hooks/pre-push  the same thing, run on every push
@@ -53,11 +56,13 @@ same inline `[text](url)` links.
 ## Publishing
 
 `noahisarider.srht.site/` is one site in one repository. The now page is at the root,
-the papers page at `/papers.html`, and the films manifest at `/MAYDAY/`.
+the papers page at `/papers.html`, the films manifest at `/MAYDAY/`, and the records
+manifest at `/shkb/`.
 
-The build writes all three into one `site/` tree, so `publish.sh` makes one tarball and one
+The build writes all four into one `site/` tree, so `publish.sh` makes one tarball and one
 upload. A publish still replaces the whole site at the server, but the replacement now
-contains `/MAYDAY/` already, nothing gets wiped and nothing has to be sent a second time.
+contains `/MAYDAY/` and `/shkb/` already, nothing gets wiped and nothing has to be sent a
+second time.
 
 ```sh
 ./publish.sh          # uses ~/.srht-token
@@ -67,6 +72,11 @@ Edit the manifest in `mayday/data/films.json` (or regenerate it with
 `python mayday/tools/build-films-from-export.py <letterboxd-export.zip>`), then run the same
 `python build.py` and `./publish.sh` as always. See `mayday/README.md` for how the list is
 made.
+
+For records, regenerate from a record.club export zip with
+`python shkb/tools/build-releases-from-export.py <record-club-export.zip>`, which writes
+`shkb/data/albums.json` and refuses any non-ASCII title or artist, then build and publish the
+same way. The page design is fixed in `shkb/DESIGN.md`.
 
 On push, once installed:
 

@@ -5,9 +5,9 @@
 # with the scope  pages.sr.ht/PAGES:RW
 # Read from $SRHT_TOKEN, else from ~/.srht-token, else asked for on the terminal.
 #
-# One build now produces everything: the now page, the papers page and the MAYDAY
-# films manifest under /MAYDAY/. One tarball, one upload, so there is no longer any
-# root-wipes-the-subdirectory problem to repair afterwards.
+# One build now produces everything: the now page, the papers page, the MAYDAY
+# films manifest under /MAYDAY/ and the shkb records manifest under /shkb/. One
+# tarball, one upload, so there is no root-wipes-the-subdirectory problem left.
 set -eu
 
 cd "$(dirname "$0")"
@@ -34,7 +34,7 @@ python build.py
 rm -f site.tar.gz
 tar -C site -czf site.tar.gz .
 
-echo "uploading $(du -h site.tar.gz | cut -f1) to $DOMAIN (root, including /MAYDAY/) ..."
+echo "uploading $(du -h site.tar.gz | cut -f1) to $DOMAIN (root, including /MAYDAY/ and /shkb/) ..."
 curl -fsS -H "Authorization: Bearer $TOKEN" \
   -F "content=@site.tar.gz" \
   "https://pages.sr.ht/publish/$DOMAIN"

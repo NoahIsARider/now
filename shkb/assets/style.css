@@ -1,0 +1,202 @@
+/* ==========================================================================
+   shkb — a listening manifest, read at depth
+   Same manifest grammar as MAYDAY, inverted to deep water. No rules, no
+   borders between rows, no cards, no rounded corners, no glow beyond the
+   plain link blue. Type and pressure only.
+   ========================================================================== */
+
+@import url("./fonts/fonts.css");
+
+:root {
+  --water: #0b1116;
+  --ink: #aebfc6;
+  --head: #e6eef1;
+  --blue: #7fb6f5;
+  --blue-visited: #6f97c9;
+  --blue-hover: #a9cff8;
+  --wash: #14202a;
+  --edge: #22303c;
+  --dim: #778891;
+  --display: "Special Elite", "Courier New", monospace;
+  --text: "Courier Prime", "Courier New", monospace;
+  --col: 720px;
+  --pad: 22px;
+}
+
+* { box-sizing: border-box; }
+
+/* entries are display:grid, which would otherwise beat the UA rule for [hidden] */
+[hidden] { display: none !important; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--water);
+  color: var(--ink);
+  font: 15px/1.62 var(--text);
+  letter-spacing: 0.01em;
+}
+
+.shell {
+  max-width: var(--col);
+  margin: 0 auto;
+  padding: 46px var(--pad) 64px;
+}
+
+/* --- links: daylight seen from underwater -------------------------------- */
+a { color: var(--blue); text-decoration: none; }
+a:visited { color: var(--blue-visited); }
+a:hover, a:focus-visible {
+  color: var(--blue-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+:focus-visible { outline: 0; background: var(--wash); box-shadow: 0 0 0 4px var(--wash); }
+input:focus-visible { background: #101a23; box-shadow: 0 0 0 4px var(--wash); }
+
+h1, h2 { font-family: var(--display); font-weight: 400; color: var(--head); }
+
+/* --- masthead ------------------------------------------------------------ */
+.mark {
+  font-size: 38px;
+  line-height: 1;
+  margin: 0 0 20px;
+  letter-spacing: 0.34em;
+  color: var(--head);
+}
+.quote { margin: 0 0 14px; font-size: 14.5px; max-width: 58ch; }
+.quote p { margin: 0 0 10px; }
+.verdict {
+  margin: 0 0 22px;
+  font-family: var(--text);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--head);
+  letter-spacing: 0.02em;
+}
+.stats { margin: 0 0 34px; font-size: 13px; max-width: 62ch; color: var(--dim); }
+
+/* --- controls ------------------------------------------------------------ */
+.controls { margin-bottom: 18px; }
+.field { display: block; margin-bottom: 14px; }
+.field .lab, .chips .lab {
+  display: block;
+  font-family: var(--display);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--head);
+  margin-bottom: 6px;
+}
+.chips .lab { display: inline; margin: 0 10px 0 0; }
+.field input {
+  width: 100%;
+  font: inherit;
+  letter-spacing: inherit;
+  padding: 9px 12px;
+  border: 1px solid var(--edge);
+  border-radius: 0;
+  background: var(--wash);
+  color: var(--head);
+}
+.field input::placeholder { color: #66787f; }
+
+.chips { font-size: 14px; }
+.chip {
+  font: inherit;
+  font-size: 14px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--ink);
+  padding: 0;
+  margin: 0 14px 6px 0;
+  cursor: pointer;
+}
+.chip:hover { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.chip[aria-pressed="true"] {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.count { font-size: 13px; color: var(--dim); margin: 6px 0 32px; }
+
+/* --- the depth log ------------------------------------------------------- */
+.entries { list-style: none; margin: 0; padding: 0; }
+.entry {
+  display: grid;
+  grid-template-columns: 3.4ch minmax(0, 1fr);
+  column-gap: 10px;
+  margin-bottom: 26px;
+}
+.entry .no { font-size: 12.5px; padding-top: 8px; color: var(--dim); }
+.entry .head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  column-gap: 18px;
+  row-gap: 2px;
+}
+.entry .name { font-family: var(--display); font-size: 21px; line-height: 1.18; }
+.entry .name a { color: var(--head); }
+.entry .name a:visited { color: var(--head); }
+.entry .name a:hover, .entry .name a:focus-visible { color: var(--blue-hover); }
+.entry .tail { margin-left: auto; white-space: nowrap; }
+.entry .score { color: var(--blue); font-size: 13.5px; margin-right: 14px; }
+.entry .score .of { color: var(--dim); }
+.entry .year { font-size: 12.5px; color: var(--dim); }
+.entry .meta { font-size: 13px; margin-top: 2px; color: var(--dim); }
+
+.empty { font-size: 14px; margin: 30px 0 0; max-width: 60ch; }
+
+/* --- page top bar (about, 404) ------------------------------------------- */
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 16px;
+  font-size: 12.5px;
+  margin-bottom: 30px;
+}
+.selfurl { color: var(--dim); }
+
+/* --- prose pages --------------------------------------------------------- */
+.doc section { margin-bottom: 32px; }
+.doc h2 { font-size: 20px; margin: 0 0 10px; }
+.doc p { margin: 0 0 13px; max-width: 68ch; }
+.doc .verdict { margin-top: 16px; }
+.doc ul { margin: 0 0 13px; padding-left: 1.2em; max-width: 68ch; }
+.doc li { margin-bottom: 6px; }
+.doc a { text-decoration: underline; text-underline-offset: 3px; }
+.doc .k { color: var(--head); }
+
+/* --- footer -------------------------------------------------------------- */
+.foot { margin-top: 46px; font-size: 13px; }
+.foot .signal {
+  font-family: var(--display);
+  letter-spacing: 0.34em;
+  color: var(--dim);
+  margin-bottom: 12px;
+}
+.foot ul { list-style: none; margin: 0 0 8px; padding: 0; }
+.foot li { margin-bottom: 3px; }
+.foot .meta { font-size: 12px; margin-top: 12px; max-width: 62ch; color: var(--dim); }
+
+/* --- narrow -------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .shell { padding: 32px 18px 48px; }
+  .mark { font-size: 32px; }
+  .entry { margin-bottom: 24px; }
+  .entry .tail { margin-left: 0; }
+}
+
+@media print {
+  .controls, .top { display: none; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .mark, .entry .name a, h1, h2 { color: #000; }
+  a { color: #000; text-decoration: none; }
+  .entry { break-inside: avoid; }
+}

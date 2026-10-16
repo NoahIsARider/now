@@ -1,0 +1,1133 @@
+{
+  "exported": "2026-10-16",
+  "counts": {
+    "total": 124,
+    "albums": 121,
+    "eps": 2,
+    "singles": 1,
+    "rated": 8,
+    "ten": 6,
+    "nine": 1,
+    "eight": 1,
+    "year_min": 1996,
+    "year_max": 2026
+  },
+  "albums": [
+    {
+      "title": "Fuzao",
+      "artist": "Faye Wong",
+      "year": 1996,
+      "type": "album",
+      "rating": null,
+      "mbid": "91f42713-b8e0-3a7b-981c-fddd20823d74",
+      "n": 1
+    },
+    {
+      "title": "Homogenic",
+      "artist": "Bj\u00f6rk",
+      "year": 1997,
+      "type": "album",
+      "rating": null,
+      "mbid": "810272e0-aef1-3d85-b2d3-e512e87fc38c",
+      "n": 2
+    },
+    {
+      "title": "Stories From the City, Stories From the Sea",
+      "artist": "PJ Harvey",
+      "year": 2000,
+      "type": "album",
+      "rating": null,
+      "mbid": "71641af7-d122-326a-b0bb-f76a8d09810c",
+      "n": 3
+    },
+    {
+      "title": "Seven Swans",
+      "artist": "Sufjan Stevens",
+      "year": 2004,
+      "type": "album",
+      "rating": null,
+      "mbid": "9c034a12-db0e-3bc1-b3ed-e74e7ffa92b1",
+      "n": 4
+    },
+    {
+      "title": "For Emma, Forever Ago",
+      "artist": "Bon Iver",
+      "year": 2007,
+      "type": "album",
+      "rating": null,
+      "mbid": "187935b5-a0a4-3e6f-9684-48b67a5190a1",
+      "n": 5
+    },
+    {
+      "title": "Blood Bank",
+      "artist": "Bon Iver",
+      "year": 2009,
+      "type": "ep",
+      "rating": null,
+      "mbid": "8ff93c7e-99e3-3c02-8a21-f927dbda9530",
+      "n": 6
+    },
+    {
+      "title": "The Age of Adz",
+      "artist": "Sufjan Stevens",
+      "year": 2010,
+      "type": "album",
+      "rating": null,
+      "mbid": "705027f6-370d-4e0a-931f-3960fe07a8ba",
+      "n": 7
+    },
+    {
+      "title": "High Violet",
+      "artist": "The National",
+      "year": 2010,
+      "type": "album",
+      "rating": null,
+      "mbid": "1ce57f6a-62c8-4017-ad38-3339f542faae",
+      "n": 8
+    },
+    {
+      "title": "Bon Iver, Bon Iver",
+      "artist": "Bon Iver",
+      "year": 2011,
+      "type": "album",
+      "rating": null,
+      "mbid": "2cb36662-3560-4b90-a0a5-7924ac039490",
+      "n": 9
+    },
+    {
+      "title": "The Idler Wheel Is Wiser Than the Driver of the Screw and Whipping Cords Will Serve You More Than Ropes Will Ever Do",
+      "artist": "Fiona Apple",
+      "year": 2012,
+      "type": "album",
+      "rating": null,
+      "mbid": "6086062c-f943-4b85-b1cb-43558425ec1c",
+      "n": 10
+    },
+    {
+      "title": "Labor",
+      "artist": "Small Sur",
+      "year": 2012,
+      "type": "album",
+      "rating": null,
+      "mbid": "4fb8826d-c762-4e71-bc91-82bb81121ce0",
+      "n": 11
+    },
+    {
+      "title": "Days Are Gone",
+      "artist": "HAIM",
+      "year": 2013,
+      "type": "album",
+      "rating": null,
+      "mbid": "c2e0ff67-fb31-4443-ae0e-22ecf010463b",
+      "n": 12
+    },
+    {
+      "title": "Same Trailer Different Park",
+      "artist": "Kacey Musgraves",
+      "year": 2013,
+      "type": "album",
+      "rating": null,
+      "mbid": "71758d87-635d-4d2f-9e5f-acbafbe2a928",
+      "n": 13
+    },
+    {
+      "title": "ARTPOP",
+      "artist": "Lady Gaga",
+      "year": 2013,
+      "type": "album",
+      "rating": null,
+      "mbid": "815b31d8-b972-48a7-b74a-38c49a277676",
+      "n": 14
+    },
+    {
+      "title": "I Forget Where We Were",
+      "artist": "Ben Howard",
+      "year": 2014,
+      "type": "album",
+      "rating": null,
+      "mbid": "bbf38d40-fead-40b9-ae5c-32c9c6f45235",
+      "n": 15
+    },
+    {
+      "title": "Art Angels",
+      "artist": "Grimes",
+      "year": 2015,
+      "type": "album",
+      "rating": null,
+      "mbid": "cac0be2c-509f-40a9-b1ac-a70aa2243a54",
+      "n": 16
+    },
+    {
+      "title": "Pageant Material",
+      "artist": "Kacey Musgraves",
+      "year": 2015,
+      "type": "album",
+      "rating": null,
+      "mbid": "3907114b-1cd5-4929-8656-546a159d4d94",
+      "n": 17
+    },
+    {
+      "title": "Carrie & Lowell",
+      "artist": "Sufjan Stevens",
+      "year": 2015,
+      "type": "album",
+      "rating": 10,
+      "mbid": "21666540-83c8-4c54-9be1-0363a0848f33",
+      "n": 18
+    },
+    {
+      "title": "Lemonade",
+      "artist": "Beyonc\u00e9",
+      "year": 2016,
+      "type": "album",
+      "rating": null,
+      "mbid": "c1f22e07-7bdf-4a4f-8b50-7747c1091ef6",
+      "n": 19
+    },
+    {
+      "title": "22, a Million",
+      "artist": "Bon Iver",
+      "year": 2016,
+      "type": "album",
+      "rating": null,
+      "mbid": "f0e8f425-a941-48df-b5d7-2ceeaaf77c71",
+      "n": 20
+    },
+    {
+      "title": "Blonde",
+      "artist": "Frank Ocean",
+      "year": 2016,
+      "type": "album",
+      "rating": null,
+      "mbid": "0da340a0-6ad7-4fc2-a272-6f94393a7831",
+      "n": 21
+    },
+    {
+      "title": "Number 1 Angel",
+      "artist": "Charli xcx",
+      "year": 2017,
+      "type": "album",
+      "rating": null,
+      "mbid": "a165bb47-3b31-45c1-9da7-ebb60bde4e1d",
+      "n": 22
+    },
+    {
+      "title": "Pop 2",
+      "artist": "Charli xcx",
+      "year": 2017,
+      "type": "album",
+      "rating": null,
+      "mbid": "bc8868e9-dda3-477d-ab89-b62d82cd7ea7",
+      "n": 23
+    },
+    {
+      "title": "Melodrama",
+      "artist": "Lorde",
+      "year": 2017,
+      "type": "album",
+      "rating": null,
+      "mbid": "668e80e0-b35e-4471-9788-0a3d797fe42c",
+      "n": 24
+    },
+    {
+      "title": "Ctrl",
+      "artist": "SZA",
+      "year": 2017,
+      "type": "album",
+      "rating": null,
+      "mbid": "8f892c1b-0709-4cf4-9711-493892a9eb9b",
+      "n": 25
+    },
+    {
+      "title": "Golden Hour",
+      "artist": "Kacey Musgraves",
+      "year": 2018,
+      "type": "album",
+      "rating": null,
+      "mbid": "56713bde-f9de-4097-bbe3-41d9d7af32c4",
+      "n": 26
+    },
+    {
+      "title": "Forever Neverland",
+      "artist": "M\u00d8",
+      "year": 2018,
+      "type": "album",
+      "rating": null,
+      "mbid": "824ffddf-6f1f-4b9e-9c32-349c5d60ef9d",
+      "n": 27
+    },
+    {
+      "title": "Birthplace",
+      "artist": "Novo Amor",
+      "year": 2018,
+      "type": "album",
+      "rating": null,
+      "mbid": "4db1d122-c292-4292-bb0b-cd30818f8212",
+      "n": 28
+    },
+    {
+      "title": "Clean",
+      "artist": "Soccer Mommy",
+      "year": 2018,
+      "type": "album",
+      "rating": null,
+      "mbid": "edf9aacf-ba73-4eef-a83c-83a7a3225fa8",
+      "n": 29
+    },
+    {
+      "title": "i,i",
+      "artist": "Bon Iver",
+      "year": 2019,
+      "type": "album",
+      "rating": null,
+      "mbid": "e53d381a-3b37-4154-9a6e-7d343b3e182e",
+      "n": 30
+    },
+    {
+      "title": "Pang",
+      "artist": "Caroline Polachek",
+      "year": 2019,
+      "type": "album",
+      "rating": null,
+      "mbid": "8c471a20-f7fe-4ccd-bfd8-045cde85ad18",
+      "n": 31
+    },
+    {
+      "title": "Charli",
+      "artist": "Charli xcx",
+      "year": 2019,
+      "type": "album",
+      "rating": null,
+      "mbid": "dc396430-1e1c-4f0b-8b05-d69603d7fb12",
+      "n": 32
+    },
+    {
+      "title": "MAGDALENE",
+      "artist": "FKA twigs",
+      "year": 2019,
+      "type": "album",
+      "rating": null,
+      "mbid": "5d78819e-18b5-4d1a-a286-d816ce868044",
+      "n": 33
+    },
+    {
+      "title": "This Is How You Smile",
+      "artist": "Helado Negro",
+      "year": 2019,
+      "type": "album",
+      "rating": null,
+      "mbid": "8f15d44a-5ee7-442e-ab53-e99b6d45adb3",
+      "n": 34
+    },
+    {
+      "title": "Norman Fucking Rockwell!",
+      "artist": "Lana Del Rey",
+      "year": 2019,
+      "type": "album",
+      "rating": null,
+      "mbid": "24fd0887-9e83-42e3-b27e-e7f89ead4c03",
+      "n": 35
+    },
+    {
+      "title": "Athena",
+      "artist": "Sudan Archives",
+      "year": 2019,
+      "type": "album",
+      "rating": null,
+      "mbid": "24d64f7e-3840-4345-9d64-826914a66afa",
+      "n": 36
+    },
+    {
+      "title": "how i\u2019m feeling now",
+      "artist": "Charli xcx",
+      "year": 2020,
+      "type": "album",
+      "rating": 10,
+      "mbid": "e6f8d52b-3b24-4546-b86d-99d79b0df209",
+      "n": 37
+    },
+    {
+      "title": "Future Nostalgia",
+      "artist": "Dua Lipa",
+      "year": 2020,
+      "type": "album",
+      "rating": null,
+      "mbid": "aa366795-92d7-4d67-91fa-6741f82a4858",
+      "n": 38
+    },
+    {
+      "title": "Fetch the Bolt Cutters",
+      "artist": "Fiona Apple",
+      "year": 2020,
+      "type": "album",
+      "rating": null,
+      "mbid": "882db6d8-e28b-46ba-8a30-277e86fbddf7",
+      "n": 39
+    },
+    {
+      "title": "Women in Music, Pt. III",
+      "artist": "HAIM",
+      "year": 2020,
+      "type": "album",
+      "rating": null,
+      "mbid": "73b8f504-93e5-483d-918d-1006ca3a315c",
+      "n": 40
+    },
+    {
+      "title": "What\u2019s Your Pleasure?",
+      "artist": "Jessie Ware",
+      "year": 2020,
+      "type": "album",
+      "rating": null,
+      "mbid": "38d0e2a3-06a0-4c2e-ac5d-faf1b2d7e563",
+      "n": 41
+    },
+    {
+      "title": "Set My Heart on Fire Immediately",
+      "artist": "Perfume Genius",
+      "year": 2020,
+      "type": "album",
+      "rating": null,
+      "mbid": "cbf252c7-bb3f-484f-825e-fc2a42b55849",
+      "n": 42
+    },
+    {
+      "title": "Punisher",
+      "artist": "Phoebe Bridgers",
+      "year": 2020,
+      "type": "album",
+      "rating": null,
+      "mbid": "cf75fd5a-ca84-4371-94d7-27410360f06b",
+      "n": 43
+    },
+    {
+      "title": "folklore",
+      "artist": "Taylor Swift",
+      "year": 2020,
+      "type": "album",
+      "rating": null,
+      "mbid": "f1d08326-c23b-4b43-be3b-20b33ab10bf6",
+      "n": 44
+    },
+    {
+      "title": "Gaslighter",
+      "artist": "The Chicks",
+      "year": 2020,
+      "type": "album",
+      "rating": null,
+      "mbid": "feeac938-9cb1-4e36-9b98-4ec2ad9a65c3",
+      "n": 45
+    },
+    {
+      "title": "Saint Cloud",
+      "artist": "Waxahatchee",
+      "year": 2020,
+      "type": "album",
+      "rating": null,
+      "mbid": "38b46e05-894f-432a-97cb-a3a1219c14bd",
+      "n": 46
+    },
+    {
+      "title": "Sensational",
+      "artist": "Erika de Casier",
+      "year": 2021,
+      "type": "album",
+      "rating": null,
+      "mbid": "a11b8178-2830-4b3b-805e-2f86792683b2",
+      "n": 47
+    },
+    {
+      "title": "Jubilee",
+      "artist": "Japanese Breakfast",
+      "year": 2021,
+      "type": "album",
+      "rating": null,
+      "mbid": "f4e55ff9-2fe6-417c-a631-f4cf528edc61",
+      "n": 48
+    },
+    {
+      "title": "star-crossed",
+      "artist": "Kacey Musgraves",
+      "year": 2021,
+      "type": "album",
+      "rating": null,
+      "mbid": "91fa494d-c409-4dc2-a8d3-430b63dd2aa9",
+      "n": 49
+    },
+    {
+      "title": "Mercurial World",
+      "artist": "Magdalena Bay",
+      "year": 2021,
+      "type": "album",
+      "rating": null,
+      "mbid": "fda72ebb-16e5-4a19-8be5-8e41906e3c86",
+      "n": 50
+    },
+    {
+      "title": "Ignorance",
+      "artist": "The Weather Station",
+      "year": 2021,
+      "type": "album",
+      "rating": null,
+      "mbid": "297db407-0049-42c3-8640-e05174f3b5b8",
+      "n": 51
+    },
+    {
+      "title": "Blue Weekend",
+      "artist": "Wolf Alice",
+      "year": 2021,
+      "type": "album",
+      "rating": null,
+      "mbid": "8216c4a1-367e-405e-8d67-9457f6e76c22",
+      "n": 52
+    },
+    {
+      "title": "RENAISSANCE",
+      "artist": "Beyonc\u00e9",
+      "year": 2022,
+      "type": "album",
+      "rating": null,
+      "mbid": "2c385052-5083-43a2-b1e5-36566d2ae3c0",
+      "n": 53
+    },
+    {
+      "title": "Ants From Up There",
+      "artist": "Black Country, New Road",
+      "year": 2022,
+      "type": "album",
+      "rating": null,
+      "mbid": "d622ed70-ccc3-4658-8a0a-b7a2d577c28d",
+      "n": 54
+    },
+    {
+      "title": "CRASH",
+      "artist": "Charli xcx",
+      "year": 2022,
+      "type": "album",
+      "rating": null,
+      "mbid": "8d0f0148-7c6e-455d-872e-9851284c5522",
+      "n": 55
+    },
+    {
+      "title": "CAPRISONGS",
+      "artist": "FKA twigs",
+      "year": 2022,
+      "type": "album",
+      "rating": null,
+      "mbid": "edc8b011-6294-48b6-b064-67dfd1712c1b",
+      "n": 56
+    },
+    {
+      "title": "Stick Season",
+      "artist": "Noah Kahan",
+      "year": 2022,
+      "type": "album",
+      "rating": null,
+      "mbid": "14fc4370-9b90-411b-a02e-6c6d5a8799fc",
+      "n": 57
+    },
+    {
+      "title": "Grip Your Fist, I\u2019m Heaven Bound",
+      "artist": "Racing Mount Pleasant",
+      "year": 2022,
+      "type": "album",
+      "rating": null,
+      "mbid": "0a9b516d-8c80-4b8a-b0fc-a4136f3ff129",
+      "n": 58
+    },
+    {
+      "title": "Sometimes, Forever",
+      "artist": "Soccer Mommy",
+      "year": 2022,
+      "type": "album",
+      "rating": null,
+      "mbid": "87df703b-d824-4766-b0b1-961674db2430",
+      "n": 59
+    },
+    {
+      "title": "SOS",
+      "artist": "SZA",
+      "year": 2022,
+      "type": "album",
+      "rating": null,
+      "mbid": "1646286a-d0ad-4288-bfab-34b0fb7b22c1",
+      "n": 60
+    },
+    {
+      "title": "Being Funny in a Foreign Language",
+      "artist": "The 1975",
+      "year": 2022,
+      "type": "album",
+      "rating": null,
+      "mbid": "1273cb92-8775-404b-bc1b-4381a8c6a5b1",
+      "n": 61
+    },
+    {
+      "title": "Dawn FM",
+      "artist": "The Weeknd",
+      "year": 2022,
+      "type": "album",
+      "rating": null,
+      "mbid": "3344452a-3da9-4b4f-8954-ae23a86c2ecf",
+      "n": 62
+    },
+    {
+      "title": "And in the Darkness, Hearts Aglow",
+      "artist": "Weyes Blood",
+      "year": 2022,
+      "type": "album",
+      "rating": null,
+      "mbid": "a392a1a8-8d91-4a79-82a4-0f7e894eb435",
+      "n": 63
+    },
+    {
+      "title": "Desire, I Want to Turn Into You",
+      "artist": "Caroline Polachek",
+      "year": 2023,
+      "type": "album",
+      "rating": null,
+      "mbid": "20bbd8b3-35fa-4a29-9a94-13f4f01bf9ca",
+      "n": 64
+    },
+    {
+      "title": "NEVER ENOUGH",
+      "artist": "Daniel Caesar",
+      "year": 2023,
+      "type": "album",
+      "rating": null,
+      "mbid": "65f5ca68-6dcd-4cc9-8f3c-09d9aaa56bfb",
+      "n": 65
+    },
+    {
+      "title": "Radical Romantics",
+      "artist": "Fever Ray",
+      "year": 2023,
+      "type": "album",
+      "rating": null,
+      "mbid": "0babcbe7-a768-4d30-a0a6-3a9098f53a94",
+      "n": 66
+    },
+    {
+      "title": "Why Does the Earth Give Us People to Love?",
+      "artist": "Kara Jackson",
+      "year": 2023,
+      "type": "album",
+      "rating": 9,
+      "mbid": "1e52b262-7b95-4641-98a7-bb4ca3749046",
+      "n": 67
+    },
+    {
+      "title": "Did you know that there\u2019s a tunnel under Ocean Blvd",
+      "artist": "Lana Del Rey",
+      "year": 2023,
+      "type": "album",
+      "rating": 10,
+      "mbid": "247ec1bd-06a6-4faa-af47-f64d7caa1f71",
+      "n": 68
+    },
+    {
+      "title": "Javelin",
+      "artist": "Sufjan Stevens",
+      "year": 2023,
+      "type": "album",
+      "rating": null,
+      "mbid": "56dba069-d0a1-4353-b786-db6fc8269139",
+      "n": 69
+    },
+    {
+      "title": "softscars",
+      "artist": "yeule",
+      "year": 2023,
+      "type": "album",
+      "rating": null,
+      "mbid": "2115a6f9-9c00-4a96-90aa-8f13771845fb",
+      "n": 70
+    },
+    {
+      "title": "COWBOY CARTER",
+      "artist": "Beyonc\u00e9",
+      "year": 2024,
+      "type": "album",
+      "rating": null,
+      "mbid": "fa566e7b-254a-4fab-8aa5-ebcb7592d7f2",
+      "n": 71
+    },
+    {
+      "title": "BRAT",
+      "artist": "Charli xcx",
+      "year": 2024,
+      "type": "album",
+      "rating": 10,
+      "mbid": "e0fdb431-0109-420d-8a37-f99eaeb4d671",
+      "n": 72
+    },
+    {
+      "title": "Brat and it\u2019s completely different but also still brat",
+      "artist": "Charli xcx",
+      "year": 2024,
+      "type": "album",
+      "rating": null,
+      "mbid": "1eb5ec6f-8f49-466b-a855-4906be6e565a",
+      "n": 73
+    },
+    {
+      "title": "Deeper Well",
+      "artist": "Kacey Musgraves",
+      "year": 2024,
+      "type": "album",
+      "rating": null,
+      "mbid": "0bfe4818-4b51-4930-ab14-c625488c3019",
+      "n": 74
+    },
+    {
+      "title": "Imaginal Disk",
+      "artist": "Magdalena Bay",
+      "year": 2024,
+      "type": "album",
+      "rating": null,
+      "mbid": "9c710cb4-6b20-47d7-a31a-5adb064c6c6b",
+      "n": 75
+    },
+    {
+      "title": "Manning Fireworks",
+      "artist": "MJ Lenderman",
+      "year": 2024,
+      "type": "album",
+      "rating": null,
+      "mbid": "0c308741-7b98-4a36-b44e-1ba437b4e2c4",
+      "n": 76
+    },
+    {
+      "title": "Collapse List",
+      "artist": "Novo Amor",
+      "year": 2024,
+      "type": "album",
+      "rating": null,
+      "mbid": "b6ab7327-ef4f-4172-933b-f03b41e4983c",
+      "n": 77
+    },
+    {
+      "title": "Big Ideas",
+      "artist": "Remi Wolf",
+      "year": 2024,
+      "type": "album",
+      "rating": null,
+      "mbid": "9fc40af7-4b44-4f63-a27b-fed0545f28d0",
+      "n": 78
+    },
+    {
+      "title": "Evergreen",
+      "artist": "Soccer Mommy",
+      "year": 2024,
+      "type": "album",
+      "rating": null,
+      "mbid": "c084071b-f42b-49f8-ab69-724a658ba4e1",
+      "n": 79
+    },
+    {
+      "title": "Tigers Blood",
+      "artist": "Waxahatchee",
+      "year": 2024,
+      "type": "album",
+      "rating": null,
+      "mbid": "f9aa9b53-2c89-4901-926e-e992f1e4d8c0",
+      "n": 80
+    },
+    {
+      "title": "Addison",
+      "artist": "Addison Rae",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "f6a46f72-4ed2-4595-8698-045e334a6716",
+      "n": 81
+    },
+    {
+      "title": "Headlights",
+      "artist": "Alex G",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "2b86bcf2-220b-44d3-9ba1-75e1983e0684",
+      "n": 82
+    },
+    {
+      "title": "Hymnal",
+      "artist": "Alif Hilal",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "b5c4ad25-8cdd-46ac-935f-a480a6b78a5d",
+      "n": 83
+    },
+    {
+      "title": "Tether",
+      "artist": "Annahstasia",
+      "year": 2025,
+      "type": "album",
+      "rating": 10,
+      "mbid": "ae371a9b-95de-4c92-b0ff-cac39ea05c7a",
+      "n": 84
+    },
+    {
+      "title": "Double Infinity",
+      "artist": "Big Thief",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "8fd54a87-a6df-4046-a9f6-7f2f171301ba",
+      "n": 85
+    },
+    {
+      "title": "SABLE, fABLE",
+      "artist": "Bon Iver",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "4843294e-a8ab-4a39-864b-36faa09a2dd8",
+      "n": 86
+    },
+    {
+      "title": "caroline 2",
+      "artist": "caroline",
+      "year": 2025,
+      "type": "album",
+      "rating": 10,
+      "mbid": "52089578-57af-48be-8ee8-594db56a91ed",
+      "n": 87
+    },
+    {
+      "title": "Under Tangled Silence",
+      "artist": "Djrum",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "d8b7c986-89bd-4da4-a0aa-2255ed65136b",
+      "n": 88
+    },
+    {
+      "title": "EUSEXUA",
+      "artist": "FKA twigs",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "05c8e133-ba85-48cc-82c3-afcf0cc9e9ff",
+      "n": 89
+    },
+    {
+      "title": "Getting Killed",
+      "artist": "Geese",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "3c18308c-9072-4810-b26e-0c573e46fb07",
+      "n": 90
+    },
+    {
+      "title": "I\u2019ll Be Waving as You Drive Away",
+      "artist": "Hayden Pedigo",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "5ee717bb-5c0a-40aa-af0d-29e0a0be2de1",
+      "n": 91
+    },
+    {
+      "title": "MAYHEM",
+      "artist": "Lady Gaga",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "4174e53c-90e8-4630-993f-1f7466178398",
+      "n": 92
+    },
+    {
+      "title": "West End Girl",
+      "artist": "Lily Allen",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "e0a7dcaa-3d5c-49a0-bd7e-42e2c89dd43e",
+      "n": 93
+    },
+    {
+      "title": "Virgin",
+      "artist": "Lorde",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "a3734ef9-80a8-40e0-8718-9eb39860ff4a",
+      "n": 94
+    },
+    {
+      "title": "I Love My Computer",
+      "artist": "Ninajirachi",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "6ab2d1f5-1730-499d-a814-6fe6eb9ec1f0",
+      "n": 95
+    },
+    {
+      "title": "choke enough",
+      "artist": "Oklou",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "45f8261c-e781-4a8f-b1f6-ca6616bd1dfe",
+      "n": 96
+    },
+    {
+      "title": "The Art of Loving",
+      "artist": "Olivia Dean",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "35eae658-4243-4bf5-91d6-5a391bbb3699",
+      "n": 97
+    },
+    {
+      "title": "Call It Easy",
+      "artist": "Racing Mount Pleasant",
+      "year": 2025,
+      "type": "single",
+      "rating": null,
+      "mbid": "7b4a7fd7-a20e-41b4-9cd5-485d51bb216f",
+      "n": 98
+    },
+    {
+      "title": "Racing Mount Pleasant",
+      "artist": "Racing Mount Pleasant",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "beccb1af-bcdc-4408-90cd-38039e6da5b1",
+      "n": 99
+    },
+    {
+      "title": "Through the Wall",
+      "artist": "Rochelle Jordan",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "1a0df0f5-c16e-4799-8d9e-fdd28c87a531",
+      "n": 100
+    },
+    {
+      "title": "LUX",
+      "artist": "ROSAL\u00cdA",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "bb3ec118-57df-4eb9-a8fe-a26a70a7dbe0",
+      "n": 101
+    },
+    {
+      "title": "Louder, Please",
+      "artist": "Rose Gray",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "4ea0f788-5ee6-409b-9054-05b58ca97d25",
+      "n": 102
+    },
+    {
+      "title": "FROM FLORIDA\u2019S FINEST",
+      "artist": "SAILORR",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "aaf4dbfe-a0bc-4899-8a80-dc36e1b37a01",
+      "n": 103
+    },
+    {
+      "title": "THE BPM",
+      "artist": "Sudan Archives",
+      "year": 2025,
+      "type": "album",
+      "rating": null,
+      "mbid": "f9e98ca4-0311-4f33-961f-f41154271ef0",
+      "n": 104
+    },
+    {
+      "title": "Train on the Island",
+      "artist": "Aldous Harding",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "97cde110-549c-4236-a233-0d72b4f58d58",
+      "n": 105
+    },
+    {
+      "title": "Music, Fashion, Film",
+      "artist": "Charli xcx",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "15010f36-5433-4a29-9b68-26c13fb4c7ec",
+      "n": 106
+    },
+    {
+      "title": "gao dan dan",
+      "artist": "Helena Gao",
+      "year": 2026,
+      "type": "ep",
+      "rating": null,
+      "mbid": "e93237bf-1610-43c1-a7b4-80c9935f75d2",
+      "n": 107
+    },
+    {
+      "title": "new avatar",
+      "artist": "Kelela",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "001c0c77-95ee-4b9a-8292-63f237ae383a",
+      "n": 108
+    },
+    {
+      "title": "Little Wide Open",
+      "artist": "Kevin Morby",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "a2647d6a-fc8f-49da-98c2-2a7d3a760e67",
+      "n": 109
+    },
+    {
+      "title": "Detour",
+      "artist": "Kim Petras",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "93eeb27b-53e0-4784-b65e-6fa1334a20b3",
+      "n": 110
+    },
+    {
+      "title": "CONFESSIONS II",
+      "artist": "Madonna",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "2dc4dae6-3475-4217-9e9f-06d3f0c763b4",
+      "n": 111
+    },
+    {
+      "title": "Dja Dja",
+      "artist": "Marina Herlop",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "fb8011c9-6074-4aba-a737-0887ec3f5e42",
+      "n": 112
+    },
+    {
+      "title": "Nothing\u2019s About to Happen to Me",
+      "artist": "Mitski",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "f24aa16e-4bb0-4ba3-8317-91c0a518f0a1",
+      "n": 113
+    },
+    {
+      "title": "Inventio",
+      "artist": "Murex",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "3530c8e8-5303-4abc-9e8b-a3b07162a3c7",
+      "n": 114
+    },
+    {
+      "title": "MY SKYSCRAPER",
+      "artist": "Nirosta Steel",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "d896b75c-554a-41bf-b747-06c756705e11",
+      "n": 115
+    },
+    {
+      "title": "The Great Divide",
+      "artist": "Noah Kahan",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "09d6c4af-2545-468e-8b44-4d5eb3e9aa85",
+      "n": 116
+    },
+    {
+      "title": "you seem pretty sad for a girl so in love",
+      "artist": "Olivia Rodrigo",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "4c4eee61-da1e-4115-8eb9-07e5b671fefe",
+      "n": 117
+    },
+    {
+      "title": "Lost Weekend",
+      "artist": "Phoebe Bridgers",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "706578f8-fb48-47f2-806d-a047dc408332",
+      "n": 118
+    },
+    {
+      "title": "Life 1",
+      "artist": "Quadeca",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "7cae1c56-da60-4036-a42f-03ffcadc8f4d",
+      "n": 119
+    },
+    {
+      "title": "Mud",
+      "artist": "Remi Wolf",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "3de0d7de-e0c1-481b-98f9-b31d88495a8d",
+      "n": 120
+    },
+    {
+      "title": "Visitor",
+      "artist": "Sienna Spiro",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "bb33d07f-bb9a-4ba7-83df-48fe5fc221b5",
+      "n": 121
+    },
+    {
+      "title": "Popstar",
+      "artist": "Tinashe",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "27a54d93-207f-4ba6-b2bc-9053373ad342",
+      "n": 122
+    },
+    {
+      "title": "She\u2019s the Best",
+      "artist": "Troye Sivan",
+      "year": 2026,
+      "type": "album",
+      "rating": null,
+      "mbid": "511dbc31-340f-49f0-ae9f-94c77acec645",
+      "n": 123
+    },
+    {
+      "title": "U",
+      "artist": "underscores",
+      "year": 2026,
+      "type": "album",
+      "rating": 8,
+      "mbid": "cec81633-5419-4f92-b0ac-6e9c508a042f",
+      "n": 124
+    }
+  ]
+}

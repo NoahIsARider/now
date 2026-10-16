@@ -19,11 +19,13 @@
     { "label": "rss", "href": "feed.xml" },
     { "label": "papers", "href": "papers.html" },
     { "label": "films", "href": "https://noahisarider.srht.site/MAYDAY/" },
+    { "label": "records", "href": "https://noahisarider.srht.site/shkb/" },
     { "label": "letterboxd", "href": "https://letterboxd.com/noahisarider/" }
   ],
   "changelog": [
     { "date": "2026-10-07", "note": "first version" },
     { "date": "2026-10-07", "note": "added a papers page" },
-    { "date": "2026-10-16", "note": "dropped the work list and refreshed what I am watching and listening to" }
+    { "date": "2026-10-16", "note": "dropped the work list and refreshed what I am watching and listening to" },
+    { "date": "2026-10-16", "note": "opened shkb, a depth log of the records I have listened to" }
   ]
 }

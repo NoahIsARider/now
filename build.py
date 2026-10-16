@@ -171,10 +171,15 @@ def page_feed(now, build_date):
     """one item per changelog entry, newest first. the newest carries the full page."""
     current = body_html(now)
     items = []
+    total = len(now["changelog"])
     for i, entry in enumerate(reversed(now["changelog"])):
         note = entry.get("note", "updated")
         desc = current if i == 0 else f"<p>{e(note)}</p>"
-        guid = f"{SITE_URL}/#{entry['date']}"
+        # the newest item owns the bare date anchor. older entries get their stable
+        # changelog index appended, so same-day entries never collide.
+        j = total - 1 - i
+        anchor = entry["date"] if i == 0 else f"{entry['date']}-{j}"
+        guid = f"{SITE_URL}/#{anchor}"
         items.append(f"""  <item>
     <title>{e(note)}</title>
     <link>{SITE_URL}/</link>
@@ -198,9 +203,9 @@ def page_feed(now, build_date):
 """
 
 
-def build_mayday():
-    """the films manifest builds into site/MAYDAY/, one more section of the same site"""
-    script = os.path.join(ROOT, "mayday", "build.py")
+def build_section(directory):
+    """a sibling manifest builds into its own folder under site/ (mayday, shkb)"""
+    script = os.path.join(ROOT, directory, "build.py")
     if os.path.exists(script):
         subprocess.run([sys.executable, script], check=True)
 
@@ -237,9 +242,12 @@ def main():
         f"  <url><loc>{SITE_URL}/</loc></url>\n"
         f"  <url><loc>{SITE_URL}/papers.html</loc></url>\n"
         f"  <url><loc>{SITE_URL}/MAYDAY/</loc></url>\n"
-        f"  <url><loc>{SITE_URL}/MAYDAY/about/</loc></url>\n</urlset>\n")
+        f"  <url><loc>{SITE_URL}/MAYDAY/about/</loc></url>\n"
+        f"  <url><loc>{SITE_URL}/shkb/</loc></url>\n"
+        f"  <url><loc>{SITE_URL}/shkb/about/</loc></url>\n</urlset>\n")
 
-    build_mayday()
+    build_section("mayday")
+    build_section("shkb")
 
     size = sum(os.path.getsize(os.path.join(d, f))
                for d, _, fs in os.walk(SRC) for f in fs)
