@@ -18,8 +18,9 @@ SRC = os.path.normpath(os.path.join(ROOT, "..", "site", "MAYDAY"))
 DATA = os.path.join(ROOT, "data", "films.json")
 ASSETS = os.path.join(ROOT, "assets")
 
-CLEAN_URL = "noahisarider.srht.site/MAYDAY"          # what the links display
-SITE_URL = "https://" + CLEAN_URL                   # canonical / og:url
+_BASE = os.environ.get("SITE_URL", "https://noahisarider.srht.site").rstrip("/")
+SITE_URL = _BASE + "/MAYDAY"
+CLEAN_URL = SITE_URL.replace("https://", "").replace("http://", "")  # used only in og:desc
 TAGLINE = ("It is said that once a pilot has issued the MAYDAY distress signal three times, "
            "the probability of survival is almost zero.")
 REPO = "https://git.sr.ht/~noahisarider/now/tree/master/item/mayday"

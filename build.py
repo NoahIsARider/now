@@ -23,7 +23,7 @@ DATA = os.path.join(ROOT, "data", "now.json")
 PAPERS_DATA = os.path.join(ROOT, "data", "papers.json")
 ASSETS = os.path.join(ROOT, "assets")
 
-SITE_URL = "https://noahisarider.srht.site"
+SITE_URL = os.environ.get("SITE_URL", "https://noahisarider.srht.site")
 FEED_TITLE = "noahisarider — what I am doing right now"
 FEED_DESC = "What I am working on, watching and listening to, updated when it changes."
 
@@ -94,12 +94,12 @@ def page_papers(papers):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(papers['name'])} — papers</title>
 <meta name="description" content="{e(papers['summary'])}">
-<link rel="canonical" href="{SITE_URL}/papers.html">
+<link rel="canonical" href="{SITE_URL}{_papers_clean_url()}">
 <link rel="alternate" type="application/rss+xml" title="{e(FEED_TITLE)}" href="{SITE_URL}/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{e(papers['name'])} — papers">
 <meta property="og:description" content="{e(papers['summary'])}">
-<meta property="og:url" content="{SITE_URL}/papers.html">
+<meta property="og:url" content="{SITE_URL}{_papers_clean_url()}">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#ffffff">
 <meta name="author" content="noahisarider">
@@ -113,6 +113,11 @@ def page_papers(papers):
 </body>
 </html>
 """
+
+
+def _papers_clean_url():
+    # sourcehut keeps /papers.html; any other host (Nekoweb mirror) uses /papers/
+    return "/papers.html" if "srht.site" in SITE_URL else "/papers/"
 
 
 def pretty_date(iso):
@@ -240,7 +245,7 @@ def main():
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         f"  <url><loc>{SITE_URL}/</loc></url>\n"
-        f"  <url><loc>{SITE_URL}/papers.html</loc></url>\n"
+        f"  <url><loc>{SITE_URL}{_papers_clean_url()}</loc></url>\n"
         f"  <url><loc>{SITE_URL}/MAYDAY/</loc></url>\n"
         f"  <url><loc>{SITE_URL}/MAYDAY/about/</loc></url>\n"
         f"  <url><loc>{SITE_URL}/shkb/</loc></url>\n</urlset>\n")

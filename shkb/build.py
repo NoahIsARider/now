@@ -18,8 +18,9 @@ SRC = os.path.normpath(os.path.join(ROOT, "..", "site", "shkb"))
 DATA = os.path.join(ROOT, "data", "albums.json")
 ASSETS = os.path.join(ROOT, "assets")
 
-CLEAN_URL = "noahisarider.srht.site/shkb"
-SITE_URL = "https://" + CLEAN_URL
+_BASE = os.environ.get("SITE_URL", "https://noahisarider.srht.site").rstrip("/")
+SITE_URL = _BASE + "/shkb"
+CLEAN_URL = SITE_URL.replace("https://", "").replace("http://", "")  # used only in og:desc
 REPO = "https://git.sr.ht/~noahisarider/now/tree/master/item/shkb"
 
 TAGLINE_A = ("We all get hurt by others, and we all hurt others, and history "
