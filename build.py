@@ -243,8 +243,7 @@ def main():
         f"  <url><loc>{SITE_URL}/papers.html</loc></url>\n"
         f"  <url><loc>{SITE_URL}/MAYDAY/</loc></url>\n"
         f"  <url><loc>{SITE_URL}/MAYDAY/about/</loc></url>\n"
-        f"  <url><loc>{SITE_URL}/shkb/</loc></url>\n"
-        f"  <url><loc>{SITE_URL}/shkb/about/</loc></url>\n</urlset>\n")
+        f"  <url><loc>{SITE_URL}/shkb/</loc></url>\n</urlset>\n")
 
     build_section("mayday")
     build_section("shkb")

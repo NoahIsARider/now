@@ -95,7 +95,5 @@ link colour.
   invoked by the root `build.py`, so the site stays one build, one
   tarball, one publish.
 - A dark `favicon.svg` letter `s` uses the link blue, not black.
-- About page explains what inclusion means, the ten-point scale, the
-  record.club to MusicBrainz provenance, and the absence of tracking.
 - Each build must be verified for zero CJK characters and for GET 200 on
-  `/shkb/`, `/shkb/about/` and `/shkb/albums.json` after publishing.
+  `/shkb/` and `/shkb/albums.json` after publishing.

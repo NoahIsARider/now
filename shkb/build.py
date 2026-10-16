@@ -81,7 +81,6 @@ def footer(p):
   <p class="signal">shkb</p>
   <ul>
     <li><a href="{p}">the depth log</a></li>
-    <li><a href="{p}about/">about this list</a></li>
     <li><a href="/MAYDAY/">films</a></li>
     <li><a href="/">now</a></li>
     <li><a href="{e(REPO)}">source repository</a></li>
@@ -156,65 +155,6 @@ Try fewer words, or clear the score filters.</p>
                   desc=desc, p="./", path="", body=body)
 
 
-def page_about(data):
-    c = data["counts"]
-    body = f"""<p class="top"><a href="../">← the depth log</a><span class="selfurl">about</span></p>
-<div class="doc">
-  <section>
-    <h2>What this is</h2>
-    <p>{c['total']} releases I have listened to, {c['albums']} albums, {c['eps']} eps and
-       {c['singles']} single, spanning {c['year_min']} to {c['year_max']}. {c['rated']} of them carry
-       a score out of ten, {c['ten']} a full ten. Everything else on the list was still listened to,
-       more than once in most cases; it simply was not graded.</p>
-    <p>{e(TAGLINE_A)} {e(TAGLINE_B)}</p>
-    <p class="verdict">{e(VERDICT)}</p>
-  </section>
-  <section>
-    <h2>How a record gets in</h2>
-    <ul>
-      <li>It is in my record.club collection, which means I actually spent time with it.</li>
-      <li>The order is chronological by release year, then artist, then title.</li>
-      <li>A score means I wanted to keep the judgement on record. Scores run out of ten,
-          and on this list they only ever appear as 8, 9 or 10. A blank score is silence,
-          not a low mark.</li>
-    </ul>
-  </section>
-  <section>
-    <h2>Reading it</h2>
-    <ul>
-      <li>the number — position on the log, earliest release first</li>
-      <li>the title — a link to the release on record.club, the listening
-      collection I started from</li>
-      <li>the blue numerals — my score, written as 8/10, 9/10 or 10/10</li>
-      <li><span class="k">ep</span> or <span class="k">single</span> — marked when a release is not a full album</li>
-    </ul>
-  </section>
-  <section>
-    <h2>About the site</h2>
-    <p>One column of type on deep water. No cover art, no rules, no boxes, and no colour except
-       the links, which are lit the way daylight looks from several metres down. It is a static
-       page built from a single JSON file and published on sourcehut pages. The fonts are served
-       from this domain, so loading a page asks nobody else for anything.</p>
-    <p>Titles, artists, years and links come straight out of a record.club export.
-       That export is regenerated into JSON by a small script, so updating the log
-       is a data task, not an editing one. The scores are mine, which is to say they
-       are opinions.</p>
-  </section>
-  <section>
-    <h2>Where to find things</h2>
-    <ul>
-      <li><a href="https://record.club/">record.club</a> — the listening collection behind every title link</li>
-      <li><a href="{e(REPO)}">Source repository</a> — this site, and the log as one JSON file</li>
-      <li><a href="albums.json">albums.json</a> — the whole manifest, machine-readable</li>
-    </ul>
-  </section>
-</div>
-{footer('../')}"""
-    return layout(title="About — shkb",
-                  desc="What this listening manifest is, how a record gets on it, and how the site is built.",
-                  p="../", path="about/", body=body)
-
-
 def page_404():
     body = f"""<p class="top"><a href="/shkb/">← the depth log</a><span class="selfurl">404</span></p>
 <div class="doc">
@@ -247,10 +187,9 @@ def main():
         open(full, "w", encoding="utf-8").write(text)
 
     w("index.html", page_index(data))
-    w("about/index.html", page_about(data))
     w("404.html", page_404())
 
-    urls = [f"{SITE_URL}/", f"{SITE_URL}/about/"]
+    urls = [f"{SITE_URL}/"]
     w("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n'
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
       "".join(f"  <url><loc>{e(u)}</loc></url>\n" for u in urls) + "</urlset>\n")
