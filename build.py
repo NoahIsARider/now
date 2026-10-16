@@ -38,7 +38,9 @@ def rich(text):
 
 
 def body_html(now):
-    parts = [f'<p class="lead summary">{rich(now["summary"])}</p>']
+    parts = []
+    if now.get("summary"):
+        parts.append(f'<p class="lead summary">{rich(now["summary"])}</p>')
     for s in now["sections"]:
         if s.get("items"):
             lis = "".join(f"<li>{rich(i)}</li>" for i in s["items"])
@@ -119,6 +121,10 @@ def pretty_date(iso):
 
 
 def page_index(now, build_date):
+    desc_meta = ""
+    if now.get("summary"):
+        desc_meta = (f'<meta name="description" content="{e(now["summary"])}">\n'
+                     f'<meta property="og:description" content="{e(now["summary"])}">\n')
     body = f"""<header class="mast">
   <p class="name">{e(now['name'])}</p>
   <p class="stamp">last updated {e(pretty_date(now['updated']))}</p>
@@ -131,12 +137,10 @@ def page_index(now, build_date):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(now['name'])}</title>
-<meta name="description" content="{e(now['summary'])}">
-<link rel="canonical" href="{SITE_URL}/">
+{desc_meta}<link rel="canonical" href="{SITE_URL}/">
 <link rel="alternate" type="application/rss+xml" title="{e(FEED_TITLE)}" href="{SITE_URL}/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{e(now['name'])}">
-<meta property="og:description" content="{e(now['summary'])}">
 <meta property="og:url" content="{SITE_URL}/">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#ffffff">

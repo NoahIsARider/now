@@ -1,28 +1,18 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-16",
   "name": "noahisarider",
-  "summary": "Preparing PhD applications. Four papers in flight.",
   "sections": [
-    {
-      "label": "work",
-      "items": [
-        "one under review, on counterfactual software defect detection",
-        "one in internal review and being polished, on tourism management",
-        "one in progress, a quantitative meta-analysis in smart healthcare",
-        "one in progress, a mental health coaching agent for smart healthcare"
-      ]
-    },
     {
       "label": "elsewhere",
       "body": "An [X](https://x.com/NoahIsARider) account for technology and the things I am learning, and [Mastodon](https://mastodon.social/@noahisarider) and [Bluesky](https://bsky.app/profile/noahisarider.bsky.social) for art."
     },
     {
       "label": "watching",
-      "body": "[Primetime](https://letterboxd.com/film/primetime-2026/) — the moral position of the story is genuinely ambiguous, but the characters are sharply drawn and the setting is real, so the whole thing feels natural. The visual language is unafraid, and it works far better than people are saying it does."
+      "body": "[The Other Side of Hope](https://letterboxd.com/film/the-other-side-of-hope/)"
     },
     {
       "label": "listening",
-      "body": "[Racing Mount Pleasant](https://racingmountpleasant.bandcamp.com/album/racing-mount-pleasant-2)"
+      "body": "[She's The Best](https://youtu.be/mFA1P8ZzoLw)"
     }
   ],
   "footer": [
@@ -33,6 +23,7 @@
   ],
   "changelog": [
     { "date": "2026-10-07", "note": "first version" },
-    { "date": "2026-10-07", "note": "added a papers page" }
+    { "date": "2026-10-07", "note": "added a papers page" },
+    { "date": "2026-10-16", "note": "dropped the work list and refreshed what I am watching and listening to" }
   ]
 }
