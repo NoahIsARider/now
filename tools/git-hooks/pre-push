@@ -1,14 +1,14 @@
 #!/bin/sh
-# Publish the now page whenever master is pushed.
+# Publish the whole site (now + papers + MAYDAY) whenever master is pushed.
 # Install with:  cp tools/git-hooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push
 
 refs=$(cat)
 
 case "$refs" in
   *refs/heads/master*|*refs/heads/main*)
-    echo "[now] rebuilding and publishing the root page ..."
+    echo "[site] rebuilding and publishing the whole site ..."
     if ! ./publish.sh; then
-      echo "[now] publish failed. the push continues, the site is unchanged."
+      echo "[site] publish failed. the push continues, the site is unchanged."
     fi
     ;;
 esac

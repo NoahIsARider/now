@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-MAYDAY site builder.
-    python build.py       ->  writes ./site/  (the directory that gets published)
+MAYDAY site builder, run as part of the merged home site.
+    python build.py       ->  writes ../site/MAYDAY/  (published at /MAYDAY/)
 
 Source of truth is data/films.json, which is generated from the Letterboxd export
 (see tools/build-films-from-export.py). Ratings and reviews are the author's own.
@@ -14,7 +14,7 @@ import shutil
 from datetime import date
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-SRC = os.path.join(ROOT, "site")
+SRC = os.path.normpath(os.path.join(ROOT, "..", "site", "MAYDAY"))
 DATA = os.path.join(ROOT, "data", "films.json")
 ASSETS = os.path.join(ROOT, "assets")
 
@@ -22,7 +22,7 @@ CLEAN_URL = "noahisarider.srht.site/MAYDAY"          # what the links display
 SITE_URL = "https://" + CLEAN_URL                   # canonical / og:url
 TAGLINE = ("It is said that once a pilot has issued the MAYDAY distress signal three times, "
            "the probability of survival is almost zero.")
-REPO = "https://sr.ht/~noahisarider/MAYDAY/"
+REPO = "https://git.sr.ht/~noahisarider/now/tree/master/item/mayday"
 LETTERBOXD = "https://letterboxd.com/noahisarider/"
 
 

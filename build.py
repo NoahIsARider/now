@@ -13,6 +13,8 @@ import json
 import os
 import re
 import shutil
+import subprocess
+import sys
 from datetime import date
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -196,6 +198,13 @@ def page_feed(now, build_date):
 """
 
 
+def build_mayday():
+    """the films manifest builds into site/MAYDAY/, one more section of the same site"""
+    script = os.path.join(ROOT, "mayday", "build.py")
+    if os.path.exists(script):
+        subprocess.run([sys.executable, script], check=True)
+
+
 def favicon():
     return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">'
             '<text x="16" y="24" text-anchor="middle" fill="#000"'
@@ -226,11 +235,15 @@ def main():
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         f"  <url><loc>{SITE_URL}/</loc></url>\n"
-        f"  <url><loc>{SITE_URL}/papers.html</loc></url>\n</urlset>\n")
+        f"  <url><loc>{SITE_URL}/papers.html</loc></url>\n"
+        f"  <url><loc>{SITE_URL}/MAYDAY/</loc></url>\n"
+        f"  <url><loc>{SITE_URL}/MAYDAY/about/</loc></url>\n</urlset>\n")
+
+    build_mayday()
 
     size = sum(os.path.getsize(os.path.join(d, f))
                for d, _, fs in os.walk(SRC) for f in fs)
-    print(f"built site/ — {size/1024:.0f} KiB, updated {now['updated']}, "
+    print(f"built site/ — {size/1024:.0f} KiB total, updated {now['updated']}, "
           f"{len(now['changelog'])} feed item(s)")
 
 

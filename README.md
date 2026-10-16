@@ -9,11 +9,14 @@ Updated when something changes, with an RSS feed for whoever wants it.
 ```
 data/now.json            the now page. edit this for the front page.
 data/papers.json         the papers page (papers.html): what I am reading, with notes.
-build.py                 reads both, writes site/
+build.py                 reads both, then calls mayday/build.py, writes the whole site/
 assets/style.css         the design: one narrow column, black on white, blue links
 assets/fonts/            Special Elite + Courier Prime, self-hosted, OFL 1.1
+mayday/                  the MAYDAY films manifest, served at /MAYDAY/
+mayday/data/films.json   the film list, generated from a Letterboxd export
+mayday/build.py          builds the manifest into site/MAYDAY/
 site/                    generated output, not in git, this is what gets published
-publish.sh               build + upload to the root of the site
+publish.sh               build + upload everything in one tarball
 tools/git-hooks/pre-push  the same thing, run on every push
 ```
 
@@ -36,6 +39,7 @@ Change `data/now.json`, then `python build.py`.
 ```
 
 - A section with `items` renders as a bulleted list, one with `body` as a paragraph.
+- `summary` is optional, a lead line under the masthead when present, nothing when absent.
 - Links are inline only: `[text](url)`. Nothing else is parsed.
 - **When you change something, add a line to `changelog`.** The newest entry becomes the
   top item in `feed.xml` and carries the full current text, so subscribers see the update.
@@ -48,17 +52,21 @@ same inline `[text](url)` links.
 
 ## Publishing
 
-`noahisarider.srht.site/` is the domain root, and the films manifest lives at `/MAYDAY/`.
+`noahisarider.srht.site/` is one site in one repository. The now page is at the root,
+the papers page at `/papers.html`, and the films manifest at `/MAYDAY/`.
 
-**Publishing the root replaces the whole site, subdirectories included.** Verified: after a
-root publish `/MAYDAY/` answered 404. So `publish.sh` here publishes the root and then runs
-`../MAYDAY/publish.sh` to put the manifest back. The other direction is harmless — a publish
-*into* a subdirectory only touches that subdirectory, so pushing MAYDAY never disturbs this
-page. If you ever publish the root by hand, republish MAYDAY afterwards.
+The build writes all three into one `site/` tree, so `publish.sh` makes one tarball and one
+upload. A publish still replaces the whole site at the server, but the replacement now
+contains `/MAYDAY/` already, nothing gets wiped and nothing has to be sent a second time.
 
 ```sh
 ./publish.sh          # uses ~/.srht-token
 ```
+
+Edit the manifest in `mayday/data/films.json` (or regenerate it with
+`python mayday/tools/build-films-from-export.py <letterboxd-export.zip>`), then run the same
+`python build.py` and `./publish.sh` as always. See `mayday/README.md` for how the list is
+made.
 
 On push, once installed:
 
