@@ -17,9 +17,8 @@
   ],
   "footer": [
     { "label": "rss", "href": "feed.xml" },
-    { "label": "papers", "href": "papers.html" },
-    { "label": "films", "href": "https://noahisarider.srht.site/MAYDAY/" },
-    { "label": "records", "href": "https://noahisarider.srht.site/shkb/" },
+    { "label": "films", "href": "/MAYDAY/" },
+    { "label": "records", "href": "/shkb/" },
     { "label": "letterboxd", "href": "https://letterboxd.com/noahisarider/" }
   ],
   "changelog": [

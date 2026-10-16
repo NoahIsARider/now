@@ -20,7 +20,6 @@ from datetime import date
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "site")
 DATA = os.path.join(ROOT, "data", "now.json")
-PAPERS_DATA = os.path.join(ROOT, "data", "papers.json")
 ASSETS = os.path.join(ROOT, "assets")
 
 SITE_URL = os.environ.get("SITE_URL", "https://noahisarider.srht.site")
@@ -56,68 +55,6 @@ def body_html(now):
 def footer_html(now):
     links = "".join(f'<a href="{e(l["href"])}">{e(l["label"])}</a>' for l in now["footer"])
     return f'<footer class="foot">{links}</footer>'
-
-
-def papers_html(papers):
-    parts = []
-    for g in papers["groups"]:
-        lis = []
-        for p in g["papers"]:
-            link = (f'<a href="{e(p["url"])}">{e(p["title"])}</a>'
-                    if p.get("url") else e(p["title"]))
-            meta = [x for x in (p.get("authors"),
-                                ", ".join(x for x in (p.get("venue"),
-                                                      str(p["year"]) if p.get("year") else "")
-                                         if x)) if x]
-            if p.get("status") and p["status"] != "read":
-                meta.append(e(p["status"]))
-            meta_s = f'\n  <span class="pmeta">{" &#183; ".join(meta)}</span>' if meta else ""
-            note = f'\n  <p class="pnote">{rich(p["note"])}</p>' if p.get("note") else ""
-            lis.append(f'<li>\n  <span class="ptitle">{link}</span>{meta_s}{note}\n</li>')
-        parts.append(f'<section>\n  <h2 class="label">{e(g["label"])}</h2>\n'
-                     f'  <ul class="papers">{chr(10).join(lis)}</ul>\n</section>')
-    return "\n".join(parts)
-
-
-def page_papers(papers):
-    body = f"""<header class="mast">
-  <p class="name"><a href="./">{e(papers['name'])}</a></p>
-  <p class="stamp">last updated {e(pretty_date(papers['updated']))}</p>
-</header>
-<p class="lead summary">{rich(papers['summary'])}</p>
-{papers_html(papers)}
-<footer class="foot"><a href="./">now</a><a href="feed.xml">rss</a></footer>"""
-    return f"""<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{e(papers['name'])} — papers</title>
-<meta name="description" content="{e(papers['summary'])}">
-<link rel="canonical" href="{SITE_URL}{_papers_clean_url()}">
-<link rel="alternate" type="application/rss+xml" title="{e(FEED_TITLE)}" href="{SITE_URL}/feed.xml">
-<meta property="og:type" content="website">
-<meta property="og:title" content="{e(papers['name'])} — papers">
-<meta property="og:description" content="{e(papers['summary'])}">
-<meta property="og:url" content="{SITE_URL}{_papers_clean_url()}">
-<meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#ffffff">
-<meta name="author" content="noahisarider">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-<div class="shell">
-{body}
-</div>
-</body>
-</html>
-"""
-
-
-def _papers_clean_url():
-    # sourcehut keeps /papers.html; any other host (Nekoweb mirror) uses /papers/
-    return "/papers.html" if "srht.site" in SITE_URL else "/papers/"
 
 
 def pretty_date(iso):
@@ -234,9 +171,6 @@ def main():
     open(os.path.join(SRC, "favicon.svg"), "w", encoding="utf-8").write(favicon())
     open(os.path.join(SRC, "index.html"), "w", encoding="utf-8").write(
         page_index(now, build_date))
-    papers = json.load(open(PAPERS_DATA, encoding="utf-8"))
-    open(os.path.join(SRC, "papers.html"), "w", encoding="utf-8").write(
-        page_papers(papers))
     open(os.path.join(SRC, "feed.xml"), "w", encoding="utf-8").write(
         page_feed(now, build_date))
     open(os.path.join(SRC, "robots.txt"), "w", encoding="utf-8").write(
@@ -245,7 +179,6 @@ def main():
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         f"  <url><loc>{SITE_URL}/</loc></url>\n"
-        f"  <url><loc>{SITE_URL}{_papers_clean_url()}</loc></url>\n"
         f"  <url><loc>{SITE_URL}/MAYDAY/</loc></url>\n"
         f"  <url><loc>{SITE_URL}/MAYDAY/about/</loc></url>\n"
         f"  <url><loc>{SITE_URL}/shkb/</loc></url>\n</urlset>\n")
