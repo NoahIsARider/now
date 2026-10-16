@@ -21,7 +21,6 @@ ASSETS = os.path.join(ROOT, "assets")
 CLEAN_URL = "noahisarider.srht.site/shkb"
 SITE_URL = "https://" + CLEAN_URL
 REPO = "https://git.sr.ht/~noahisarider/now/tree/master/item/shkb"
-MUSICBRAINZ = "https://musicbrainz.org/release/"
 
 TAGLINE_A = ("We all get hurt by others, and we all hurt others, and history "
              "repeats itself again and again.")
@@ -34,7 +33,7 @@ def e(s):
 
 
 def release_url(album):
-    return MUSICBRAINZ + album["mbid"]
+    return album.get("url", "")
 
 
 def score(album):
@@ -87,8 +86,7 @@ def footer(p):
     <li><a href="/">now</a></li>
     <li><a href="{e(REPO)}">source repository</a></li>
   </ul>
-  <p class="meta">compiled by noahisarider · record data from a record.club export,
-  identifiers from MusicBrainz · built {date.today().isoformat()} · no cookies, no trackers</p>
+  <p class="meta">compiled by noahisarider · record data from a record.club export · built {date.today().isoformat()} · no cookies, no trackers</p>
 </footer>"""
 
 
@@ -185,7 +183,8 @@ def page_about(data):
     <h2>Reading it</h2>
     <ul>
       <li>the number — position on the log, earliest release first</li>
-      <li>the title — a link to the release on MusicBrainz, the open music database</li>
+      <li>the title — a link to the release on record.club, the listening
+      collection I started from</li>
       <li>the blue numerals — my score, written as 8/10, 9/10 or 10/10</li>
       <li><span class="k">ep</span> or <span class="k">single</span> — marked when a release is not a full album</li>
     </ul>
@@ -196,15 +195,15 @@ def page_about(data):
        the links, which are lit the way daylight looks from several metres down. It is a static
        page built from a single JSON file and published on sourcehut pages. The fonts are served
        from this domain, so loading a page asks nobody else for anything.</p>
-    <p>Titles, artists, years and identifiers come out of a record.club export, whose catalogue
-       is keyed to MusicBrainz. The export is regenerated into JSON by a small script, so updating
-       the log is a data task, not an editing one. The scores are mine, which is to say they are
-       opinions.</p>
+    <p>Titles, artists, years and links come straight out of a record.club export.
+       That export is regenerated into JSON by a small script, so updating the log
+       is a data task, not an editing one. The scores are mine, which is to say they
+       are opinions.</p>
   </section>
   <section>
     <h2>Where to find things</h2>
     <ul>
-      <li><a href="https://musicbrainz.org/">MusicBrainz</a> — the open music encyclopedia behind every title link</li>
+      <li><a href="https://record.club/">record.club</a> — the listening collection behind every title link</li>
       <li><a href="{e(REPO)}">Source repository</a> — this site, and the log as one JSON file</li>
       <li><a href="albums.json">albums.json</a> — the whole manifest, machine-readable</li>
     </ul>

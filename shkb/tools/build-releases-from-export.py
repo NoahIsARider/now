@@ -55,6 +55,7 @@ def main(argv):
         title = row["Title"].strip()
         artist = row["Artist"].strip()
         mbid = row["MBID"].strip()
+        url = row.get("URL", "").strip()
         kind = row["Type"].strip().lower()
         ascii_guard("title", title)
         ascii_guard("artist", artist)
@@ -68,6 +69,7 @@ def main(argv):
                 "type": kind if kind in {"album", "ep", "single"} else "album",
                 "rating": ratings.get(mbid),
                 "mbid": mbid,
+                "url": url,
             }
         )
 
