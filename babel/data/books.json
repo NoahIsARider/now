@@ -1,0 +1,918 @@
+{
+  "exported": "2026-10-16",
+  "source": "d:\\Download\\EdgeDownload\\goodreads_library_export.csv",
+  "counts": {
+    "total": 100,
+    "rejected_cjk_no_translation": 0,
+    "read": 100,
+    "rated": 58,
+    "five": 29,
+    "four": 25,
+    "three": 4,
+    "zero": 42,
+    "year_min": 1991,
+    "year_max": 2026
+  },
+  "books": [
+    {
+      "n": "001",
+      "title": "AI Engineering: Building Applications with Foundation Models",
+      "author": "Chip Huyen",
+      "year": 2025,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/216848047"
+    },
+    {
+      "n": "002",
+      "title": "Carnal Thoughts: Embodiment and Moving Image Culture",
+      "author": "Vivian Sobchack",
+      "year": 2004,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/786569"
+    },
+    {
+      "n": "003",
+      "title": "Catch-22",
+      "author": "Joseph Heller",
+      "year": 2012,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/30266815"
+    },
+    {
+      "n": "004",
+      "title": "For Common Things: Irony, Trust and Commitment in America Today",
+      "author": "Jedediah Purdy",
+      "year": 2000,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/160767"
+    },
+    {
+      "n": "005",
+      "title": "Guns, Germs and Steel: The Fates of Human Societies",
+      "author": "Jared Diamond",
+      "year": 1999,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/76919"
+    },
+    {
+      "n": "006",
+      "title": "Imagined Communities: Reflections on the Origin and Spread of Nationalism",
+      "author": "Benedict Anderson",
+      "year": 1991,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/399136"
+    },
+    {
+      "n": "007",
+      "title": "Jacques Rancière: Key Concepts",
+      "author": "Jean-Philippe Deranty",
+      "year": 2018,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/112459321"
+    },
+    {
+      "n": "008",
+      "title": "Light in August",
+      "author": "William Faulkner",
+      "year": 2015,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/98212882"
+    },
+    {
+      "n": "009",
+      "title": "Looking at Pictures",
+      "author": "Robert Walser",
+      "year": 2024,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/228333601"
+    },
+    {
+      "n": "010",
+      "title": "NeuroLogic Thinking: 9 Scientific Principles That Explain How We Think",
+      "author": "Eliezer Sternberg",
+      "year": 2018,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/42250520"
+    },
+    {
+      "n": "011",
+      "title": "On History",
+      "author": "Eric J. Hobsbawm",
+      "year": 2015,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/96877017"
+    },
+    {
+      "n": "012",
+      "title": "Only a Joke Can Save Us: A Theory of Comedy (Diaeresis)",
+      "author": "Todd McGowan",
+      "year": 2017,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/33931726"
+    },
+    {
+      "n": "013",
+      "title": "Principles of Economics",
+      "author": "N. Gregory Mankiw",
+      "year": 2017,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/31161372"
+    },
+    {
+      "n": "014",
+      "title": "Pursued Economy: Understanding and Overcoming the Challenging New Realities for Advanced Economies",
+      "author": "Richard C. Koo",
+      "year": 2022,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/61720124"
+    },
+    {
+      "n": "015",
+      "title": "Sister Outsider: Essays and Speeches",
+      "author": "Audre Lorde",
+      "year": 2007,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/730745"
+    },
+    {
+      "n": "016",
+      "title": "Stoner",
+      "author": "John  Williams",
+      "year": 2016,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/28454619"
+    },
+    {
+      "n": "017",
+      "title": "Tears of Eros",
+      "author": "Georges Bataille",
+      "year": 2020,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/117659147"
+    },
+    {
+      "n": "018",
+      "title": "Technopoly: The Surrender of Culture to Technology",
+      "author": "Neil Postman",
+      "year": 2019,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/71059124"
+    },
+    {
+      "n": "019",
+      "title": "The Brain from Inside Out",
+      "author": "György Buzsáki",
+      "year": 2019,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/45862737"
+    },
+    {
+      "n": "020",
+      "title": "The Brain: The Story of You",
+      "author": "Eric R. Kandel",
+      "year": 2021,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/95181043"
+    },
+    {
+      "n": "021",
+      "title": "The Help",
+      "author": "Kathryn Stockett",
+      "year": 2009,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/4667024"
+    },
+    {
+      "n": "022",
+      "title": "The Hotel New Hampshire",
+      "author": "John Irving",
+      "year": 2021,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/60052502"
+    },
+    {
+      "n": "023",
+      "title": "The Innocent Anthropologist: Notes from a Mud Hut",
+      "author": "Nigel Barley",
+      "year": 2026,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/9885431"
+    },
+    {
+      "n": "024",
+      "title": "The Long Goodbye",
+      "author": "Raymond Chandler",
+      "year": 2018,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/156910839"
+    },
+    {
+      "n": "025",
+      "title": "The Magic Mountain",
+      "author": "Thomas Mann",
+      "year": 2020,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/72963670"
+    },
+    {
+      "n": "026",
+      "title": "The Matrix of Visual Culture: Working with Deleuze in Film Theory",
+      "author": "Patricia Pisters",
+      "year": 2022,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/126469864"
+    },
+    {
+      "n": "027",
+      "title": "The Selfish Gene",
+      "author": "Richard Dawkins",
+      "year": 2016,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/29807115"
+    },
+    {
+      "n": "028",
+      "title": "The Sound and the Fury",
+      "author": "William Faulkner",
+      "year": 2019,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/61152993"
+    },
+    {
+      "n": "029",
+      "title": "The Subject of Psychosis: A Lacanian Perspective",
+      "author": "Stijn Vanheule",
+      "year": 2011,
+      "rating": 5,
+      "stars": "★★★★★",
+      "url": "https://www.goodreads.com/book/show/12904472"
+    },
+    {
+      "n": "030",
+      "title": "All That Is Solid Melts into Air: The Experience of Modernity",
+      "author": "Marshall Berman",
+      "year": 2013,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/112031451"
+    },
+    {
+      "n": "031",
+      "title": "Antifragile: Things That Gain from Disorder",
+      "author": "Nassim Nicholas Taleb",
+      "year": 2011,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/30849649"
+    },
+    {
+      "n": "032",
+      "title": "Castles, Battles, and Bombs: How Economics Explains Military History",
+      "author": "Jurgen Brauer",
+      "year": 2008,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/2851596"
+    },
+    {
+      "n": "033",
+      "title": "Consciousness and the Brain: Deciphering How the Brain Codes Our Thoughts",
+      "author": "Stanislas Dehaene",
+      "year": 2018,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/50366165"
+    },
+    {
+      "n": "034",
+      "title": "Empire of Cotton: A Global History",
+      "author": "Sven Beckert",
+      "year": 2014,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/20758057"
+    },
+    {
+      "n": "035",
+      "title": "Essays on Art and Science",
+      "author": "Eric R. Kandel",
+      "year": 2024,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/199603770"
+    },
+    {
+      "n": "036",
+      "title": "Gödel, Escher, Bach: An Eternal Golden Braid",
+      "author": "Douglas R. Hofstadter",
+      "year": 1997,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/43396894"
+    },
+    {
+      "n": "037",
+      "title": "Le Cinéma De La Cruauté: Eric Von Stroheim, Carl Th. Dreyer, Preston Sturges, Luis Bunuel, Alfred Hitchcock, Akira Kurosawa",
+      "author": "André Bazin",
+      "year": 1992,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/72410"
+    },
+    {
+      "n": "038",
+      "title": "Looking Awry: An Introduction to Jacques Lacan through Popular Culture",
+      "author": "Slavoj Žižek",
+      "year": 1991,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/112994493"
+    },
+    {
+      "n": "039",
+      "title": "Neuroscience: Exploring the Brain",
+      "author": "Mark F. Bear",
+      "year": 2006,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/170011"
+    },
+    {
+      "n": "040",
+      "title": "Pedro Páramo",
+      "author": "Juan Rulfo",
+      "year": 2011,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/33830013"
+    },
+    {
+      "n": "041",
+      "title": "Pink Globalization: Hello Kitty's Trek Across the Pacific",
+      "author": "Christine R. Yano",
+      "year": 2013,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/16033311"
+    },
+    {
+      "n": "042",
+      "title": "Principles for Navigating Big Debt Crises",
+      "author": "Ray Dalio",
+      "year": 2025,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/238965378"
+    },
+    {
+      "n": "043",
+      "title": "Reality Is Not What It Seems: The Journey to Quantum Gravity",
+      "author": "Carlo Rovelli",
+      "year": 2017,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/40200980"
+    },
+    {
+      "n": "044",
+      "title": "Rewriting the Soul: Multiple Personalities and the Sciences of Memory",
+      "author": "Ian Hacking",
+      "year": 2025,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/240245176"
+    },
+    {
+      "n": "045",
+      "title": "Solaris",
+      "author": "Stanisław Lem",
+      "year": 2021,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/58790192"
+    },
+    {
+      "n": "046",
+      "title": "Technoféodalisme: Critique de l'économie numérique",
+      "author": "Cédric Durand",
+      "year": 2020,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/55680237"
+    },
+    {
+      "n": "047",
+      "title": "The Age of Insight: The Quest to Understand the Unconscious in Art, Mind, and Brain from Vienna 1900 to the Present",
+      "author": "Eric R. Kandel",
+      "year": 2012,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/12263681"
+    },
+    {
+      "n": "048",
+      "title": "The Disordered Mind: What Unusual Brains Tell Us About Ourselves",
+      "author": "Eric R. Kandel",
+      "year": 2018,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/36722978"
+    },
+    {
+      "n": "049",
+      "title": "The Door of the World: A History of the Senses",
+      "author": "Ashley   Ward",
+      "year": 2024,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/214022352"
+    },
+    {
+      "n": "050",
+      "title": "The Economics of Money, Banking, and Financial Markets (Addison-Wesley Series in Economics)",
+      "author": "Frederic S. Mishkin",
+      "year": 2006,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/299577"
+    },
+    {
+      "n": "051",
+      "title": "The Extended Phenotype",
+      "author": "Richard Dawkins",
+      "year": 2024,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/222460618"
+    },
+    {
+      "n": "052",
+      "title": "Unstoppable Us, Volume 1",
+      "author": "&#23588;&#29926;&#23572;-&#36203;&#25289;&#21033;",
+      "year": 2025,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/231755601"
+    },
+    {
+      "n": "053",
+      "title": "We Have Never Been Modern",
+      "author": "Bruno Latour",
+      "year": 2022,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/94459983"
+    },
+    {
+      "n": "054",
+      "title": "What I Learned About Investing from Darwin",
+      "author": "Pulak Prasad",
+      "year": 2023,
+      "rating": 4,
+      "stars": "★★★★☆",
+      "url": "https://www.goodreads.com/book/show/62792694"
+    },
+    {
+      "n": "055",
+      "title": "Film and Ethics: Foreclosed Encounters",
+      "author": "Lisa Downing, Libby Saxton",
+      "year": 2019,
+      "rating": 3,
+      "stars": "★★★☆☆",
+      "url": "https://www.goodreads.com/book/show/97309701"
+    },
+    {
+      "n": "056",
+      "title": "Introductory Psychology",
+      "author": "Paul Bloom",
+      "year": 2026,
+      "rating": 3,
+      "stars": "★★★☆☆",
+      "url": "https://www.goodreads.com/book/show/249676791"
+    },
+    {
+      "n": "057",
+      "title": "Same as Ever: A Guide to What Never Changes",
+      "author": "Morgan Housel",
+      "year": 2023,
+      "rating": 3,
+      "stars": "★★★☆☆",
+      "url": "https://www.goodreads.com/book/show/125116554"
+    },
+    {
+      "n": "058",
+      "title": "Scarcity: Why Having Too Little Means So Much",
+      "author": "Sendhil Mullainathan",
+      "year": 2013,
+      "rating": 3,
+      "stars": "★★★☆☆",
+      "url": "https://www.goodreads.com/book/show/17286670"
+    },
+    {
+      "n": "059",
+      "title": "2001: A Space Odyssey",
+      "author": "Arthur C. Clarke",
+      "year": 2019,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/54122980"
+    },
+    {
+      "n": "060",
+      "title": "A Fourth Hand",
+      "author": "John Irving",
+      "year": 2019,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/54701382"
+    },
+    {
+      "n": "061",
+      "title": "A Widow for One Year",
+      "author": "John Irving",
+      "year": 2017,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/41134939"
+    },
+    {
+      "n": "062",
+      "title": "Bodyscape: Art, Modernity and the Ideal Figure",
+      "author": "Nicholas Mirzoeff",
+      "year": 1995,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/1752737"
+    },
+    {
+      "n": "063",
+      "title": "Crash",
+      "author": "J.G. Ballard",
+      "year": 2001,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/70241"
+    },
+    {
+      "n": "064",
+      "title": "decision-making, uncertainty, and the brain: neural Economics",
+      "author": "(MEI )GE LAI MU QI HE JING TONG DENG YI",
+      "year": 1991,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/202235366"
+    },
+    {
+      "n": "065",
+      "title": "Designing Machine Learning Systems: An Iterative Process for Production-Ready Applications",
+      "author": "Chip Huyen",
+      "year": 2022,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/60715378"
+    },
+    {
+      "n": "066",
+      "title": "Do Androids Dream of Electric Sheep?",
+      "author": "Philip K. Dick",
+      "year": 2017,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/38892513"
+    },
+    {
+      "n": "067",
+      "title": "Educated: A Memoir",
+      "author": "Tara Westover",
+      "year": 2019,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/49579778"
+    },
+    {
+      "n": "068",
+      "title": "Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are",
+      "author": "Seth Stephens-Davidowitz",
+      "year": 2018,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/54897824"
+    },
+    {
+      "n": "069",
+      "title": "Flowers for Algernon",
+      "author": "Daniel Keyes",
+      "year": 2015,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/31623832"
+    },
+    {
+      "n": "070",
+      "title": "Freakonomics: A Rogue Economist Explores the Hidden Side of Everything",
+      "author": "Steven D. Levitt",
+      "year": 2007,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/702386"
+    },
+    {
+      "n": "071",
+      "title": "Furiously Happy: A Funny Book About Horrible Things",
+      "author": "Jenny  Lawson",
+      "year": 2018,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/113776179"
+    },
+    {
+      "n": "072",
+      "title": "Gilles Deleuze: Key Concepts 2e",
+      "author": "Charles J. Stivale",
+      "year": 2011,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/16486309"
+    },
+    {
+      "n": "073",
+      "title": "Influence, New and Expanded: The Psychology of Persuasion (Chinese Edition)",
+      "author": "Robert B. Cialdini",
+      "year": 2021,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/121524832"
+    },
+    {
+      "n": "074",
+      "title": "It",
+      "author": "Stephen King",
+      "year": 2017,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/157445511"
+    },
+    {
+      "n": "075",
+      "title": "Last Night in Twisted River",
+      "author": "John Irving",
+      "year": 2021,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/62087643"
+    },
+    {
+      "n": "076",
+      "title": "Misery",
+      "author": "Stephen  King",
+      "year": 2013,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/33543906"
+    },
+    {
+      "n": "077",
+      "title": "My Stroke of Insight: A Brain Scientist's Personal Journey",
+      "author": "Jill Bolte Taylor",
+      "year": 2024,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/214935332"
+    },
+    {
+      "n": "078",
+      "title": "neurons in Economics: Evidence and Challenges",
+      "author": "(MEI )LA QIE QI NI (Rust-ichini A. ) (MEI )GE LIN QIE ER (Glimcher P. ) ZHE JIANG DA XUE KUA X...",
+      "year": 1991,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/208760835"
+    },
+    {
+      "n": "079",
+      "title": "No Rules Rules: Netflix and the Culture of Reinvention",
+      "author": "Reed Hastings",
+      "year": 2020,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/49099937"
+    },
+    {
+      "n": "080",
+      "title": "Noise: A Flaw in Human Judgment",
+      "author": "Daniel Kahneman",
+      "year": 2021,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/55339408"
+    },
+    {
+      "n": "081",
+      "title": "Of Mice and Men",
+      "author": "John Steinbeck",
+      "year": 2019,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/52171194"
+    },
+    {
+      "n": "082",
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel García Márquez",
+      "year": 2017,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/42122618"
+    },
+    {
+      "n": "083",
+      "title": "Pet Sematary",
+      "author": "Stephen  King",
+      "year": 2014,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/70738480"
+    },
+    {
+      "n": "084",
+      "title": "Pop Music and Capitalism",
+      "author": "Takahiro Mouri",
+      "year": 2022,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/94291006"
+    },
+    {
+      "n": "085",
+      "title": "Savage Reprisals: Bleak House, Madame Bovary, Buddenbrooks",
+      "author": "Peter Gay",
+      "year": 2002,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/895151"
+    },
+    {
+      "n": "086",
+      "title": "Technofeudalism: What Killed Capitalism",
+      "author": "Cédric Durand",
+      "year": 2024,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/221093275"
+    },
+    {
+      "n": "087",
+      "title": "The Bear",
+      "author": "John Irving",
+      "year": 2021,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/57578167"
+    },
+    {
+      "n": "088",
+      "title": "The Cider House Rules",
+      "author": "John Irving",
+      "year": 2018,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/55921081"
+    },
+    {
+      "n": "089",
+      "title": "The Final Countdown: Europe, Refugees and the Left",
+      "author": "Boris Buden",
+      "year": 2017,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/36988777"
+    },
+    {
+      "n": "090",
+      "title": "The Great Game: The Emergence of Wall Street as a World Power (1653-2004)",
+      "author": "John Steele Gordon",
+      "year": 2005,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/7326351"
+    },
+    {
+      "n": "091",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "year": 2018,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/51961040"
+    },
+    {
+      "n": "092",
+      "title": "The Innocent and the Sentimental Novelist",
+      "author": "Orhan Pamuk",
+      "year": 2012,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/29560688"
+    },
+    {
+      "n": "093",
+      "title": "The PlayStation Dreamworld (Theory Redux)",
+      "author": "Alfie Bown",
+      "year": 2017,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/35142358"
+    },
+    {
+      "n": "094",
+      "title": "The power of terror: On the the lowly (France ideological Culture Series)(Chinese Edition)",
+      "author": "ZHU LI YA KE LI SI DI WA",
+      "year": 2000,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/114302453"
+    },
+    {
+      "n": "095",
+      "title": "The Pygmalion Effect: From Ovid to Hitchcock (Louise Smith Bross Lecture Series)",
+      "author": "Victor Ieronim Stoichiță",
+      "year": 2008,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/2059434"
+    },
+    {
+      "n": "096",
+      "title": "The Ride of a Lifetime: Lessons Learned from 15 Years as CEO of the Walt Disney Company",
+      "author": "Robert Iger, Joel Lovell",
+      "year": 2020,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/63006173"
+    },
+    {
+      "n": "097",
+      "title": "The War Against Cliche: Essays and Reviews 1971-2000",
+      "author": "Martin Amis",
+      "year": 2024,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/222534764"
+    },
+    {
+      "n": "098",
+      "title": "The World According to Garp",
+      "author": "John Irving",
+      "year": 2018,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/51921635"
+    },
+    {
+      "n": "099",
+      "title": "Thinking Strategically: The Competitive Edge in Business, Politics, and Everyday Life",
+      "author": "Avinash K. Dixit",
+      "year": 2000,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/52217428"
+    },
+    {
+      "n": "100",
+      "title": "We Are All Cannibals: And Other Essays",
+      "author": "Claude Lévi-Strauss",
+      "year": 2016,
+      "rating": 0,
+      "stars": "",
+      "url": "https://www.goodreads.com/book/show/53310583"
+    }
+  ]
+}

@@ -29,6 +29,9 @@ if [ -z "$TOKEN" ]; then
   exit 1
 fi
 
+# the build prints its output paths, which are not cp1252-safe on Windows
+export PYTHONIOENCODING="${PYTHONIOENCODING:-utf-8}"
+
 python build.py
 
 rm -f site.tar.gz

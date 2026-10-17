@@ -53,8 +53,13 @@ def body_html(now):
 
 
 def footer_html(now):
-    links = "".join(f'<a href="{e(l["href"])}">{e(l["label"])}</a>' for l in now["footer"])
-    return f'<footer class="foot">{links}</footer>'
+    parts = []
+    for l in now["footer"]:
+        if l.get("href") == "_br_":
+            parts.append("<br>")
+        else:
+            parts.append(f'<a href="{e(l["href"])}">{e(l["label"])}</a>')
+    return f'<footer class="foot">{"".join(parts)}</footer>'
 
 
 def pretty_date(iso):
@@ -181,10 +186,15 @@ def main():
         f"  <url><loc>{SITE_URL}/</loc></url>\n"
         f"  <url><loc>{SITE_URL}/MAYDAY/</loc></url>\n"
         f"  <url><loc>{SITE_URL}/MAYDAY/about/</loc></url>\n"
-        f"  <url><loc>{SITE_URL}/shkb/</loc></url>\n</urlset>\n")
+        f"  <url><loc>{SITE_URL}/shkb/</loc></url>\n"
+        f"  <url><loc>{SITE_URL}/babel/</loc></url>\n"
+        f"  <url><loc>{SITE_URL}/nymph/</loc></url>\n"
+        f"  <url><loc>{SITE_URL}/nymph/about/</loc></url>\n</urlset>\n")
 
     build_section("mayday")
     build_section("shkb")
+    build_section("babel")
+    build_section("nymph")
 
     size = sum(os.path.getsize(os.path.join(d, f))
                for d, _, fs in os.walk(SRC) for f in fs)

@@ -1,0 +1,119 @@
+:root {
+  --bg: #faf9f6;
+  --text: #1a1a1a;
+  --mark: #1a1a1a;
+  --link: #3a3a3a;
+  --visited: #6b6b6b;
+  --inputbg: #f2f0ec;
+  --border: #dcd8d3;
+  --dim: #999;
+  --star: #1a1a1a;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.shell {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+/* --- masthead --- */
+.mast {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.mast .mark {
+  font-family: "UnifrakturMaguntia", "Georgia", serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--mark);
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+}
+.mast .stamp {
+  margin: 0;
+  font-size: 11px;
+  color: var(--dim);
+}
+
+/* --- rows --- */
+.list .row {
+  display: grid;
+  grid-template-columns: 3.4ch 1fr;
+  gap: 12px;
+  margin-bottom: 2px;
+  padding-bottom: 2px;
+}
+.list .n {
+  color: var(--dim);
+  font-family: "Courier Prime", monospace;
+  font-size: 11px;
+  text-align: right;
+  padding-top: 2px;
+}
+.list .title-line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.btitle {
+  font-family: "UnifrakturMaguntia", "Georgia", serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--link);
+  text-decoration: none;
+  line-height: 1.2;
+}
+.btitle:visited { color: var(--visited); }
+.btitle:hover { color: var(--mark); }
+.stars {
+  color: var(--star);
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.meta {
+  font-size: 12px;
+  color: var(--dim);
+  margin-top: 1px;
+}
+
+/* --- footer --- */
+.foot {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.foot a {
+  color: var(--dim);
+  text-decoration: none;
+}
+.foot a:visited { color: var(--dim); }
+.foot a:hover { color: var(--mark); }
+
+/* --- print --- */
+@media print {
+  body { background: #fff; color: #000; }
+  .search, .filters, .foot, .msg, .cnt { display: none; }
+}
