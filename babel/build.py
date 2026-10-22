@@ -18,7 +18,7 @@ SRC = os.path.normpath(os.path.join(ROOT, "..", "site", "babel"))
 DATA = os.path.join(ROOT, "data", "books.json")
 ASSETS = os.path.join(ROOT, "..", "assets")
 # Courier Prime fonts live under MAYDAY/assets/fonts (shared with MAYDAY and shkb)
-CP_FONTS = os.path.normpath(os.path.join(ROOT, "..", "MAYDAY", "assets", "fonts"))
+CP_FONTS = os.path.normpath(os.path.join(ROOT, "..", "mayday", "assets", "fonts"))
 
 _BASE = os.environ.get("SITE_URL", "https://noahisarider.srht.site").rstrip("/")
 SITE_URL = _BASE + "/babel"
