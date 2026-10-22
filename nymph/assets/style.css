@@ -1,19 +1,39 @@
 /* ==========================================================================
-   nymph — one column on a lemon wall. See DESIGN.md.
-   Type, whitespace and a single hairline grammar. No cards, no pills, no
-   decoration, no client javascript.
+   nymph — one column, two kinds of paper. See DESIGN.md.
+   Light: lemon page, ink type, the wordmark stamped in ink.
+   Dark (prefers-color-scheme): ink page, lemon type, the wordmark stamped
+   the other way round. Same type, same measure, same hairline grammar.
+   No cards, no pills, no decoration, no client javascript.
    ========================================================================== */
 
 :root {
-  --lemon: #f0fa92;
+  --page: #f0fa92;
   --ink: #1a1a17;
   --ink-soft: rgba(26, 26, 23, .64);
   --ink-faint: rgba(26, 26, 23, .40);
+  --lede: rgba(26, 26, 23, .82);
   --rule: rgba(26, 26, 23, .16);
+  --code: rgba(26, 26, 23, .07);
+  --mark-bg: #1a1a17;
+  --mark-fg: #f0fa92;
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans: "Inter", "Helvetica Neue", Arial, sans-serif;
   --col: 640px;
   --pad: 24px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #1a1a17;
+    --ink: #f0fa92;
+    --ink-soft: rgba(240, 250, 146, .66);
+    --ink-faint: rgba(240, 250, 146, .38);
+    --lede: rgba(240, 250, 146, .86);
+    --rule: rgba(240, 250, 146, .20);
+    --code: rgba(240, 250, 146, .10);
+    --mark-bg: #f0fa92;
+    --mark-fg: #1a1a17;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -21,7 +41,7 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  background: var(--lemon);
+  background: var(--page);
   color: var(--ink);
   font: 18.5px/1.68 var(--serif);
   font-optical-sizing: auto;
@@ -38,7 +58,7 @@ body {
 
 a { color: inherit; text-decoration: none; }
 :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
-::selection { background: var(--ink); color: var(--lemon); }
+::selection { background: var(--ink); color: var(--page); }
 
 /* --- masthead ------------------------------------------------------------ */
 
@@ -52,7 +72,12 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid var(--rule);
 }
 
+/* the wordmark sits in a stamped block, the paper knocked out of the ink */
 .mark {
+  display: inline-block;
+  padding: .08em .165em .27em;
+  background: var(--mark-bg);
+  color: var(--mark-fg);
   font-size: 27px;
   font-weight: 600;
   line-height: 1;
@@ -126,7 +151,7 @@ a { color: inherit; text-decoration: none; }
   font-size: clamp(18px, 2.4vw, 21px);
   font-style: italic;
   line-height: 1.5;
-  color: rgba(26, 26, 23, .82);
+  color: var(--lede);
   font-variation-settings: "SOFT" 40;
 }
 
@@ -232,7 +257,7 @@ a { color: inherit; text-decoration: none; }
 .prose code {
   font-family: ui-monospace, "SF Mono", Consolas, monospace;
   font-size: .84em;
-  background: rgba(26, 26, 23, .07);
+  background: var(--code);
   padding: 2px 5px;
 }
 .prose hr { margin: 2.6em 0; border: 0; border-top: 1px solid var(--rule); }
@@ -284,7 +309,20 @@ a { color: inherit; text-decoration: none; }
   .stamp { letter-spacing: .12em; }
 }
 
+/* --- print: always ink on paper, whatever the screen is set to ----------- */
+
 @media print {
+  :root {
+    --page: #fff;
+    --ink: #000;
+    --ink-soft: #000;
+    --ink-faint: #555;
+    --lede: #000;
+    --rule: #000;
+    --code: rgba(0, 0, 0, .06);
+    --mark-bg: #000;
+    --mark-fg: #fff;
+  }
   body { background: #fff; color: #000; }
   .bar, .foot, .back { display: none; }
 }

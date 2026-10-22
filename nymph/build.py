@@ -31,6 +31,7 @@ MARK = "nymph"
 
 MONTHS = ("January", "February", "March", "April", "May", "June", "July",
           "August", "September", "October", "November", "December")
+DAYS = ("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
 
 
 def e(s):
@@ -40,6 +41,13 @@ def e(s):
 def pretty_date(iso):
     y, m, d = (int(x) for x in iso.split("-"))
     return f"{MONTHS[m - 1]} {d}, {y}"
+
+
+def rfc822(iso, hour=9):
+    """RFC 822 date, built by hand so %a/%b never follow the system locale."""
+    d = dt.date.fromisoformat(iso)
+    return (f"{DAYS[d.weekday()]}, {d.day:02d} {MONTHS[d.month - 1][:3]} "
+            f"{d.year} {hour:02d}:00:00 +0000")
 
 
 # --------------------------------------------------------------------------
@@ -169,9 +177,12 @@ def layout(title, desc, depth, active, body):
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="icon" href="{fav_pre}" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="nymph" href="{pre}feed.xml">
 <link rel="stylesheet" href="{font_pre}fonts.css">
 <link rel="stylesheet" href="{css_pre}">
-<meta name="theme-color" content="#f0fa92">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f0fa92" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1a17" media="(prefers-color-scheme: dark)">
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
 </head>
@@ -248,23 +259,28 @@ def page_feed(posts):
     items = []
     for p in posts:
         url = f'{BASE}/{p["slug"]}/'
-        pub = dt.date.fromisoformat(p["date"]).strftime("%a, %d %b %Y 09:00:00 +0000")
         items.append(
             "    <item>\n"
             f"      <title>{e(p['title'])}</title>\n"
             f"      <link>{url}</link>\n"
-            f"      <guid>{url}</guid>\n"
-            f"      <pubDate>{pub}</pub>\n"
+            f"      <guid isPermaLink=\"true\">{url}</guid>\n"
+            f"      <pubDate>{rfc822(p['date'])}</pubDate>\n"
+            f"      <category>{e(p['category'])}</category>\n"
             f"      <description>{e(p.get('lede', ''))}</description>\n"
             "    </item>")
-    today = dt.date.today().strftime("%a, %d %b %Y 09:00:00 +0000")
+    now = dt.datetime.now(dt.timezone.utc)
+    built = (f"{DAYS[now.weekday()]}, {now.day:02d} "
+             f"{MONTHS[now.month - 1][:3]} {now.year} "
+             f"{now.hour:02d}:{now.minute:02d}:{now.second:02d} +0000")
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>\n'
             f"  <title>nymph</title>\n"
             f"  <link>{BASE}/</link>\n"
-            f"  <atom:link href=\"{BASE}/feed.xml\" rel=\"self\" type=\"application/rss+xml\"/>\n"
+            f"  <atom:link href=\"{BASE}/feed.xml\" rel=\"self\" "
+            "type=\"application/rss+xml\"/>\n"
             "  <description>writing by noahisarider</description>\n"
-            f"  <lastBuildDate>{today}</lastBuildDate>\n"
+            "  <language>en</language>\n"
+            f"  <lastBuildDate>{built}</lastBuildDate>\n"
             + "\n".join(items) + "\n</channel></rss>\n")
 
 
@@ -279,9 +295,13 @@ def page_404():
 
 
 def favicon_svg():
+    # the same stamped block as the masthead, flipped with the page
     return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">'
-            '<circle cx="16" cy="16" r="16" fill="#191919"/>'
-            '<text x="16" y="23" text-anchor="middle" fill="#f0fa92" '
+            '<style>.paper{fill:#1a1a17}.type{fill:#f0fa92}'
+            '@media (prefers-color-scheme: dark){.paper{fill:#f0fa92}'
+            '.type{fill:#1a1a17}}</style>'
+            '<circle class="paper" cx="16" cy="16" r="16"/>'
+            '<text class="type" x="16" y="23" text-anchor="middle" '
             'font-family="Georgia, serif" font-size="19" font-weight="bold">n</text>'
             '</svg>')
 
