@@ -1,0 +1,13 @@
+image: python:3.13-slim
+
+pages:
+  stage: deploy
+  script:
+    - python build.py
+    - rm -rf public
+    - cp -r site public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
