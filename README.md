@@ -8,10 +8,16 @@ Updated when something changes, with an RSS feed for whoever wants it.
 
 ```
 data/now.json            the now page. edit this for the front page.
-data/papers.json         the papers page (papers.html): what I am reading, with notes.
-build.py                 reads both, then calls mayday/ and shkb/build.py, writes the whole site/
+build.py                 reads it, then calls babel/, nymph/, mayday/ and shkb/build.py,
+                         writes the whole site/
 assets/style.css         the design: one narrow column, black on white, blue links
 assets/fonts/            Special Elite + Courier Prime, self-hosted, OFL 1.1
+babel/                   the books manifest, served at /babel/
+babel/data/books.json    the reading list
+babel/build.py           builds the manifest into site/babel/
+nymph/                   the writing, served at /nymph/
+nymph/posts/*.md         one markdown file per post
+nymph/build.py           builds the posts into site/nymph/
 mayday/                  the MAYDAY films manifest, served at /MAYDAY/
 mayday/data/films.json   the film list, generated from a Letterboxd export
 mayday/build.py          builds the manifest into site/MAYDAY/
@@ -48,20 +54,19 @@ Change `data/now.json`, then `python build.py`.
   top item in `feed.xml` and carries the full current text, so subscribers see the update.
   Older entries stay in the feed with their note.
 
-The papers page is the same idea: edit `data/papers.json`, re-run. Papers are grouped
-(`label` + `papers`); each paper has `title`, optional `url`, `authors`, `venue`, `year`,
-optional `status` (shown unless it is `read`), and an optional `note` — `note` accepts the
-same inline `[text](url)` links.
+The three manifests work the same way. Edit the JSON, re-run the same `python build.py`,
+publish as usual. `babel`, `nymph` and `shkb` each carry a `DESIGN.md` for the page they
+render.
 
 ## Publishing
 
 `noahisarider.srht.site/` is one site in one repository. The now page is at the root,
-the papers page at `/papers.html`, the films manifest at `/MAYDAY/`, and the records
-manifest at `/shkb/`.
+the films manifest at `/MAYDAY/`, the records manifest at `/shkb/`, the books at
+`/babel/` and the writing at `/nymph/`.
 
-The build writes all four into one `site/` tree, so `publish.sh` makes one tarball and one
-upload. A publish still replaces the whole site at the server, but the replacement now
-contains `/MAYDAY/` and `/shkb/` already, nothing gets wiped and nothing has to be sent a
+The build writes all of them into one `site/` tree, so `publish.sh` makes one tarball and
+one upload. A publish still replaces the whole site at the server, but the replacement
+contains every subdirectory already, so nothing gets wiped and nothing has to be sent a
 second time.
 
 ```sh
