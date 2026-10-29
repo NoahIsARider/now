@@ -87,6 +87,10 @@ def page_index(now, build_date):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(now['name'])}</title>
 {desc_meta}<link rel="canonical" href="{SITE_URL}/">
+<link rel="me" href="https://noahisarider.github.io/">
+<link rel="me" href="https://noahisarider.gitlab.io/">
+<link rel="me" href="https://noahisarider.codeberg.page/">
+<link rel="me" href="https://noahisarider.pages.dev/">
 <link rel="alternate" type="application/rss+xml" title="{e(FEED_TITLE)}" href="{SITE_URL}/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{e(now['name'])}">
