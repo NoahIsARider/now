@@ -82,8 +82,8 @@ def footer(p):
   <p class="signal">shkb</p>
   <ul>
     <li><a href="{p}">the depth log</a></li>
-    <li><a href="/MAYDAY/">films</a></li>
-    <li><a href="/">now</a></li>
+    <li><a href="{p}../MAYDAY/">films</a></li>
+    <li><a href="{p}..">now</a></li>
     <li><a href="{e(REPO)}">source repository</a></li>
   </ul>
   <p class="meta">compiled by noahisarider · record data from a record.club export · built {date.today().isoformat()} · no cookies, no trackers</p>

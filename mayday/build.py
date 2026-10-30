@@ -101,8 +101,8 @@ def footer(p):
   <ul>
     <li><a href="{p}">the manifest</a></li>
     <li><a href="{p}about/">about this list</a></li>
-    <li><a href="/">now</a></li>
-    <li><a href="/shkb/">records</a></li>
+    <li><a href="{p}..">now</a></li>
+    <li><a href="{p}../shkb/">records</a></li>
     <li><a href="{e(REPO)}">source repository</a></li>
   </ul>
   <p class="meta">compiled by <a href="{e(LETTERBOXD)}" rel="me">noahisarider</a> · film data from
@@ -230,7 +230,7 @@ def page_about(films, profile, ratings):
     <ul>
       <li><a href="{e(LETTERBOXD)}">Letterboxd</a> — everything I have watched</li>
       <li><a href="{e(REPO)}">Source repository</a> — this site, and the list as one JSON file</li>
-      <li><a href="films.json">films.json</a> — the whole manifest, machine-readable</li>
+      <li><a href="../films.json">films.json</a> — the whole manifest, machine-readable</li>
     </ul>
   </section>
 </div>
