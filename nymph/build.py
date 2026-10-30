@@ -10,6 +10,7 @@ The page is one list: masthead, statement, shelf, footer. No nav, no about.
 
 Run from the root build.py (build_section("nymph")) or directly.
 """
+import hashlib
 import html
 import json
 import os
@@ -24,6 +25,11 @@ SITE_URL = os.environ.get("SITE_URL", "https://noahisarider.srht.site")
 BASE = SITE_URL.rstrip("/") + "/nymph"
 MARK = "nymph"
 DESC = "The games I own and keep installed, one note each."
+
+# the stylesheet link carries a hash of its own contents, so a new build is a
+# new URL and a cached copy of an old build can never hide a change
+CSS_VERSION = hashlib.md5(
+    open(os.path.join(ASSETS, "style.css"), "rb").read()).hexdigest()[:8]
 
 # The switch. Runs before the first paint so the page never flashes the wrong
 # paper, and remembers the choice. Without javascript the system decides.
@@ -105,7 +111,7 @@ def layout(title, desc, depth, body, path=""):
 <meta name="author" content="noahisarider">
 <link rel="icon" href="{fav_pre}" type="image/svg+xml">
 <link rel="stylesheet" href="{font_pre}fonts.css">
-<link rel="stylesheet" href="{css_pre}">
+<link rel="stylesheet" href="{css_pre}?v={CSS_VERSION}">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f0fa92" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1a1a17" media="(prefers-color-scheme: dark)">
