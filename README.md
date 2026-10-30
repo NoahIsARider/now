@@ -15,9 +15,9 @@ assets/fonts/            Special Elite + Courier Prime, self-hosted, OFL 1.1
 babel/                   the books manifest, served at /babel/
 babel/data/books.json    the reading list
 babel/build.py           builds the manifest into site/babel/
-nymph/                   the writing, served at /nymph/
-nymph/posts/*.md         one markdown file per post
-nymph/build.py           builds the posts into site/nymph/
+nymph/                   the games shelf, served at /nymph/
+nymph/data/games.json    the games, one object per game
+nymph/build.py           builds the shelf into site/nymph/
 mayday/                  the MAYDAY films manifest, served at /MAYDAY/
 mayday/data/films.json   the film list, generated from a Letterboxd export
 mayday/build.py          builds the manifest into site/MAYDAY/
@@ -62,7 +62,7 @@ render.
 
 `noahisarider.srht.site/` is one site in one repository. The now page is at the root,
 the films manifest at `/MAYDAY/`, the records manifest at `/shkb/`, the books at
-`/babel/` and the writing at `/nymph/`.
+`/babel/` and the games at `/nymph/`.
 
 The build writes all of them into one `site/` tree, so `publish.sh` makes one tarball and
 one upload. A publish still replaces the whole site at the server, but the replacement

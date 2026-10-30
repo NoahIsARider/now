@@ -1,0 +1,153 @@
+{
+  "statement": {
+    "kicker": "shelf",
+    "title": "What I keep installed.",
+    "lede": "Not a backlog and not a ranking, only the games I still reopen."
+  },
+  "games": [
+    {
+      "title": "Chants of Sennaar",
+      "studio": "Rundisc",
+      "year": "2023",
+      "url": "https://store.steampowered.com/app/1931770/",
+      "lede": "A tower where five peoples speak five languages and none of them is yours.",
+      "note": "You climb with a notebook, copying glyphs you cannot read and guessing at what they mean until the sentences start to give. Translation is the whole game and the whole difficulty, and the moment a stranger's greeting turns into grammar is worth more than any fight. I finished it in two sittings because the guessing would not let me stop."
+    },
+    {
+      "title": "The Cosmic Wheel Sisterhood",
+      "studio": "Deconstructeam",
+      "year": "2023",
+      "url": "https://store.steampowered.com/app/1340480/",
+      "lede": "A witch in exile, building a tarot deck out of the things she remembers.",
+      "note": "You compose cards from fragments the game hands you, and then the deck becomes the way you speak to everyone who visits. Reading fate for other people turns out to be a way of deciding what you believe. Few games make a deck of cards feel this much like an argument."
+    },
+    {
+      "title": "DAVE THE DIVER",
+      "studio": "MINTROCKET",
+      "year": "2023",
+      "url": "https://store.steampowered.com/app/1868140/",
+      "lede": "Spearfish all afternoon, run the sushi bar all evening.",
+      "note": "The loop is small and it never gets old. Dive the reef, fill the net, serve the catch, put the money back into better gear. Underneath it there is a conspiracy plot with a cast that should be far too silly to work, and it works."
+    },
+    {
+      "title": "Disco Elysium",
+      "studio": "ZA/UM",
+      "year": "2019",
+      "url": "https://store.steampowered.com/app/632470/",
+      "lede": "A detective who has forgotten everything, in a city that has not forgotten him.",
+      "note": "Your skills argue with you, each one a distinct voice with its own politics and its own way of ruining a conversation. It is the only game I know where failing a check is usually more interesting than passing it. Revachol is a ruin and the writing never once lets you feel superior to anybody living in it."
+    },
+    {
+      "title": "Don't Starve Together",
+      "studio": "Klei Entertainment",
+      "year": "2016",
+      "url": "https://store.steampowered.com/app/322330/",
+      "lede": "Survive a hand drawn world that is openly hostile and quietly funny.",
+      "note": "Hunger, darkness and the low hum of lost sanity shape every decision, and the pencil art makes dying look like a page from a children's book. Best played with someone else, badly, at night, with no plan at all."
+    },
+    {
+      "title": "INDIKA",
+      "studio": "Odd Meter",
+      "year": "2024",
+      "url": "https://store.steampowered.com/app/1373960/",
+      "lede": "A nun walks out of a monastery with a devil over her shoulder.",
+      "note": "The setting is an alternate Russia of rail yards and factory floors, the story runs in a straight line, and the puzzles are small physical absurdities that keep you off balance. It is short and it is never gentle. I liked that the story refuses to let her keep her dignity for long."
+    },
+    {
+      "title": "Journey",
+      "studio": "thatgamecompany",
+      "year": "2012",
+      "url": "https://store.steampowered.com/app/638230/",
+      "lede": "A wordless walk to a mountain, with strangers who can only sing.",
+      "note": "No language, no names, no way to be rude to anyone you meet. Companions arrive and leave and the only thing you can offer is a chirp and some of your time. It is the cleanest argument I know for games as a feeling rather than a task."
+    },
+    {
+      "title": "Kentucky Route Zero",
+      "studio": "Cardboard Computer",
+      "year": "2013..2020",
+      "url": "https://store.steampowered.com/app/231200/",
+      "lede": "A delivery driver looking for an address that may not exist.",
+      "note": "Five acts of magical realism staged like theatre, with the camera fixed and the dialogue taking whatever shape you give it. The bluegrass, the underground and the debt are all real. It is slow on purpose and it earns every minute of that slowness."
+    },
+    {
+      "title": "Marvel Rivals",
+      "studio": "NetEase Games",
+      "year": "2024",
+      "url": "https://store.steampowered.com/app/2767030/",
+      "lede": "Six against six, in maps that come apart around you.",
+      "note": "The one game on this shelf I play in company, with no story at all. Destructible walls and the team up abilities are why I keep opening it. Nothing here is quiet and that is the whole point."
+    },
+    {
+      "title": "Ori and the Will of the Wisps",
+      "studio": "Moon Studios",
+      "year": "2020",
+      "url": "https://store.steampowered.com/app/1057090/",
+      "lede": "A forest spirit learning to move through a painted world.",
+      "note": "The animation is drawn frame by frame and the movement is the reward, every new ability making the map feel larger than it did. The chase sequences are brutal and the whole thing looks like a storybook left out in the rain. I have restarted it twice just to watch the opening."
+    },
+    {
+      "title": "Outer Wilds",
+      "studio": "Mobius Digital",
+      "year": "2019",
+      "url": "https://store.steampowered.com/app/753640/",
+      "lede": "Twenty two minutes, one small solar system, and the sun always ends.",
+      "note": "You keep nothing except what you work out in your head, and by the end the only upgrade is understanding. Nobody can tell you how to play it without spoiling it, which is a strange thing for a game to ask of its players. It is the closest anything has come to giving me the feeling of reading a good mystery."
+    },
+    {
+      "title": "Oxygen Not Included",
+      "studio": "Klei Entertainment",
+      "year": "2019",
+      "url": "https://store.steampowered.com/app/457140/",
+      "lede": "A colony of small people who need air, water and somewhere to put the waste.",
+      "note": "It looks like a cartoon and it is really a thermodynamics problem with plumbing. Heat is the true enemy and it arrives slowly enough that you have time to feel smug before it kills everybody. My colonies always die some way past the point where I have started naming the duplicants."
+    },
+    {
+      "title": "The Red Strings Club",
+      "studio": "Deconstructeam",
+      "year": "2018",
+      "url": "https://store.steampowered.com/app/589780/",
+      "lede": "Bartending as interrogation, in a city that has decided sadness is a defect.",
+      "note": "You mix drinks to loosen people up and the recipe is the question. Between the bar scenes you throw pots on an android's arm, which sounds absurd and is exactly as pointed as the rest of it. It asks whether removing pain from a person is a kindness, then declines to answer for you."
+    },
+    {
+      "title": "Return of the Obra Dinn",
+      "studio": "Lucas Pope",
+      "year": "2018",
+      "url": "https://store.steampowered.com/app/653530/",
+      "lede": "Sixty deaths on a ship that came home without its crew.",
+      "note": "One bit dithering, two colours, and a pocket watch that drops you into the last moment of a life so you can write down who died and how. Every deduction is checked in groups of three, so guessing costs you and knowing pays. It is the best pure deduction I have played."
+    },
+    {
+      "title": "The Stanley Parable: Ultra Deluxe",
+      "studio": "Crows Crows Crows",
+      "year": "2022",
+      "url": "https://store.steampowered.com/app/1703340/",
+      "lede": "An office, a narrator, and a door you were told not to take.",
+      "note": "The joke is that you already know the joke, and the new content is one long argument with that. It is funny the way a good essay is funny, which is to say it needs you paying attention. The broom closet ending is still the best one."
+    },
+    {
+      "title": "Stardew Valley",
+      "studio": "ConcernedApe",
+      "year": "2016",
+      "url": "https://store.steampowered.com/app/413150/",
+      "lede": "An inherited farm, a tired town, and four seasons to fix either of them.",
+      "note": "One person made nearly all of it and the seams show as care rather than damage. The point is not the money, it is the calendar and who you remember to talk to. I come back to it every winter."
+    },
+    {
+      "title": "Terraria",
+      "studio": "Re-Logic",
+      "year": "2011",
+      "url": "https://store.steampowered.com/app/105600/",
+      "lede": "Dig down, build up, and find out what has been living under the ground.",
+      "note": "It hands you a pickaxe and then keeps growing for a decade, and the bosses are the timetable that keeps the building honest. Getting the guide to accept your house as a house is its own small comedy. Nothing on this shelf has been installed longer."
+    },
+    {
+      "title": "What Remains of Edith Finch",
+      "studio": "Giant Sparrow",
+      "year": "2017",
+      "url": "https://store.steampowered.com/app/501300/",
+      "lede": "A family house where every room is somebody's last day.",
+      "note": "Each death is played differently, a comic panel, a camera, a bathtub, and no mechanic repeats itself. The house is the strongest character in it and the ending is kinder than the setup promises. Two hours long, and I have kept thinking about it for years."
+    }
+  ]
+}

@@ -23,7 +23,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="day"]) {
     --page: #1a1a17;
     --ink: #f0fa92;
     --ink-soft: rgba(240, 250, 146, .66);
@@ -34,6 +34,19 @@
     --mark-bg: #f0fa92;
     --mark-fg: #1a1a17;
   }
+}
+
+/* the switch: the same two colours, swapped by hand and remembered */
+:root[data-theme="night"] {
+  --page: #1a1a17;
+  --ink: #f0fa92;
+  --ink-soft: rgba(240, 250, 146, .66);
+  --ink-faint: rgba(240, 250, 146, .38);
+  --lede: rgba(240, 250, 146, .86);
+  --rule: rgba(240, 250, 146, .20);
+  --code: rgba(240, 250, 146, .10);
+  --mark-bg: #f0fa92;
+  --mark-fg: #1a1a17;
 }
 
 * { box-sizing: border-box; }
@@ -95,24 +108,47 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink-soft);
 }
 
-/* --- nav ---------------------------------------------------------------- */
+/* masthead right: who made it, and the day / night switch under it */
 
-.bar {
+.aside {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 4px 18px;
-  padding: 13px 0;
-  border-bottom: 1px solid var(--rule);
-  font-family: var(--sans);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
 }
-.bar-left, .bar-right { display: flex; gap: 20px; }
-.bar a { color: var(--ink-soft); }
-.bar a:hover, .bar a.on { color: var(--ink); }
+
+.light {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: .55em;
+  font-family: var(--sans);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.light button {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: var(--ink-faint);
+  cursor: pointer;
+}
+.light button:hover { color: var(--ink-soft); }
+.light .sep { margin: 0; color: var(--ink-faint); }
+
+:root[data-theme="day"] .light [data-theme-set="day"],
+:root[data-theme="night"] .light [data-theme-set="night"] {
+  color: var(--ink);
+}
 
 /* --- lead: kicker, one statement, lede ----------------------------------- */
 
@@ -202,6 +238,16 @@ a { color: inherit; text-decoration: none; }
   font-style: italic;
   line-height: 1.5;
   color: var(--ink-soft);
+}
+
+.row-note {
+  display: block;
+  margin-top: 12px;
+  max-width: 56ch;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--lede);
+  text-wrap: pretty;
 }
 
 .rows a:hover .row-title {
@@ -305,14 +351,13 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 400px) {
-  .bar-left, .bar-right { gap: 16px; }
   .stamp { letter-spacing: .12em; }
 }
 
 /* --- print: always ink on paper, whatever the screen is set to ----------- */
 
 @media print {
-  :root {
+  :root, :root[data-theme="day"], :root[data-theme="night"] {
     --page: #fff;
     --ink: #000;
     --ink-soft: #000;
@@ -324,5 +369,5 @@ a { color: inherit; text-decoration: none; }
     --mark-fg: #fff;
   }
   body { background: #fff; color: #000; }
-  .bar, .foot, .back { display: none; }
+  .foot, .back, .light { display: none; }
 }
