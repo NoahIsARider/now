@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-11-01",
   "name": "noahisarider",
   "sections": [
     {
@@ -8,11 +8,11 @@
     },
     {
       "label": "watching",
-      "body": "[The Other Side of Hope](https://letterboxd.com/film/the-other-side-of-hope/)"
+      "body": "[You Can See Everything](https://letterboxd.com/film/you-can-see-everything/)"
     },
     {
       "label": "listening",
-      "body": "[She's The Best](https://youtu.be/mFA1P8ZzoLw)"
+      "body": "[Wallsocket](https://underscores.bandcamp.com/album/wallsocket)"
     }
   ],
   "footer": [
@@ -33,6 +33,7 @@
     { "date": "2026-10-16", "note": "dropped the work list and refreshed what I am watching and listening to" },
     { "date": "2026-10-16", "note": "opened shkb, a depth log of the records I have listened to" },
     { "date": "2026-10-17", "note": "opened nymph, a notebook blog" },
-    { "date": "2026-10-30", "note": "nymph is now the games shelf" }
+    { "date": "2026-10-30", "note": "nymph is now the games shelf" },
+    { "date": "2026-11-01", "note": "watching You Can See Everything, listening to Wallsocket" }
   ]
 }
