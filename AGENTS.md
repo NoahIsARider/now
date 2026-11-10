@@ -10,11 +10,13 @@
 
 No package manager, no lint config, no tests. Python 3 standard library only.
 
-## Deploy — two hosts, always update both
+## Deploy — sr.ht is canonical, GitHub and GitLab build themselves
 
-Sourcehut is canonical; Nekoweb is a mirror. Content changes ship to both.
+`https://noahisarider.srht.site` is the only copy of this site that is uploaded by hand.
+`.github/workflows/pages.yml` and `.gitlab-ci.yml` rebuild the same commit on push, so a
+content change ships to all three mirrors with one `git push` each and no manual import.
 
-**sr.ht** (`https://noahisarider.srht.site`):
+**sr.ht:**
 
 ```sh
 ./publish.sh          # run from git-bash; reads token from ~/.srht-token
@@ -22,17 +24,11 @@ Sourcehut is canonical; Nekoweb is a mirror. Content changes ship to both.
 
 One tarball replaces the whole site (root + `/MAYDAY/` + `/shkb/` + `/babel/`), so sub-directories can never be wiped by a root publish.
 
-**Nekoweb** (`https://noahisarider.nekoweb.org`), manual ZIP import:
-
-```powershell
-$env:SITE_URL="https://noahisarider.nekoweb.org"; python build.py; Remove-Item Env:SITE_URL
-# then zip site/ with .NET ZipArchive (see below), import in the Nekoweb panel
-```
-
-Nekoweb rules:
-- Build with `SITE_URL` overridden, or canonical/RSS/sitemap URLs point at sr.ht.
-- ZIP entry names MUST use forward slashes. Never use `Compress-Archive` — it writes backslash entries and Nekoweb skips every sub-directory. Use `System.IO.Compression.ZipArchive` with `.Replace('\','/')`.
-- After either deploy, verify live: HTTP 200 for `/` and `/babel/`, footer links present, zero CJK.
+**Nekoweb and Neocities do not host this site.** `noahisarider.nekoweb.org` and
+`noahisarider.neocities.org` both serve the separate `intro` repository (the doodle
+homepage and its black-and-white idle field at `game.html`). Never import this build
+there. After any deploy, verify live: HTTP 200 for `/` and `/nymph/`, footer links
+present, zero CJK.
 
 ## Layout
 
